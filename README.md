@@ -7,3 +7,7 @@ https://www.edrdg.org/wiki/index.php/KANJIDIC_Project
 
 Additional data form Jim Breen's JMdict-EDICT Dictionary Project
 https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project
+
+Converted MySQL's buggy UTF-8 to their cleaner format, utf8mb4, 
+by following instructions here:
+https://mathiasbynens.be/notes/mysql-utf8mb4#utf8-to-utf8mb4
