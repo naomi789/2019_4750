@@ -23,3 +23,17 @@ ROWS IDENTIFIED BY '<entry>';
 
 SHOW VARIABLES LIKE 'local_infile';
 SET GLOBAL local_infile = 1;
+
+/*
+1. A SQL script that creates all of your tables.
+Primary key and foreign key constraints must be included.
+Check constraints must be included as well where applicable.
+2. SQL insert statements to fill your tables with initial data. Include enough data to show proper testing of your SQL select statements below.
+3. A SQL select statement for each table that shows all rows.
+4. SQL select statements that use criteria to select some rows.
+5. SQL select statements that summarize data.
+6. SQL select statements that join tables for a master-detail report.
+7. A SQL select statement for each of your associative entities that shows the contents of your associative entities. These SQL statements must join the related tables and include some information from each table directly related to the associative entity.
+8. Consider creating views for the SQL selects that involve joins.
+9. Create an in-class presentation summarizing your status report.
+*/
