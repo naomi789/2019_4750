@@ -31,3 +31,15 @@ ALTER TABLE kanji_english_pair CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_
 ALTER TABLE kanji_symbol CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE vocab_list CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE vocab_list_word CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE english_word CHANGE english_word_name english_word_name VARCHAR(2000)
+ CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ ALTER TABLE kanji_english_pair CHANGE romaji romaji VARCHAR(200) 
+ CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ ALTER TABLE kanji_english_pair CHANGE katakana katakana VARCHAR(200) 
+ CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ ALTER TABLE kanji_english_pair CHANGE hiragana hiragana VARCHAR(200) 
+ CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ ALTER TABLE kanji_symbol CHANGE kanji_symbol_name kanji_symbol_name VARCHAR(200) 
+ CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ ALTER TABLE vocab_list CHANGE vocab_list_name vocab_list_name VARCHAR(200) 
+ CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
