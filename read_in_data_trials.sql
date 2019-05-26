@@ -38,8 +38,13 @@ SELECT * FROM jmdict;
 /*4. SQL select statements that use criteria to select some rows.*/
 SELECT * FROM jmdict WHERE ent_seq < 100;
 
-/*5. SQL select statements that summarize data.*/
+/*5. SQL select statements that summarize data.
+SELECT * FROM jmdict WHERE GROUP BY*/
+
 /*6. SQL select statements that join tables for a master-detail report.*/
+
 /*7. A SQL select statement for each of your associative entities that shows the contents of your associative entities. These SQL statements must join the related tables and include some information from each table directly related to the associative entity.*/
+
 /*8. Consider creating views for the SQL selects that involve joins.*/
+
 /*9. Create an in-class presentation summarizing your status report.*/
