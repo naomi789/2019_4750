@@ -13,10 +13,11 @@ Primary key and foreign key constraints must be included.
 Check constraints must be included as well where applicable.*/
 
 CREATE TABLE IF NOT EXISTS jmdict(
-  k_ele VARCHAR(20) PRIMARY KEY,
+  k_ele VARCHAR(20),
   ent_seq VARCHAR(20),
   r_ele VARCHAR(20),
-  gloss VARCHAR(20) PRIMARY KEY
+  gloss VARCHAR(20),
+  CONSTRAINT PK_jmdict PRIMARY KEY (k_ele, gloss)
 );
 
 ALTER TABLE jmdict CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
