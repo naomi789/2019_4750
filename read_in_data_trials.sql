@@ -20,22 +20,20 @@ CREATE TABLE IF NOT EXISTS jmdict(
   CONSTRAINT PK_jmdict PRIMARY KEY (k_ele, gloss)
 );
 
+ALTER TABLE jmdict CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+/*2. SQL insert statements to fill your tables with initial data. Include enough data to show proper testing of your SQL select statements below.*/
+SHOW VARIABLES LIKE 'local_infile';
+SET GLOBAL local_infile = 1;
+LOAD XML LOCAL INFILE '/data/JMdict_e.xml'
+INTO TABLE jmdict
+ROWS IDENTIFIED BY '<entry>';
+
 INSERT INTO jmdict (行く, 12345, いく, 'to go, to proceed, to take place, to continue');
 INSERT INTO jmdict (食べる, 12346, 食べる, 'to eat');
 INSERT INTO jmdict (今日は, 12347, こんにちは, 'hello, good day (day time greating)');
 INSERT INTO jmdict (林檎, 12348, りんご, 'apple, apple tree');
 INSERT INTO jmdict (明るい, 12349, あかるい, 'bright, colorful, cheerful, familiar (with), knowledgeable (about), fair (eg politics), clean');
-
-ALTER TABLE jmdict CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
-SHOW VARIABLES LIKE 'local_infile';
-SET GLOBAL local_infile = 1;
-
-/*
-2. SQL insert statements to fill your tables with initial data. Include enough data to show proper testing of your SQL select statements below.*/
-LOAD XML LOCAL INFILE '/data/JMdict_e.xml'
-INTO TABLE jmdict
-ROWS IDENTIFIED BY '<entry>';
 
 
 /*3. A SQL select statement for each table that shows all rows.*/
