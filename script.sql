@@ -53,55 +53,58 @@ CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE vocab_list CHANGE vocab_list_name vocab_list_name VARCHAR(200)
 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-INSERT INTO kanji_english_pair VALUES (111, 222, 'taberu', NULL, 'たべる');
+
 INSERT INTO english_word VALUES (222, 'to eat');
 INSERT INTO kanji_symbol VALUES (111, '食べる');
-INSERT INTO vocab_list_word VALUES (111, 222, 333);
+INSERT INTO kanji_english_pair VALUES (111, 222, 'taberu', NULL, 'たべる');
 INSERT INTO vocab_list VALUES (333, 'JLPT N5');
+INSERT INTO vocab_list_word VALUES (111, 222, 333);
 
-INSERT INTO kanji_english_pair VALUES (112, 223, 'iku', NULL, 'いく');
 INSERT INTO english_word VALUES (223, 'to go, to proceed, to take place, to continue');
 INSERT INTO kanji_symbol VALUES (112, '行く');
+INSERT INTO kanji_english_pair VALUES (112, 223, 'iku', NULL, 'いく');
 INSERT INTO vocab_list_word VALUES (112, 223, 333);
 
-INSERT INTO kanji_english_pair VALUES (113, 224, 'konnichiwa', NULL, 'こんにちは');
 INSERT INTO english_word VALUES (224, 'hello, good day (day time greating)');
 INSERT INTO kanji_symbol VALUES (113, '今日は');
+INSERT INTO kanji_english_pair VALUES (113, 224, 'konnichiwa', NULL, 'こんにちは');
 INSERT INTO vocab_list_word VALUES (113, 224, 333);
 
-INSERT INTO kanji_english_pair VALUES (114, 225, 'aisukurimu', アイスクリーム, NULL);
 INSERT INTO english_word VALUES (225, 'ice cream');
 INSERT INTO kanji_symbol VALUES (114, 'アイスクリーム');
+INSERT INTO kanji_english_pair VALUES (114, 225, 'aisukurimu', 'アイスクリーム', NULL);
 INSERT INTO vocab_list_word VALUES (114, 225, 333);
 
-INSERT INTO kanji_english_pair VALUES (115, 226, 'mondai', NULL, 'もんだい');
 INSERT INTO english_word VALUES (226, 'problem, question, doubt, guess');
 INSERT INTO kanji_symbol VALUES (115, '問題');
+INSERT INTO kanji_english_pair VALUES (115, 226, 'mondai', NULL, 'もんだい');
+INSERT INTO vocab_list VALUES (334, 'JLPT N4');
 INSERT INTO vocab_list_word VALUES (115, 226, 333);
 INSERT INTO vocab_list_word VALUES (115, 226, 334);
-INSERT INTO vocab_list VALUES (334, 'JLPT N4');
 
-INSERT INTO kanji_english_pair VALUES (116, 227, 'sanpo', NULL, 'さんぽ');
+
 INSERT INTO english_word VALUES (227, 'to go for a walk, stroll, strolling');
 INSERT INTO kanji_symbol VALUES (116, '散歩');
+INSERT INTO kanji_english_pair VALUES (116, 227, 'sanpo', NULL, 'さんぽ');
+INSERT INTO vocab_list VALUES (335, 'JLPT N3');
 INSERT INTO vocab_list_word VALUES (116, 227, 335);
-INSERT INTO vocab_list VALUES (333, 'JLPT N3');
 
-INSERT INTO kanji_english_pair VALUES (117, 228, 'hirune', NULL, 'ひるね');
 INSERT INTO english_word VALUES (228, 'nap (afternoon), siesta');
 INSERT INTO kanji_symbol VALUES (117, '昼寝');
-INSERT INTO vocab_list_word VALUES (117, 228, 336);
+INSERT INTO kanji_english_pair VALUES (117, 228, 'hirune', NULL, 'ひるね');
 INSERT INTO vocab_list VALUES (336, 'JLPT N2');
+INSERT INTO vocab_list_word VALUES (117, 228, 336);
 
-INSERT INTO kanji_english_pair VALUES (118, 229, 'hima', NULL, 'ひま');
 INSERT INTO english_word VALUES (229, 'spare time, free time, leisure, time (eg it takes to do something), time off');
 INSERT INTO kanji_symbol VALUES (118, '暇');
-INSERT INTO vocab_list_word VALUES (118, 229, 337);
+INSERT INTO kanji_english_pair VALUES (118, 229, 'hima', NULL, 'ひま');
 INSERT INTO vocab_list VALUES (337, 'JLPT N1');
+INSERT INTO vocab_list_word VALUES (118, 229, 337);
 
-INSERT INTO kanji_english_pair VALUES (119, 230, 'ryokou', NULL, 'りょこう');
+
 INSERT INTO english_word VALUES (230, 'travel, trip, journey, excursion, tour');
 INSERT INTO kanji_symbol VALUES (119, '旅行');
+INSERT INTO kanji_english_pair VALUES (119, 230, 'ryokou', NULL, 'りょこう');
 INSERT INTO vocab_list_word VALUES (119, 230, 333);
 
 
