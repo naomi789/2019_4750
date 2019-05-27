@@ -57,4 +57,44 @@ INSERT INTO kanji_english_pair(111, 222, 'taberu', NULL, 'たべる');
 INSERT INTO english_word(222, 'to eat');
 INSERT INTO kanji_symbol(111, '食べる');
 INSERT INTO vocab_list_word(111, 222, 333);
-INSERT INTO vocab_list(333, 'JLPT N1');
+INSERT INTO vocab_list(333, 'JLPT N5');
+
+INSERT INTO kanji_english_pair(112, 223, 'iku', NULL, 'いく');
+INSERT INTO english_word(223, 'to go, to proceed, to take place, to continue');
+INSERT INTO kanji_symbol(112, '行く');
+INSERT INTO vocab_list_word(112, 223, 333);
+
+INSERT INTO kanji_english_pair(113, 224, 'konnichiwa', NULL, 'こんにちは');
+INSERT INTO english_word(224, 'hello, good day (day time greating)');
+INSERT INTO kanji_symbol(113, '今日は');
+INSERT INTO vocab_list_word(113, 224, 333);
+
+INSERT INTO kanji_english_pair(114, 225, 'aisukurimu', アイスクリーム, NULL);
+INSERT INTO english_word(225, 'ice cream');
+INSERT INTO kanji_symbol(114, 'アイスクリーム');
+INSERT INTO vocab_list_word(114, 225, 333);
+
+INSERT INTO kanji_english_pair(115, 226 'mondai', NULL, 'もんだい');
+INSERT INTO english_word(226, 'problem, question, doubt, guess');
+INSERT INTO kanji_symbol(115, '問題');
+INSERT INTO vocab_list_word(115, 226, 333);
+INSERT INTO vocab_list_word(115, 226, 334);
+INSERT INTO vocab_list(334, 'JLPT N4');
+
+INSERT INTO kanji_english_pair(116, 227, 'sanpo', NULL, 'さんぽ');
+INSERT INTO english_word(227, 'to go for a walk, stroll, strolling');
+INSERT INTO kanji_symbol(116, '散歩');
+INSERT INTO vocab_list_word(116, 227, 335);
+INSERT INTO vocab_list(333, 'JLPT N3');
+
+INSERT INTO kanji_english_pair(117, 228, 'hirune', NULL, 'ひるね');
+INSERT INTO english_word(228, 'nap (afternoon), siesta');
+INSERT INTO kanji_symbol(117, '昼寝');
+INSERT INTO vocab_list_word(117, 228, 336);
+INSERT INTO vocab_list(336, 'JLPT N2');
+
+INSERT INTO kanji_english_pair(118, 229, 'hima', NULL, 'ひま');
+INSERT INTO english_word(229, 'spare time, free time, leisure, time (eg it takes to do something), time off');
+INSERT INTO kanji_symbol(118, '暇');
+INSERT INTO vocab_list_word(118, 229, 337);
+INSERT INTO vocab_list(337, 'JLPT N1');
