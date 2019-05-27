@@ -193,7 +193,7 @@ INNER JOIN kanji_symbol
 ON kanji_english_pair.kanji_id = kanji_symbol.kanji_id; 
 SELECT * FROM Kanji_vs_alphabet;
 
-/*a view for studying kanji and romaji*/
+/*a view for studying kanji and its related info*/
 CREATE VIEW learn_kanji AS
 SELECT kanji_symbol.kanji_symbol_name, kanji_english_pair.romaji, kanji_english_pair.katakana, kanji_english_pair.hiragana, english_word.english_word_name AS English_Definition
 FROM kanji_english_pair
