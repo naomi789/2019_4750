@@ -177,6 +177,27 @@ ORDER BY vocab_list.vocab_list_name;
 
 
 /*8. Consider creating views for the SQL selects that involve joins.*/
--- CREATE VIEW kanji_jlpt_n1 AS SELECT k_ele FROM JMdict INNER JOIN
+/*a view for studying kanji and romaji*/
+CREATE VIEW Kanji_vs_Romaji AS
+SELECT kanji_symbol.kanji_symbol_name, kanji_english_pair.romaji
+FROM kanji_english_pair
+INNER JOIN kanji_symbol
+ON kanji_english_pair.kanji_id = kanji_symbol.kanji_id; 
+SELECT * FROM Kanji_vs_Romaji;
 
-/*9. Create an in-class presentation summarizing your status report.*/
+/*a view for kanji and its alphabet*/
+CREATE VIEW Kanji_vs_alphabet AS
+SELECT kanji_symbol.kanji_symbol_name AS kanji, kanji_english_pair.katakana, kanji_english_pair.hiragana
+FROM kanji_english_pair
+INNER JOIN kanji_symbol
+ON kanji_english_pair.kanji_id = kanji_symbol.kanji_id; 
+SELECT * FROM Kanji_vs_alphabet;
+
+/*a view for studying kanji and romaji*/
+CREATE VIEW learn_kanji AS
+SELECT kanji_symbol.kanji_symbol_name, kanji_english_pair.romaji, kanji_english_pair.katakana, kanji_english_pair.hiragana, english_word.english_word_name AS English_Definition
+FROM kanji_english_pair
+	LEFT JOIN english_word ON kanji_english_pair.english_word_id = english_word.english_word_id
+    LEFT JOIN kanji_symbol ON kanji_english_pair.kanji_id = kanji_symbol.kanji_id
+ORDER BY kanji_english_pair.kanji_id;
+SELECT * FROM learn_kanji
