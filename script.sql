@@ -124,18 +124,18 @@ SELECT * FROM vocab_list WHERE vocab_list_name='JLPT N5';
 
 /*5. SQL select statements that summarize data.*/
 /*count the number of english word in data*/
-SELECT COUNT(english_word_id) FROM english_word;
+SELECT COUNT(english_word_id) AS numOf_English_Words FROM english_word;
 /*count the number of kanji in the database*/
-SELECT COUNT(kanji_id) FROM kanji_symbol;
+SELECT COUNT(kanji_id) AS num0f_Kanji FROM kanji_symbol;
 /*count the number of kanji in each lists created*/
-SELECT COUNT(kanji_id), vocab_list_id FROM vocab_list_word GROUP BY vocab_list_id;
+SELECT COUNT(kanji_id) AS numOf_words, vocab_list_id FROM vocab_list_word GROUP BY vocab_list_id;
 /*summarize the percentage of kanji with katakana and hiragana*/
 SELECT (SELECT COUNT(katakana) / (SELECT COUNT(kanji_id) FROM kanji_english_pair) 
 FROM kanji_english_pair) AS katakana_Percentage,
 (SELECT COUNT(hiragana) / (SELECT COUNT(kanji_id) FROM kanji_english_pair) 
 FROM kanji_english_pair) AS hiragana_Percentage; 
 /*count the exist kanji-english-pairs*/
-SELECT COUNT(*) FROM kanji_english_pair;
+SELECT COUNT(*) AS numOf_word_pairs FROM kanji_english_pair;
 
 
 /*6. SQL select statements that join tables for a master-detail report.*/
