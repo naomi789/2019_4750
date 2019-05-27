@@ -160,9 +160,21 @@ FROM kanji_english_pair p
     INNER JOIN vocab_list ON vocab_list_word.vocab_list_id = vocab_list.vocab_list_id
 ORDER BY vocab_list.vocab_list_name;
 
-
-
 /*7. A SQL select statement for each of your associative entities that shows the contents of your associative entities. These SQL statements must join the related tables and include some information from each table directly related to the associative entity.*/
+/*The kanji_english_pair associative entity - join this entity with english_word and kanji_symbol*/
+SELECT kanji_english_pair.kanji_id, kanji_english_pair.english_word_id, kanji_symbol.kanji_symbol_name, kanji_english_pair.romaji, kanji_english_pair.katakana, kanji_english_pair.hiragana, english_word.english_word_name AS English_Definition
+FROM kanji_english_pair
+	LEFT JOIN english_word ON kanji_english_pair.english_word_id = english_word.english_word_id
+    LEFT JOIN kanji_symbol ON kanji_english_pair.kanji_id = kanji_symbol.kanji_id
+ORDER BY kanji_english_pair.kanji_id;
+
+/*The vocab_list_word associative entity - join this entity with kanji_english_word and vocab_list   */
+SELECT vocab_list.vocab_list_name, vocab_list_word.vocab_list_id, p.kanji_id, p.english_word_id, p.romaji, p.katakana, p.hiragana
+FROM kanji_english_pair p
+    INNER JOIN vocab_list_word ON p.kanji_id = vocab_list_word.kanji_id AND p.english_word_id = vocab_list_word.english_word_id
+    INNER JOIN vocab_list ON vocab_list_word.vocab_list_id = vocab_list.vocab_list_id
+ORDER BY vocab_list.vocab_list_name;
+
 
 /*8. Consider creating views for the SQL selects that involve joins.*/
 -- CREATE VIEW kanji_jlpt_n1 AS SELECT k_ele FROM JMdict INNER JOIN
