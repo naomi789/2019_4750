@@ -40,7 +40,7 @@ INSERT INTO jmdict ('明るい', 12349, 'あかるい', 'bright, colorful, cheer
 SELECT * FROM jmdict;
 
 /*4. SQL select statements that use criteria to select some rows.*/
-SELECT * FROM jmdict WHERE ent_seq < 100;
+SELECT * FROM jmdict WHERE ent_seq < 12346;
 
 /*5. SQL select statements that summarize data.
 SELECT * FROM jmdict WHERE GROUP BY*/
