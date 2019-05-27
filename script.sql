@@ -114,8 +114,8 @@ SELECT * FROM vocab_list;
 
 /*4. SQL select statements that use criteria to select some rows.*/
 SELECT * FROM kanji_english_pair WHERE katakana IS NOT NULL;
-SELECT * FROM english_word WHERE english_word_name IS LIKE 'to%';
-SELECT * FROM kanji_symbol WHERE kanji_symbol_name IS LIKE '%行%';
+SELECT * FROM english_word WHERE english_word_name LIKE 'to%';
+SELECT * FROM kanji_symbol WHERE kanji_symbol_name LIKE '%行%';
 SELECT * FROM vocab_list_word WHERE vocab_list_id=333;
 SELECT * FROM vocab_list WHERE vocab_list_name='JLPT N5';
 
