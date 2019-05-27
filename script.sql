@@ -52,3 +52,9 @@ ALTER TABLE kanji_symbol CHANGE kanji_symbol_name kanji_symbol_name VARCHAR(200)
 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE vocab_list CHANGE vocab_list_name vocab_list_name VARCHAR(200)
 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+INSERT INTO kanji_english_pair(111, 222, 'taberu', NULL, 'たべる');
+INSERT INTO english_word(222, 'to eat');
+INSERT INTO kanji_symbol(111, '食べる');
+INSERT INTO vocab_list_word(111, 222, 333);
+INSERT INTO vocab_list(333, 'JLPT N1');
