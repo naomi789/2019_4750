@@ -92,6 +92,90 @@
 
   </div>
 
+  <div>
+    <div class="container">
+      <h2>FAQ</h2>
+      <p>Type in your question below.</p>
+      <input class="form-control" id="myInput" type="text" placeholder="E.g.    Should I enter a kanji or a english word?">
+      <br>
+      <div class="panel-group" id="questions">
+         <div class="panel panel-default ">
+             <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question0">
+                  <h4 class="panel-title">
+                     <a href="#" class="ing">Q: Who will benefit from using your dictionary?</a>
+               </h4>
+
+             </div>
+             <div id="question0" class="panel-collapse collapse" style="height: 0px;">
+                 <div class="panel-body">
+                      <h5><span class="label label-primary">Answer</span></h5>
+
+                     <p>Both Japanese and English speakers.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="panel panel-default ">
+             <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question1">
+                  <h4 class="panel-title">
+                     <a href="#" class="ing">Q: Should I enter a kanji or a english word?</a>
+               </h4>
+
+             </div>
+             <div id="question1" class="panel-collapse collapse" style="height: 0px;">
+                 <div class="panel-body">
+                      <h5><span class="label label-primary">Answer</span></h5>
+
+                      <p>Your choice! Our online dictionary will show you a table of corrsponding solutions that match either.</p>
+                  </div>
+             </div>
+         </div>
+         <div class="panel panel-default ">
+             <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question2">
+                  <h4 class="panel-title">
+                     <a href="#" class="ing">Q: Do I need to pay?</a>
+               </h4>
+
+             </div>
+             <div id="question2" class="panel-collapse collapse" style="height: 0px;">
+                 <div class="panel-body">
+                      <h5><span class="label label-primary">Answer</span></h5>
+                      <p>No! Our online dictionary is free for everyone.</p>
+                  </div>
+             </div>
+         </div>
+         <div class="panel panel-default ">
+             <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question3">
+                  <h4 class="panel-title">
+                     <a href="#" class="ing">Q: Can I create my own list?</a>
+               </h4>
+
+             </div>
+             <div id="question3" class="panel-collapse collapse" style="height: 0px;">
+                 <div class="panel-body">
+                      <h5><span class="label label-primary">Answer</span></h5>
+
+                    <p>Yes! Click the "List" tab on the navigation bar.</p>
+                 </div>
+             </div>
+         </div>
+
+     </div>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#questions a").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+
+
+  </div>
+
 <!-- Citations for codes
 Citation 1:
 Titile: Bootstrap Theme "Company"
