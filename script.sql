@@ -124,7 +124,10 @@ SELECT * FROM jmdict WHERE GROUP BY*/
 
 /*6. SQL select statements that join tables for a master-detail report.*/
 
-/*7. A SQL select statement for each of your associative entities that shows the contents of your associative entities. These SQL statements must join the related tables and include some information from each table directly related to the associative entity.*/
+/*7. A SQL select statement for each of your associative entities that
+shows the contents of your associative entities.
+These SQL statements must join the related tables and include some information
+from each table directly related to the associative entity.*/
 
 /*8. Consider creating views for the SQL selects that involve joins.*/
 -- CREATE VIEW kanji_jlpt_n1 AS SELECT k_ele FROM JMdict INNER JOIN
