@@ -137,8 +137,30 @@ FROM kanji_english_pair) AS hiragana_Percentage;
 /*count the exist kanji-english-pairs*/
 SELECT COUNT(*) AS numOf_word_pairs FROM kanji_english_pair;
 
-
 /*6. SQL select statements that join tables for a master-detail report.*/
+/*join kanji_english_pair and english_word*/
+SELECT kanji_english_pair.kanji_id, kanji_english_pair.english_word_id, kanji_english_pair.romaji, kanji_english_pair.katakana, kanji_english_pair.hiragana, english_word.english_word_name 
+FROM kanji_english_pair
+LEFT JOIN english_word
+ON kanji_english_pair.english_word_id = english_word.english_word_id; 
+
+/*join kanji_english_pari, english_word and also kanji_symbol and sort by kanji_id*/
+SELECT kanji_english_pair.kanji_id, kanji_english_pair.romaji, kanji_english_pair.katakana, kanji_english_pair.hiragana, kanji_english_pair.english_word_id, english_word.english_word_name, kanji_symbol.kanji_symbol_name
+FROM kanji_english_pair
+	LEFT JOIN english_word ON kanji_english_pair.english_word_id = english_word.english_word_id
+    LEFT JOIN kanji_symbol ON kanji_english_pair.kanji_id = kanji_symbol.kanji_id
+ORDER BY kanji_english_pair.kanji_id;
+
+/*join all tables*/
+SELECT vocab_list.vocab_list_name, vocab_list_word.vocab_list_id, p.kanji_id, p.english_word_id, p.romaji, p.katakana, p.hiragana, english_word.english_word_name, kanji_symbol.kanji_symbol_name
+FROM kanji_english_pair p
+	INNER JOIN english_word ON p.english_word_id = english_word.english_word_id
+    INNER JOIN kanji_symbol ON p.kanji_id = kanji_symbol.kanji_id
+    INNER JOIN vocab_list_word ON p.kanji_id = vocab_list_word.kanji_id AND p.english_word_id = vocab_list_word.english_word_id
+    INNER JOIN vocab_list ON vocab_list_word.vocab_list_id = vocab_list.vocab_list_id
+ORDER BY vocab_list.vocab_list_name;
+
+
 
 /*7. A SQL select statement for each of your associative entities that shows the contents of your associative entities. These SQL statements must join the related tables and include some information from each table directly related to the associative entity.*/
 
