@@ -99,16 +99,25 @@ INSERT INTO kanji_symbol(118, '暇');
 INSERT INTO vocab_list_word(118, 229, 337);
 INSERT INTO vocab_list(337, 'JLPT N1');
 
+INSERT INTO kanji_english_pair(119, 230, 'ryokou', NULL, 'りょこう');
+INSERT INTO english_word(230, 'travel, trip, journey, excursion, tour');
+INSERT INTO kanji_symbol(119, '旅行');
+INSERT INTO vocab_list_word(119, 230, 333)
+
 
 /*3. A SQL select statement for each table that shows all rows.*/
 SELECT * FROM kanji_english_pair;
 SELECT * FROM english_word;
 SELECT * FROM kanji_symbol;
 SELECT * FROM vocab_list_word;
-SELECT * FROM vocab_list; 
+SELECT * FROM vocab_list;
 
 /*4. SQL select statements that use criteria to select some rows.*/
-SELECT * FROM jmdict WHERE ent_seq < 12346;
+SELECT * FROM kanji_english_pair WHERE katakana IS NOT NULL;
+SELECT * FROM english_word WHERE english_word_name IS LIKE 'to%';
+SELECT * FROM kanji_symbol WHERE kanji_symbol_name IS LIKE '%行%';
+SELECT * FROM vocab_list_word WHERE vocab_list_id=333;
+SELECT * FROM vocab_list WHERE vocab_list_name='JLPT N5';
 
 /*5. SQL select statements that summarize data.
 SELECT * FROM jmdict WHERE GROUP BY*/
