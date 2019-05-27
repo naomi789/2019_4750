@@ -122,8 +122,21 @@ SELECT * FROM kanji_symbol WHERE kanji_symbol_name LIKE '%行%';
 SELECT * FROM vocab_list_word WHERE vocab_list_id=333;
 SELECT * FROM vocab_list WHERE vocab_list_name='JLPT N5';
 
-/*5. SQL select statements that summarize data.
-SELECT * FROM jmdict WHERE GROUP BY*/
+/*5. SQL select statements that summarize data.*/
+/*count the number of english word in data*/
+SELECT COUNT(english_word_id) FROM english_word;
+/*count the number of kanji in the database*/
+SELECT COUNT(kanji_id) FROM kanji_symbol;
+/*count the number of kanji in each lists created*/
+SELECT COUNT(kanji_id), vocab_list_id FROM vocab_list_word GROUP BY vocab_list_id;
+/*summarize the percentage of kanji with katakana and hiragana*/
+SELECT (SELECT COUNT(katakana) / (SELECT COUNT(kanji_id) FROM kanji_english_pair) 
+FROM kanji_english_pair) AS katakana_Percentage,
+(SELECT COUNT(hiragana) / (SELECT COUNT(kanji_id) FROM kanji_english_pair) 
+FROM kanji_english_pair) AS hiragana_Percentage; 
+/*count the exist kanji-english-pairs*/
+SELECT COUNT(*) FROM kanji_english_pair;
+
 
 /*6. SQL select statements that join tables for a master-detail report.*/
 
