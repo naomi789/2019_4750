@@ -25,7 +25,12 @@ ALTER TABLE jmdict CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 /*2. SQL insert statements to fill your tables with initial data. Include enough data to show proper testing of your SQL select statements below.*/
 SHOW VARIABLES LIKE 'local_infile';
 SET GLOBAL local_infile = 1;
-LOAD XML LOCAL INFILE '/data/JMdict_e.xml'
+-- /data/JMdict_e.xml
+-- /data/alt.txt
+-- 'C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\'
+
+SHOW VARIABLES LIKE "secure_file_priv";
+LOAD XML INFILE '/data/JMdict_e.xml'
 INTO TABLE jmdict
 ROWS IDENTIFIED BY '<entry>';
 
