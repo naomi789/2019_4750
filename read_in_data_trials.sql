@@ -12,7 +12,7 @@ https://stackoverflow.com/questions/8582837/load-xml-local-infile-with-inconsist
 Primary key and foreign key constraints must be included.
 Check constraints must be included as well where applicable.*/
 
-# DROP TABLE jmdict; 
+DROP TABLE jmdict; 
 
 CREATE TABLE IF NOT EXISTS jmdict(
   keb VARCHAR(20), # This element will contain a word or short phrase in Japanese  which is written using at least one non-kana character (usually kanji, but can be other characters).
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS jmdict(
   CONSTRAINT PK_jmdict PRIMARY KEY (ent_seq)
 );
 
-ALTER TABLE jmdict CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE jmdict CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE jmdict CHANGE keb keb VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE jmdict CHANGE ent_seq ent_seq VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE jmdict CHANGE r_ele r_ele VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
