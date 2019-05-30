@@ -1,4 +1,4 @@
-CREATE DATABASE main_db DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE main_db DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 # or character set: utf8mb4, utf8
 # or collate to: utf8mb4_unicode_520_ci, utf8_general_ci, utf8mb4_unicode_ci, utf8mb4_unicode_520_ci
 
@@ -17,13 +17,13 @@ DROP TABLE jmdict;
 # CONSTRAINT PK_jmdict PRIMARY KEY (ent_seq)
 
 CREATE TABLE IF NOT EXISTS jmdict(
-  ent_seq VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL PRIMARY KEY,
-  keb VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci,
-  r_ele VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci,
-  pos VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci,
-  lsource VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci,
-  gloss VARCHAR(2000), # english
-  k_ele VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci
+  ent_seq VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL PRIMARY KEY,
+  keb VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  r_ele VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  pos VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  lsource VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  gloss VARCHAR(2000)  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci, # english
+  k_ele VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci 
 );
 
 SHOW VARIABLES LIKE "secure_file_priv";
