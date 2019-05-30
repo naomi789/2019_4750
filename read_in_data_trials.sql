@@ -26,14 +26,15 @@ CREATE TABLE IF NOT EXISTS jmdict(
 );
 
 ALTER TABLE jmdict CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE jmdict CHANGE keb keb VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE jmdict CHANGE ent_seq ent_seq VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE jmdict CHANGE r_ele r_ele VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE jmdict CHANGE pos pos VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE jmdict CHANGE lsource lsource VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; 
+ALTER TABLE jmdict CHANGE gloss gloss VARCHAR(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE jmdict CHANGE k_ele k_ele VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-/*2. SQL insert statements to fill your tables with initial data. Include enough data to show proper testing of your SQL select statements below.*/
-# SHOW VARIABLES LIKE 'local_infile';
-# SET GLOBAL local_infile = 1;
--- /data/JMdict_e.xml
--- /data/alt.txt
--- 'C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\'
-# SHOW VARIABLES LIKE "secure_file_priv";
+SHOW VARIABLES LIKE "secure_file_priv";
 
 LOAD XML INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/data/JMdict_e.xml"
 INTO TABLE jmdict
