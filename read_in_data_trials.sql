@@ -1,45 +1,38 @@
-USE main_db;
+CREATE DATABASE main_db DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+# or character set: utf8mb4, utf8
+# or collate to: utf8mb4_unicode_520_ci, utf8_general_ci, utf8mb4_unicode_ci, utf8mb4_unicode_520_ci
 
-ALTER DATABASE main_db CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci;
+
+USE main_db;
 
 DROP TABLE jmdict; 
 
+# This element will contain a word or short phrase in Japanese  which is written using at least one non-kana character (usually kanji, but can be other characters).
+# unique ID from Jim Breen
+# The reading element typically contains the valid readings of the word(s) in the kanji element using modern kanadzukai. 
+# Part-of-speech information about the entry/sense. Should use  appropriate entity codes. 
+# This element records the information about the source language(s) of a loan-word/gairaigo. 
+# target-language words or phrases which are equivalents to the  Japanese word
+# The kanji element, or in its absence, the reading element, is the defining component of each entry.
+# CONSTRAINT PK_jmdict PRIMARY KEY (ent_seq)
+
 CREATE TABLE IF NOT EXISTS jmdict(
-  keb NCHAR(20), # This element will contain a word or short phrase in Japanese  which is written using at least one non-kana character (usually kanji, but can be other characters).
-  ent_seq NCHAR(20), # unique ID from Jim Breen
-  r_ele NCHAR(20), # The reading element typically contains the valid readings of the word(s) in the kanji element using modern kanadzukai. 
-  pos NCHAR(20), # Part-of-speech information about the entry/sense. Should use  appropriate entity codes. 
-  lsource NCHAR(200), # This element records the information about the source language(s) of a loan-word/gairaigo. 
-  gloss NCHAR(2000), # target-language words or phrases which are equivalents to the  Japanese word
-  k_ele NCHAR(20), # The kanji element, or in its absence, the reading element, is the defining component of each entry.
-  CONSTRAINT PK_jmdict PRIMARY KEY (ent_seq)
+  ent_seq VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL PRIMARY KEY,
+  keb VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci,
+  r_ele VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci,
+  pos VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci,
+  lsource VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci,
+  gloss VARCHAR(2000), # english
+  k_ele VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci
 );
-# utf8mb4_unicode_ci
-ALTER TABLE jmdict CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
-ALTER TABLE jmdict CHANGE keb keb VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
-ALTER TABLE jmdict CHANGE ent_seq ent_seq VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
-ALTER TABLE jmdict CHANGE r_ele r_ele VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
-ALTER TABLE jmdict CHANGE pos pos VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
-ALTER TABLE jmdict CHANGE lsource lsource VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci; 
-ALTER TABLE jmdict CHANGE gloss gloss VARCHAR(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
-ALTER TABLE jmdict CHANGE k_ele k_ele VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
 
 SHOW VARIABLES LIKE "secure_file_priv";
-SELECT VERSION();
-SELECT CHARACTER_SET_NAME, DESCRIPTION
-       FROM INFORMATION_SCHEMA.CHARACTER_SETS
-       WHERE DESCRIPTION LIKE '%Chin%'
-       OR DESCRIPTION LIKE '%Japanese%'
-       OR DESCRIPTION LIKE '%Korean%'
-       ORDER BY CHARACTER_SET_NAME;
-SHOW VARIABLES LIKE 'char%';
 
 LOAD XML INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/data/JMdict_e.xml"
 INTO TABLE jmdict
 CHARACTER SET utf8mb4
 ROWS IDENTIFIED BY '<entry>';
 
-SELECT * FROM jmdict; 
 DESCRIBE jmdict; 
 
-SELECT pos FROM jmdict WHERE pos IS NOT NULL; 
+SELECT * FROM jmdict; 
