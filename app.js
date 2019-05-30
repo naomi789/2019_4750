@@ -5,8 +5,8 @@ const mysql = require('mysql');
 const path = require('path');
 const app = express();
 
-// const {getHomePage} = require('./routes/index');
-// const {addPlayerPage, addPlayer, deletePlayer, editPlayer, editPlayerPage} = require('./routes/player');
+const {getHomePage} = require('./routes/index');
+const {getListPage} = require('./routes/list');
 const port = 5000;
 
 //create connection
@@ -34,6 +34,13 @@ app.set('view engine', 'ejs'); // configure template engine
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // parse form data client
 app.use(fileUpload()); // configure fileupload
+
+// routes for the app
+
+app.get('/', getHomePage);
+app.get('/list', getListPage);
+
+//app.get('/sumbit', searchWordPage);
 
 
 // set the app to listen on the port

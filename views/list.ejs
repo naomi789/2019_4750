@@ -93,28 +93,26 @@
   </div>
 
   <div class="table-wrapper">
-      <% if (english.length > 0) {%>
+      <% if (lists.length > 0) {%>
           <table class="table table-hovered">
               <thead class="thead-dark">
                   <tr>
-                      <th scope="col">english_word_id</th>
-                      <th scope="col">english_word_name</th>
+                      <th scope="col">List_id</th>
+                      <th scope="col">List_name</th>
                   </tr>
               </thead>
               <tbody>
-                  <% english.forEach((word, index) => { %>
+                  <% lists.forEach((list, index) => { %>
                       <tr>
-                          <th scope="row"><%= word.english_word_id %></th>
-
-
-                          <td><%= word.english_word_name %></td>
+                          <th scope="row"><%= list.vocab_list_id %></th>
+                          <td><%= list.vocab_list_name %></td>
 
                       </tr>
                   <% }) %>
               </tbody>
           </table>
       <% } else { %>
-          <p class="text-center">No english_word found.</p>
+          <p class="text-center">No list found.</p>
       <% } %>
   </div>
 
