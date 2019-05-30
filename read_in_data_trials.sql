@@ -15,13 +15,13 @@ Check constraints must be included as well where applicable.*/
 # DROP TABLE jmdict; 
 
 CREATE TABLE IF NOT EXISTS jmdict(
-  # k_ele VARCHAR(20), # The kanji element, or in its absence, the reading element, is the defining component of each entry.
   keb VARCHAR(20), # This element will contain a word or short phrase in Japanese  which is written using at least one non-kana character (usually kanji, but can be other characters).
   ent_seq VARCHAR(20), # unique ID from Jim Breen
   r_ele VARCHAR(20), # The reading element typically contains the valid readings of the word(s) in the kanji element using modern kanadzukai. 
   pos VARCHAR(20), # Part-of-speech information about the entry/sense. Should use  appropriate entity codes. 
-  lsource VARCHAR(20), # This element records the information about the source language(s) of a loan-word/gairaigo. 
+  lsource VARCHAR(200), # This element records the information about the source language(s) of a loan-word/gairaigo. 
   gloss VARCHAR(2000), # target-language words or phrases which are equivalents to the  Japanese word
+  k_ele VARCHAR(20), # The kanji element, or in its absence, the reading element, is the defining component of each entry.
   CONSTRAINT PK_jmdict PRIMARY KEY (ent_seq)
 );
 
