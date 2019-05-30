@@ -34,27 +34,4 @@ LOAD XML INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/data/JMdict_e.xml
 INTO TABLE jmdict
 ROWS IDENTIFIED BY '<entry>';
 
-# INSERT INTO jmdict ('行く', 12345, 'いく', 'to go, to proceed, to take place, to continue');
-# INSERT INTO jmdict ('食べる', 12346, '食べる', 'to eat');
-# INSERT INTO jmdict ('今日は', 12347, 'こんにちは', 'hello, good day (day time greating)');
-# INSERT INTO jmdict ('林檎', 12348, 'りんご', 'apple, apple tree');
-# INSERT INTO jmdict ('明るい', 12349, 'あかるい', 'bright, colorful, cheerful, familiar (with), knowledgeable (about), fair (eg politics), clean');
-
-
-/*3. A SQL select statement for each table that shows all rows.*/
-SELECT * FROM jmdict;
-
-/*4. SQL select statements that use criteria to select some rows.*/
-SELECT * FROM jmdict WHERE ent_seq < 12346;
-
-/*5. SQL select statements that summarize data.
-SELECT * FROM jmdict WHERE GROUP BY*/
-
-/*6. SQL select statements that join tables for a master-detail report.*/
-
-/*7. A SQL select statement for each of your associative entities that shows the contents of your associative entities. These SQL statements must join the related tables and include some information from each table directly related to the associative entity.*/
-
-/*8. Consider creating views for the SQL selects that involve joins.*/
--- CREATE VIEW kanji_jlpt_n1 AS SELECT k_ele FROM JMdict INNER JOIN
-
-/*9. Create an in-class presentation summarizing your status report.*/
+SELECT * FROM jmdict; 
