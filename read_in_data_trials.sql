@@ -1,16 +1,4 @@
 USE main_db;
-/*kanji_symbol
-vocab_list_word
-vocab_list
-kanji_english_pair
-english_word
-
-https://stackoverflow.com/questions/8582837/load-xml-local-infile-with-inconsistent-column-names
-*/
-
-/*A SQL script that creates all of your tables.
-Primary key and foreign key constraints must be included.
-Check constraints must be included as well where applicable.*/
 
 DROP TABLE jmdict; 
 
