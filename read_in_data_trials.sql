@@ -30,15 +30,16 @@ SET GLOBAL local_infile = 1;
 -- 'C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\'
 
 SHOW VARIABLES LIKE "secure_file_priv";
-LOAD XML INFILE '/data/JMdict_e.xml'
+
+LOAD XML INFILE "C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\data\JMdict_e.xml"
 INTO TABLE jmdict
 ROWS IDENTIFIED BY '<entry>';
 
-INSERT INTO jmdict ('行く', 12345, 'いく', 'to go, to proceed, to take place, to continue');
-INSERT INTO jmdict ('食べる', 12346, '食べる', 'to eat');
-INSERT INTO jmdict ('今日は', 12347, 'こんにちは', 'hello, good day (day time greating)');
-INSERT INTO jmdict ('林檎', 12348, 'りんご', 'apple, apple tree');
-INSERT INTO jmdict ('明るい', 12349, 'あかるい', 'bright, colorful, cheerful, familiar (with), knowledgeable (about), fair (eg politics), clean');
+# INSERT INTO jmdict ('行く', 12345, 'いく', 'to go, to proceed, to take place, to continue');
+# INSERT INTO jmdict ('食べる', 12346, '食べる', 'to eat');
+# INSERT INTO jmdict ('今日は', 12347, 'こんにちは', 'hello, good day (day time greating)');
+# INSERT INTO jmdict ('林檎', 12348, 'りんご', 'apple, apple tree');
+# INSERT INTO jmdict ('明るい', 12349, 'あかるい', 'bright, colorful, cheerful, familiar (with), knowledgeable (about), fair (eg politics), clean');
 
 
 /*3. A SQL select statement for each table that shows all rows.*/
