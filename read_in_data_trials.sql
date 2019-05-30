@@ -35,3 +35,4 @@ INTO TABLE jmdict
 ROWS IDENTIFIED BY '<entry>';
 
 SELECT * FROM jmdict; 
+DESCRIBE jmdict; 
