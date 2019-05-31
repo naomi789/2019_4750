@@ -8,6 +8,8 @@ const app = express();
 const {getHomePage} = require('./routes/index');
 const {getListPage} = require('./routes/list');
 const {getSearchPage} = require('./routes/search');
+const {getDetailPage} = require('./routes/detail');
+
 const port = 5000;
 
 //create connection
@@ -37,16 +39,11 @@ app.use(bodyParser.json()); // parse form data client
 app.use(fileUpload()); // configure fileupload
 
 // routes for the app
-
 app.get('/', getHomePage);
 app.get('/new_search',getSearchPage);
-/*
-app.get('/new_search', function(req,res) {
-  console.log(req.query.search)
-})
-*/
 app.get('/list', getListPage);
 app.get('/search', getSearchPage);
+app.get('/detail/:romaji', getDetailPage);
 
 
 //app.get('/sumbit', searchWordPage);
