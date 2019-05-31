@@ -70,5 +70,5 @@ if (__name__ == '__main__'):
     Handler = Entry()
     parser.setContentHandler( Handler )
 
-    parser.parse("data/temp.xml")
+    parser.parse('data/temp.xml')
     # parser.parse("data/JMdict_e.xml")
