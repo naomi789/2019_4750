@@ -92,31 +92,7 @@
 
   </div>
 
-  <div class="table-wrapper">
-      <% if (english.length > 0) {%>
-          <table class="table table-hovered">
-              <thead class="thead-dark">
-                  <tr>
-                      <th scope="col">english_word_id</th>
-                      <th scope="col">english_word_name</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <% english.forEach((word, index) => { %>
-                      <tr>
-                          <th scope="row"><%= word.english_word_id %></th>
-
-
-                          <td><%= word.english_word_name %></td>
-
-                      </tr>
-                  <% }) %>
-              </tbody>
-          </table>
-      <% } else { %>
-          <p class="text-center">No english_word found.</p>
-      <% } %>
-  </div>
+  
 
 <!-- Citations for codes
 Citation 1:Theme Used
