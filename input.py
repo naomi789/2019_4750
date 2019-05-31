@@ -20,16 +20,18 @@ class Entry( xml.sax.ContentHandler ):
 
     # call this when an element starts
     def startElement(self, tag, attributes):
-        pass
-        # self.CurrentData = tag
-        # if tag == 'entry':
+        # print('unnamed')
+        self.CurrentData = tag
+        if tag == 'entry':
+            print('unnamed')
         #     title = attributes['title']
-        #     print('title: ', title) # this should break bc there is none...
+        #     print('title: ', title)
+        #     there should be no 'attributes' field in this case
 
     def endElement(self, tag):
-        if self.CurrentData == 'entry':
-            print('type', self.type) # this should also break
-        elif self.CurrentData == 'ent_seq':
+        # if self.CurrentData == 'entry':
+        #     print('type', self.type) # this should also break
+        if self.CurrentData == 'ent_seq':
             print('ent_seq', self.ent_seq)
         elif self.CurrentData == 'keb':
             print('keb', self.keb)
@@ -39,14 +41,14 @@ class Entry( xml.sax.ContentHandler ):
         # separately do ent_seq and each of the glosses
 
     def characters(self, content):
-        if self.CurrentData == 'type':
-            self.type == contents
-        elif self.CurrentData == 'ent_seq':
-            self.type == contents
+        # if self.CurrentData == 'type':
+        #     self.type == contents
+        if self.CurrentData == 'ent_seq':
+            self.ent_seq == content
         elif self.CurrentData == 'keb':
-            self.type == contents
+            self.keb == content
         elif self.CurrentData == 'reb':
-            self.type == contents
+            self.reb == content
         # also pos, lsource
         # separately do ent_seq and each of the glosses
 
