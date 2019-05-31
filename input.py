@@ -64,3 +64,4 @@ if (__name__ == '__main__'):
     parser.setContentHandler( Handler )
 
     parser.parse("data/temp.xml")
+    # parser.parse("data/JMdict_e.xml")
