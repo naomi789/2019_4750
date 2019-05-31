@@ -19,16 +19,18 @@ DROP TABLE jmdict;
 CREATE TABLE IF NOT EXISTS jmdict(
   ent_seq VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL PRIMARY KEY,
   keb VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  r_ele VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  reb VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  # r_ele VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   pos VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   lsource VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  gloss VARCHAR(2000)  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci, # english
-  k_ele VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci 
+  gloss VARCHAR(2000)  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci # english
+  # k_ele VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci 
 );
 
 SHOW VARIABLES LIKE "secure_file_priv";
 
-LOAD XML INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/data/JMdict_e.xml"
+# LOAD XML INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/data/JMdict_e.xml"
+LOAD XML INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/data/temp.xml"
 INTO TABLE jmdict
 CHARACTER SET utf8mb4
 ROWS IDENTIFIED BY '<entry>';
@@ -36,3 +38,4 @@ ROWS IDENTIFIED BY '<entry>';
 DESCRIBE jmdict; 
 
 SELECT * FROM jmdict; 
+SELECT * FROM jmdict WHERE keb IS NOT NULL; 
