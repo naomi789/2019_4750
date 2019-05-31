@@ -9,6 +9,7 @@ const {getHomePage} = require('./routes/index');
 const {getListPage} = require('./routes/list');
 const {getSearchPage} = require('./routes/search');
 const {getDetailPage} = require('./routes/detail');
+const {getHelpPage} = require('./routes/help');
 
 const port = 5000;
 
@@ -44,6 +45,7 @@ app.get('/new_search',getSearchPage);
 app.get('/list', getListPage);
 app.get('/search', getSearchPage);
 app.get('/detail/:romaji', getDetailPage);
+app.get('/help', getHelpPage);
 
 
 //app.get('/sumbit', searchWordPage);
