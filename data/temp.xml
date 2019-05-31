@@ -287,30 +287,3 @@ some of the "*" as he suggested. - 27 May 2000 Added the re_nokanji element - Se
     <gloss>obvious</gloss>
   </sense>
 </entry>
-<entry>
-  <ent_seq>1000730</ent_seq>
-  <k_ele>
-    <keb>行けない</keb>
-    <ke_pri>ichi1</ke_pri>
-  </k_ele>
-  <r_ele>
-    <reb>いけない</reb>
-    <re_pri>ichi1</re_pri>
-  </r_ele>
-  <sense>
-    <pos>&exp;</pos>
-    <misc>&uk;</misc>
-    <gloss>wrong</gloss>
-    <gloss>not good</gloss>
-    <gloss>of no use</gloss>
-  </sense>
-  <sense>
-    <misc>&uk;</misc>
-    <gloss>hopeless</gloss>
-    <gloss>past hope</gloss>
-  </sense>
-  <sense>
-    <misc>&uk;</misc>
-    <gloss>must not do</gloss>
-  </sense>
-</entry>
