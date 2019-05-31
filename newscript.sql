@@ -1,0 +1,32 @@
+CREATE DATABASE main_db;
+USE main_db;
+
+CREATE TABLE IF NOT EXISTS JMdict
+(ent_seq INT(250) NOT NULL, keb NVARCHAR(250), reb NVARCHAR(250), pos NVARCHAR(100), lsource NVARCHAR(400),
+CONSTRAINT PK_JMdict PRIMARY KEY (ent_seq) );
+
+CREATE TABLE IF NOT EXISTS gloss
+(gloss_ID INT NOT NULL, gloss_def NVARCHAR(300), 
+CONSTRAINT PK_gloss PRIMARY KEY (gloss_ID) );
+
+CREATE TABLE IF NOT EXISTS word_gloss
+(ent_seq INT(250) NOT NULL, gloss_ID INT NOT NULL,
+CONSTRAINT PK_word_gloss PRIMARY KEY (ent_seq, gloss_ID) );
+
+CREATE TABLE IF NOT EXISTS list
+(list_ID INT NOT NULL, list_name NVARCHAR(200),
+CONSTRAINT PK_list PRIMARY KEY (list_ID) );
+
+CREATE TABLE IF NOT EXISTS list_word
+(ent_seq INT(250) NOT NULL, list_ID INT NOT NULL,
+CONSTRAINT PK_list_word PRIMARY KEY (list_ID) );
+
+ALTER TABLE word_gloss
+ADD FOREIGN KEY (ent_seq) REFERENCES JMdict(ent_seq);
+ALTER TABLE word_gloss
+ADD FOREIGN KEY (gloss_ID) REFERENCES gloss(gloss_ID);
+
+ALTER TABLE list_word
+ADD FOREIGN KEY (ent_seq) REFERENCES JMdict(ent_seq);
+ALTER TABLE list_word
+ADD FOREIGN KEY (list_ID) REFERENCES list(list_ID);
