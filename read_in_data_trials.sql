@@ -17,14 +17,12 @@ DROP TABLE jmdict;
 # CONSTRAINT PK_jmdict PRIMARY KEY (ent_seq)
 
 CREATE TABLE IF NOT EXISTS jmdict(
-  ent_seq VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL PRIMARY KEY,
-  keb VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  reb VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  # r_ele VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  pos VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  lsource VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  gloss VARCHAR(2000)  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci # english
-  # k_ele VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci 
+  ent_seq NVARCHAR(255),
+  keb NVARCHAR(255),
+  reb  NVARCHAR(255),
+  pos  NVARCHAR(255),
+  lsource  NVARCHAR(255),
+  gloss  NVARCHAR(255)
 );
 
 SHOW VARIABLES LIKE "secure_file_priv";
