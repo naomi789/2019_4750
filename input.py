@@ -37,8 +37,13 @@ class Entry( xml.sax.ContentHandler ):
             print('keb', self.keb)
         elif self.CurrentData == 'reb':
             print('reb', self.reb)
-        # also pos, lsource
+        elif self.CurrentData == 'pos':
+            print('pos', self.pos)
+        elif self.CurrentData == 'lsource':
+            print('lsource', self.lsource)
+
         # separately do ent_seq and each of the glosses
+        self.CurrentData = ''
 
     def characters(self, content):
         # if self.CurrentData == 'type':
@@ -49,8 +54,10 @@ class Entry( xml.sax.ContentHandler ):
             self.keb == content
         elif self.CurrentData == 'reb':
             self.reb == content
-        # also pos, lsource
-        # separately do ent_seq and each of the glosses
+        elif self.CurrentData == 'pos':
+            self.lsource == content
+        elif self.CurrentData == 'lsource':
+            self.lsource == content        # separately do ent_seq and each of the glosses
 
 if (__name__ == '__main__'):
     # create an XMLReader
