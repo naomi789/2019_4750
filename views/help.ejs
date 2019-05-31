@@ -81,7 +81,49 @@
 
   </div>
 
+  <div class="container">
+  <h2>FAQ</h2>
+  <p>Type your question in the input field to search the FAQ table for answers</p>
+  <input class="form-control" id="myInput" type="text" placeholder="a word or two for your question">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Answer</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>Do I need to pay? blah blah blah </td>
+        <td>blah blah blah</td>
+      </tr>
+      <tr>
+        <td>blah blah blah</td>
+        <td>blah blah blah</td>
+      </tr>
+      <tr>
+        <td>blah blah blah</td>
+        <td>blah blah blah</td>
+      </tr>
+      <tr>
+        <td>blah blah blah</td>
+        <td>blah blah blah</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
+  <script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
 
 
 <!-- Citations for codes
