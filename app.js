@@ -7,6 +7,7 @@ const app = express();
 
 const {getHomePage} = require('./routes/index');
 const {getListPage} = require('./routes/list');
+const {getSearchPage} = require('./routes/search');
 const port = 5000;
 
 //create connection
@@ -38,7 +39,15 @@ app.use(fileUpload()); // configure fileupload
 // routes for the app
 
 app.get('/', getHomePage);
+app.get('/new_search',getSearchPage);
+/*
+app.get('/new_search', function(req,res) {
+  console.log(req.query.search)
+})
+*/
 app.get('/list', getListPage);
+app.get('/search', getSearchPage);
+
 
 //app.get('/sumbit', searchWordPage);
 

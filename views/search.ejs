@@ -93,28 +93,31 @@
   </div>
 
   <div class="table-wrapper">
-      <% if (english.length > 0) {%>
+      <% if (search_results.length > 0) {%>
           <table class="table table-hovered">
               <thead class="thead-dark">
                   <tr>
-                      <th scope="col">english_word_id</th>
-                      <th scope="col">english_word_name</th>
+                      <th scope="col">Kanji</th>
+                      <th scope="col">Romaji</th>
+                      <th scope="col">Katakana</th>
+                      <th scope="col">Hiragana</th>
+                      <th scope="col">English Definition</th>
                   </tr>
               </thead>
               <tbody>
-                  <% english.forEach((word, index) => { %>
+                  <% search_results.forEach((search, index) => { %>
                       <tr>
-                          <th scope="row"><%= word.english_word_id %></th>
-
-
-                          <td><%= word.english_word_name %></td>
-
+                          <th scope="row"><%= search.kanji_symbol_name %></th>
+                          <td><%= search.romaji %></td>
+                          <td><%= search.katakana %></td>
+                          <td><%= search.hiragana %></td>
+                          <td><%= search.English_Definition %></td>
                       </tr>
                   <% }) %>
               </tbody>
           </table>
       <% } else { %>
-          <p class="text-center">No english_word found.</p>
+          <p class="text-center">No search found.</p>
       <% } %>
   </div>
 
