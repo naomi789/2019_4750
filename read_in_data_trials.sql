@@ -1,55 +1,39 @@
+CREATE DATABASE main_db DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+# or character set: utf8mb4, utf8
+# or collate to: utf8mb4_unicode_520_ci, utf8_general_ci, utf8mb4_unicode_ci, utf8mb4_unicode_520_ci
+
+
 USE main_db;
-/*kanji_symbol
-vocab_list_word
-vocab_list
-kanji_english_pair
-english_word
 
-https://stackoverflow.com/questions/8582837/load-xml-local-infile-with-inconsistent-column-names
-*/
+DROP TABLE jmdict; 
 
-/*A SQL script that creates all of your tables.
-Primary key and foreign key constraints must be included.
-Check constraints must be included as well where applicable.*/
+# This element will contain a word or short phrase in Japanese  which is written using at least one non-kana character (usually kanji, but can be other characters).
+# unique ID from Jim Breen
+# The reading element typically contains the valid readings of the word(s) in the kanji element using modern kanadzukai. 
+# Part-of-speech information about the entry/sense. Should use  appropriate entity codes. 
+# This element records the information about the source language(s) of a loan-word/gairaigo. 
+# target-language words or phrases which are equivalents to the  Japanese word
+# The kanji element, or in its absence, the reading element, is the defining component of each entry.
+# CONSTRAINT PK_jmdict PRIMARY KEY (ent_seq)
 
 CREATE TABLE IF NOT EXISTS jmdict(
-  k_ele VARCHAR(20),
-  ent_seq VARCHAR(20),
-  r_ele VARCHAR(20),
-  gloss VARCHAR(20),
-  CONSTRAINT PK_jmdict PRIMARY KEY (k_ele, gloss)
+  ent_seq NVARCHAR(255),
+  keb NVARCHAR(255),
+  reb  NVARCHAR(255),
+  pos  NVARCHAR(255),
+  lsource  NVARCHAR(255),
+  gloss  NVARCHAR(255)
 );
 
-ALTER TABLE jmdict CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+SHOW VARIABLES LIKE "secure_file_priv";
 
-/*2. SQL insert statements to fill your tables with initial data. Include enough data to show proper testing of your SQL select statements below.*/
-SHOW VARIABLES LIKE 'local_infile';
-SET GLOBAL local_infile = 1;
-LOAD XML LOCAL INFILE '/data/JMdict_e.xml'
+# LOAD XML INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/data/JMdict_e.xml"
+LOAD XML INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/data/temp.xml"
 INTO TABLE jmdict
+CHARACTER SET utf8mb4
 ROWS IDENTIFIED BY '<entry>';
 
-INSERT INTO jmdict ('行く', 12345, 'いく', 'to go, to proceed, to take place, to continue');
-INSERT INTO jmdict ('食べる', 12346, '食べる', 'to eat');
-INSERT INTO jmdict ('今日は', 12347, 'こんにちは', 'hello, good day (day time greating)');
-INSERT INTO jmdict ('林檎', 12348, 'りんご', 'apple, apple tree');
-INSERT INTO jmdict ('明るい', 12349, 'あかるい', 'bright, colorful, cheerful, familiar (with), knowledgeable (about), fair (eg politics), clean');
+DESCRIBE jmdict; 
 
-
-/*3. A SQL select statement for each table that shows all rows.*/
-SELECT * FROM jmdict;
-
-/*4. SQL select statements that use criteria to select some rows.*/
-SELECT * FROM jmdict WHERE ent_seq < 12346;
-
-/*5. SQL select statements that summarize data.
-SELECT * FROM jmdict WHERE GROUP BY*/
-
-/*6. SQL select statements that join tables for a master-detail report.*/
-
-/*7. A SQL select statement for each of your associative entities that shows the contents of your associative entities. These SQL statements must join the related tables and include some information from each table directly related to the associative entity.*/
-
-/*8. Consider creating views for the SQL selects that involve joins.*/
--- CREATE VIEW kanji_jlpt_n1 AS SELECT k_ele FROM JMdict INNER JOIN
-
-/*9. Create an in-class presentation summarizing your status report.*/
+SELECT * FROM jmdict; 
+SELECT * FROM jmdict WHERE keb IS NOT NULL; 
