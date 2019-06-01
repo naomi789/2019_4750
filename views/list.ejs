@@ -90,8 +90,12 @@
 
 
 <div class="container">
+
 <input class="form-control" id="myInput" type="text" style="width: 400px" placeholder="search lists with name">
 <br>
+
+<button type="button" class="btn btn-success">+ Add a List</button>
+
 <div class="table-wrapper">
   <br>
     <% if (lists.length > 0) {%>
@@ -102,7 +106,6 @@
                     <th scope="col">List Name</th>
                     <th scope="col">List Description</th>
                     <th scope="col">Operation</th>
-
                 </tr>
             </thead>
             <tbody id="myTable">
@@ -112,8 +115,8 @@
                         <td><%= list.vocab_list_name %></td>
                         <td></td>
                         <td>
-                              <a href="/" target="_blank" rel="noopener" class="btn btn-sm btn-info">Detail</a>
-                              <a href="/" class="btn btn-sm btn-danger">Delete</a>
+                              <a href="/" target="_blank" rel="noopener" class="btn btn-sm btn-info">≡ Detail</a>
+                              <a href="/" class="btn btn-sm btn-danger">X Delete</a>
                           </td>
                     </tr>
                 <% }) %>
