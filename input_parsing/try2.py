@@ -51,26 +51,13 @@ with open(output, 'w') as output:
             pos = sense['pos']
             gloss = sense['gloss']
             if 'lsource' in sense:
-                # print('lsource is in sense')
                 lsource = sense['lsource'][0]
-                # print('lsource is:', lsource)
-
                 if '$' in lsource:
-                    # print('$ is in lsource')
-
                     dollar_lang = lsource['$']
-                    # print('dollar_lang', dollar_lang)
-
                     if 'xml:lang' in dollar_lang:
-                        # print('xml is in dollar_lang')
                         orig_lang = dollar_lang['xml:lang']
-                        # print('orig_lang', orig_lang)
                     if '_' in lsource:
-                        # print('_ is in dollar_lang')
                         orig_word = lsource['_']
-                        # print('orig_word', orig_word)
-                    # if orig_lang is not None and orig_word is not None:
-                    #     print(orig_lang, orig_word)
 
         # sql_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
         # sql_statement += str(k_ele + '\',' + r_ele + '\',')
