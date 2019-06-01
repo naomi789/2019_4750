@@ -130,10 +130,6 @@ with open(output, 'w') as output:
             output.write(jmdict_foreign_statement)
             output.write(jmdict_statement)
 
-        else:
-            # write to jmdict_statement
-            output.write(jmdict_statement)
-
 
 
         # INSERT INTO jmdict VALUES('1000220', '明白', 'めいはく', NULL, NULL);
