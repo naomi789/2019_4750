@@ -87,20 +87,21 @@ with open(output, 'w') as output:
             output.write(finished_pos_statement)
             # TODO: write 'pos_word_statement to a file
             output.write(pos_word_statement)
-            pass
 
         gloss_statement = str('INSERT INTO gloss VALUES(\'')
+        # print('all glosses are:', gloss)
+        # print('all sense is', sense)
         for single_gloss in gloss:
-            # finished_gloss_statement = str(gloss_statement, single_gloss, ')')
-            # gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\')')
-            #
+            # print('single_gloss is', single_gloss)
+            # finished_gloss_statement = str(gloss_statement + single_gloss + ');\n')
+            # gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\');\n')
             #
             # # TODO: write 'finished_gloss_statement to a file
             # output.write(finished_pos_statement)
             # # TODO: write 'gloss_word_statement' to a file
             # output.write(gloss_word_statement)
             pass
-
+            # TODO FIX THIS
 
         if lsource is not None:
             # print('before', orig_lang, orig_word, waseieigo)
