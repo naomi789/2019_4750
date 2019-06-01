@@ -27,6 +27,7 @@ with open(output, 'w') as output:
         lsource = None
         pos = None
         gloss = None
+        lsource = None
         orig_lang = None
         orig_word = None
 
@@ -51,6 +52,9 @@ with open(output, 'w') as output:
             pos = sense['pos']
             gloss = sense['gloss']
             if 'lsource' in sense:
+                # print(lsource)
+                if lsource is not None:
+                    print(lsource)
                 lsource = sense['lsource'][0]
                 if '$' in lsource:
                     dollar_lang = lsource['$']
@@ -62,22 +66,54 @@ with open(output, 'w') as output:
 
 
 
-        sql_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
+        jmdict_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
         # print('NEXT')
         if keb is not None:
             assert(len(keb) == 1), 'looks like this is off'
-            sql_statement = str(sql_statement + keb[0] + '\',')
+            jmdict_statement = str(jmdict_statement + keb[0] + '\',')
 
         if reb is not None:
             assert(len(reb) == 1), 'idk about this'
-            sql_statement = str(sql_statement + reb[0] + '\',')
+            jmdict_statement = str(jmdict_statement + reb[0] + '\',')
 
 
-        print(pos)
-        # sql_statement += str(k_ele + '\',' + r_ele + '\',')
-        # sql_statement += str(pos + '\',' + lsource + '\'' + ');\n')
-        # sql_statement = str(ent_seq + keb + reb + pos + gloss)
-        # print(sql_statement)
+
+        pos_statement = str('INSERT INTO pos VALUES(\'')
+        for single_pos in pos:
+            pass
+            # finished_pos_statement = str(pos_statement, single_pos, ')')
+            # pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + '\')')
+            #
+            # # TODO: write 'finished_pos_statement to a file
+            # output.write(finished_pos_statement)
+            # # TODO: write 'pos_word_statement to a file
+            # output.write(pos_word_statement)
+
+        gloss_statement = str('INSERT INTO gloss VALUES(\'')
+        for single_gloss in gloss:
+            pass
+            # finished_gloss_statement = str(gloss_statement, single_gloss, ')')
+            # gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\')')
+            #
+            #
+            # # TODO: write 'finished_gloss_statement to a file
+            # output.write(finished_pos_statement)
+            # # TODO: write 'gloss_word_statement' to a file
+            # output.write(gloss_word_statement)
+
+
+        if orig_lang is not None or orig_word is not None:
+            print(lsource)
+            print(orig_lang, orig_word)
+            print('')
+
+
+
+
+        # jmdict_statement += str(k_ele + '\',' + r_ele + '\',')
+        # jmdict_statement += str(pos + '\',' + lsource + '\'' + ');\n')
+        # jmdict_statement = str(ent_seq + keb + reb + pos + gloss)
+        # print(jmdict_statement)
         # print(type(keb))
 
 
@@ -95,4 +131,4 @@ with open(output, 'w') as output:
 
 
 
-        # print(sql_statement)
+        # print(jmdict_statement)
