@@ -77,7 +77,7 @@ with open(output, 'w') as output:
 
         if reb is not None:
             assert(len(reb) == 1), 'idk about this'
-            jmdict_statement = str(jmdict_statement + reb[0] + '\');') # that's the last one
+            jmdict_statement = str(jmdict_statement + reb[0] + '\');\n') # that's the last one
             jmdict_foreign_statement = str(jmdict_statement + reb[0] + '\',')
 
 
@@ -107,21 +107,24 @@ with open(output, 'w') as output:
 
 
         if lsource is not None:
-            print('before', orig_lang, orig_word, waseieigo)
+            # print('before', orig_lang, orig_word, waseieigo)
             if orig_lang is None:
-                print('orig_lang is NULL')
+                # print('orig_lang is NULL')
                 orig_lang = 'NULL'
             if orig_word is None:
-                print('orig_word is NULL')
+                # print('orig_word is NULL')
                 orig_word = 'NULL'
             if waseieigo is None:
-                print('waseieigo is NULL')
+                # print('waseieigo is NULL')
                 waseieigo = 'NULL'
-            print('after', orig_lang, orig_word, waseieigo)
+            # print('after', orig_lang, orig_word, waseieigo)
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_lang + '\',')
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',')
-            jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');')
-
+            jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');\n')
+            output.write(jmdict_foreign_statement)
+        else:
+            # write to jmdict_statement
+            output.write(jmdict_statement)
 
 
 
@@ -130,4 +133,4 @@ with open(output, 'w') as output:
 
 
 
-        print(jmdict_statement)
+        # print(jmdict_statement)
