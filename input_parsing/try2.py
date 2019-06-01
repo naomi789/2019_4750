@@ -65,16 +65,15 @@ with open(output, 'w') as output:
         sql_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
         # print('NEXT')
         if keb is not None:
-            counter = 0
             assert(len(keb) == 1), 'looks like this is off'
+            sql_statement = str(sql_statement + keb[0] + '\',')
+
+        if reb is not None:
+            assert(len(reb) == 1), 'idk about this'
+            sql_statement = str(sql_statement + reb[0] + '\',')
 
 
-            # if len(keb) > 1:
-            #     print('MORE THAN ONE')
-
-            # for item in keb:
-            #     print(counter, keb)
-            #     counter += 1
+        print(pos)
         # sql_statement += str(k_ele + '\',' + r_ele + '\',')
         # sql_statement += str(pos + '\',' + lsource + '\'' + ');\n')
         # sql_statement = str(ent_seq + keb + reb + pos + gloss)
