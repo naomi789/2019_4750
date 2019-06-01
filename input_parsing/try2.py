@@ -77,13 +77,13 @@ with open(output, 'w') as output:
 
         if reb is not None:
             assert(len(reb) == 1), 'idk about this'
-            jmdict_statement = str(jmdict_statement + reb[0] + '\');') # that's the last one 
+            jmdict_statement = str(jmdict_statement + reb[0] + '\');') # that's the last one
             jmdict_foreign_statement = str(jmdict_statement + reb[0] + '\',')
 
 
         pos_statement = str('INSERT INTO pos VALUES(\'')
         for single_pos in pos:
-            pass
+
             # finished_pos_statement = str(pos_statement, single_pos, ')')
             # pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + '\')')
             #
@@ -91,10 +91,10 @@ with open(output, 'w') as output:
             # output.write(finished_pos_statement)
             # # TODO: write 'pos_word_statement to a file
             # output.write(pos_word_statement)
+            pass
 
         gloss_statement = str('INSERT INTO gloss VALUES(\'')
         for single_gloss in gloss:
-            pass
             # finished_gloss_statement = str(gloss_statement, single_gloss, ')')
             # gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\')')
             #
@@ -103,9 +103,21 @@ with open(output, 'w') as output:
             # output.write(finished_pos_statement)
             # # TODO: write 'gloss_word_statement' to a file
             # output.write(gloss_word_statement)
+            pass
 
 
         if lsource is not None:
+            print('before', orig_lang, orig_word, waseieigo)
+            if orig_lang is None:
+                print('orig_lang is NULL')
+                orig_lang = 'NULL'
+            if orig_word is None:
+                print('orig_word is NULL')
+                orig_word = 'NULL'
+            if waseieigo is None:
+                print('waseieigo is NULL')
+                waseieigo = 'NULL'
+            print('after', orig_lang, orig_word, waseieigo)
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_lang + '\',')
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',')
             jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');')
@@ -113,26 +125,9 @@ with open(output, 'w') as output:
 
 
 
-
-        # jmdict_statement += str(k_ele + '\',' + r_ele + '\',')
-        # jmdict_statement += str(pos + '\',' + lsource + '\'' + ');\n')
-        # jmdict_statement = str(ent_seq + keb + reb + pos + gloss)
-        # print(jmdict_statement)
-        # print(type(keb))
-
-
-        # if type(keb) is not None:
-        #     print('type(keb)', type(keb))
-        #     if keb is not []:
-        #         print('keb', keb)
-        #         if keb is not None:
-        #             output.write(str(keb[0]))
-
-        # second_statement = 'INSERT INTO word_gloss(' + ent_seq + '\','
-        # second_statement += gloss + ');'
         # INSERT INTO jmdict VALUES('1000220', '明白', 'めいはく', NULL, NULL);
         # INSERT INTO word_gloss('1000220', 'obvious')
 
 
 
-        # print(jmdict_statement)
+        print(jmdict_statement)
