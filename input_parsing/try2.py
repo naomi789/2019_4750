@@ -78,7 +78,7 @@ with open(output, 'w') as output:
         pos_statement = str('INSERT INTO pos VALUES(\'')
         for single_pos in pos:
 
-            finished_pos_statement = str(pos_statement + single_pos + ');\n')
+            finished_pos_statement = str(pos_statement + single_pos + '\');\n')
             pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + '\');\n')
 
             # TODO: write 'finished_pos_statement to a file
@@ -90,24 +90,21 @@ with open(output, 'w') as output:
         # print('all glosses are:', gloss)
         # print('all sense is', sense)
         for single_gloss in gloss:
-            # if str(single_gloss):
-            #     print(type(gloss_statement), type(single_gloss))
-            #     print(single_gloss)
-            #
-            #     finished_gloss_statement = str(gloss_statement + single_gloss + ');\n')
-            #     gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\');\n')
-            #     # TODO: write 'finished_gloss_statement to a file
-            #     output.write(finished_pos_statement)
-            #     # TODO: write 'gloss_word_statement' to a file
-            #     output.write(gloss_word_statement)
-            #     # pass
-            #     # print(single_gloss)
-            # else:
-            #     # print(single_gloss)
-            #     pass
-            # # if single_gloss is not in ['_', '$']:
-            # #     print('single_gloss is', single_gloss)
+            if not isinstance(single_gloss, collections.Mapping):
+                # print(type(gloss_statement), type(single_gloss))
+                # print(single_gloss)
 
+                finished_gloss_statement = str(gloss_statement + single_gloss + ');\n')
+                gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\');\n')
+                # TODO: write 'finished_gloss_statement to a file
+                output.write(finished_pos_statement)
+                # TODO: write 'gloss_word_statement' to a file
+                output.write(gloss_word_statement)
+
+            # note that we're ignoring the else
+            # else:
+            #     print(single_gloss)
+            # TODO: add the '_' val as a gloss (tabun)
 
             pass
             # TODO FIX THIS
