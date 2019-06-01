@@ -31,6 +31,9 @@ class Entry( xml.sax.ContentHandler ):
     def endElement(self, tag):
         # if self.CurrentData == 'entry':
         #     print('type', self.type) # this should also break
+        # if self.CurrentData == 'entry':
+        #     print('entry', self.CurrentData)
+        # el
         if self.CurrentData == 'ent_seq':
             print('ent_seq', self.ent_seq)
         elif self.CurrentData == 'keb':
@@ -58,6 +61,7 @@ class Entry( xml.sax.ContentHandler ):
             self.lsource == content
         elif self.CurrentData == 'lsource':
             self.lsource == content        # separately do ent_seq and each of the glosses
+        print('content', content)
 
 if (__name__ == '__main__'):
     # create an XMLReader

@@ -20,7 +20,7 @@ class MovieHandler( xml.sax.ContentHandler ):
          print ("INSERT INTO jmdict VALUES(")
          print ("*****Movie*****")
          title = attributes["title"]
-         title = s.encode()
+         title = title.encode()
          print ("Title:", title.decode('utf-8'))
 
    # Call when an elements ends

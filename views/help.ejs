@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dictionary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+    }
+    .jumbotron {
+      background-image: url('https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009__340.jpg');
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+    }
+    .logo {
+      color: #f4511e;
+      font-size: 200px;
+    }
+    .navbar {
+      margin-bottom: 0;
+      background-image: url('https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009__340.jpg');
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+    .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+    }
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#myPage">Dictionary</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">WORD</a></li>
+          <li><a href="list">LIST</a></li>
+          <li><a href="help">HELP</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <h1>FAQ Center</h1>
+
+
+  </div>
+
+  <div class="container">
+  <h2>FAQ</h2>
+  <p>Type your question in the input field to search the FAQ table for answers</p>
+  <input class="form-control" id="myInput" type="text" placeholder="a word or two that describe your question">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Answer</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>Do I need to pay? blah blah blah Do I need to pay? blah blah blah Do I need to pay? blah blah blah Do I need to pay? blah blah blah Do I need to pay? blah blah blah </td>
+        <td>blah blah blah</td>
+      </tr>
+      <tr>
+        <td>blah blah blah</td>
+        <td>blah blah blah Do I need to pay? blah blah blah Do I need to pay? blah blah blah Do I need to pay? blah blah blah</td>
+      </tr>
+      <tr>
+        <td>blah blah blah</td>
+        <td>blah blah blah</td>
+      </tr>
+      <tr>
+        <td>blah blah blah</td>
+        <td>blah blah blah</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
+
+
+<!-- Citations for codes
+Citation 1:Theme Used
+Titile: Bootstrap Theme "Company"
+Author: w3school
+Availability: w3school.com
+
+Citation 2:Filter script
+Titile: Filter Lists
+Author: w3school
+Availability: w3school.com
+
+Citation 3:FAQ Section
+Titile: Boostrap FAQ Accordion
+Author: MTaqi
+Availability: bootsnipp.com
+
+-->
+
+<!-- Citations for images used
+Citation 1:Index Navigation bar and Jumbotron Image
+Titile: Japanese Umbrellas
+Author: DeltaWorks
+License: Pixabay License (Free for commercial use)
+Availability: Pixabay.com
+
+-->
+</body>
+</html>
