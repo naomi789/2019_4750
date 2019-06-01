@@ -30,6 +30,7 @@ with open(output, 'w') as output:
         lsource = None
         orig_lang = None
         orig_word = None
+        waseieigo = None
 
 
         # print(counter, entry)
@@ -53,29 +54,31 @@ with open(output, 'w') as output:
             gloss = sense['gloss']
             if 'lsource' in sense:
                 # print(lsource)
-                if lsource is not None:
-                    print(lsource)
+                # if lsource is not None:
+                #     # print(lsource)
                 lsource = sense['lsource'][0]
                 if '$' in lsource:
                     dollar_lang = lsource['$']
-                    if 'xml:lang' in dollar_lang:
-                        orig_lang = dollar_lang['xml:lang']
                     if '_' in lsource:
                         orig_word = lsource['_']
 
+                    if 'ls_wasei' in dollar_lang:
+                        waseieigo = dollar_lang['ls_wasei']
+                    if 'xml:lang' in dollar_lang:
+                        orig_lang = dollar_lang['xml:lang']
 
 
-
+        jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + ent_seq + '\',')
         jmdict_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
-        # print('NEXT')
         if keb is not None:
             assert(len(keb) == 1), 'looks like this is off'
             jmdict_statement = str(jmdict_statement + keb[0] + '\',')
+            jmdict_foreign_statement = str(jmdict_statement + keb[0] + '\',')
 
         if reb is not None:
             assert(len(reb) == 1), 'idk about this'
-            jmdict_statement = str(jmdict_statement + reb[0] + '\',')
-
+            jmdict_statement = str(jmdict_statement + reb[0] + '\');') # that's the last one 
+            jmdict_foreign_statement = str(jmdict_statement + reb[0] + '\',')
 
 
         pos_statement = str('INSERT INTO pos VALUES(\'')
@@ -102,10 +105,11 @@ with open(output, 'w') as output:
             # output.write(gloss_word_statement)
 
 
-        if orig_lang is not None or orig_word is not None:
-            print(lsource)
-            print(orig_lang, orig_word)
-            print('')
+        if lsource is not None:
+            jmdict_foreign_statement = str(jmdict_foreign_statement + orig_lang + '\',')
+            jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',')
+            jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');')
+
 
 
 
