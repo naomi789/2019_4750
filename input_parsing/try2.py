@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import json
+import collections
 
 json_file = './JMdict_e.xml.json'
 # json_file = './examp_6.json'
@@ -92,14 +93,25 @@ with open(output, 'w') as output:
         # print('all glosses are:', gloss)
         # print('all sense is', sense)
         for single_gloss in gloss:
-            # print('single_gloss is', single_gloss)
-            # finished_gloss_statement = str(gloss_statement + single_gloss + ');\n')
-            # gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\');\n')
-            #
-            # # TODO: write 'finished_gloss_statement to a file
-            # output.write(finished_pos_statement)
-            # # TODO: write 'gloss_word_statement' to a file
-            # output.write(gloss_word_statement)
+            if str(single_gloss):
+                print(type(gloss_statement), type(single_gloss))
+                print(single_gloss)
+
+                finished_gloss_statement = str(gloss_statement + single_gloss + ');\n')
+                gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\');\n')
+                # TODO: write 'finished_gloss_statement to a file
+                output.write(finished_pos_statement)
+                # TODO: write 'gloss_word_statement' to a file
+                output.write(gloss_word_statement)
+                # pass
+                # print(single_gloss)
+            else:
+                # print(single_gloss)
+                pass
+            # if single_gloss is not in ['_', '$']:
+            #     print('single_gloss is', single_gloss)
+
+
             pass
             # TODO FIX THIS
 
