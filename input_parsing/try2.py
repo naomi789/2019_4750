@@ -32,7 +32,6 @@ with open(output, 'w') as output:
         orig_word = None
         waseieigo = None
 
-
         # print(counter, entry)
         ent_seq = entry['ent_seq'] # this ALWAYS exists
         ent_seq = ent_seq[0] # there can only be one, therefore always zeroth
@@ -53,9 +52,6 @@ with open(output, 'w') as output:
             pos = sense['pos']
             gloss = sense['gloss']
             if 'lsource' in sense:
-                # print(lsource)
-                # if lsource is not None:
-                #     # print(lsource)
                 lsource = sense['lsource'][0]
                 if '$' in lsource:
                     dollar_lang = lsource['$']
@@ -84,13 +80,13 @@ with open(output, 'w') as output:
         pos_statement = str('INSERT INTO pos VALUES(\'')
         for single_pos in pos:
 
-            # finished_pos_statement = str(pos_statement, single_pos, ')')
-            # pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + '\')')
-            #
-            # # TODO: write 'finished_pos_statement to a file
-            # output.write(finished_pos_statement)
-            # # TODO: write 'pos_word_statement to a file
-            # output.write(pos_word_statement)
+            finished_pos_statement = str(pos_statement + single_pos + ');\n')
+            pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + '\');\n')
+
+            # TODO: write 'finished_pos_statement to a file
+            output.write(finished_pos_statement)
+            # TODO: write 'pos_word_statement to a file
+            output.write(pos_word_statement)
             pass
 
         gloss_statement = str('INSERT INTO gloss VALUES(\'')
