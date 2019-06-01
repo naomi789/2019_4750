@@ -69,8 +69,8 @@ with open(output, 'w') as output:
                         # print('_ is in dollar_lang')
                         orig_word = lsource['_']
                         # print('orig_word', orig_word)
-                    if orig_lang is not None and orig_word is not None:
-                        print(orig_lang, orig_word)
+                    # if orig_lang is not None and orig_word is not None:
+                    #     print(orig_lang, orig_word)
 
         # sql_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
         # sql_statement += str(k_ele + '\',' + r_ele + '\',')
