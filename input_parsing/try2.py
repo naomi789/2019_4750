@@ -59,16 +59,28 @@ with open(output, 'w') as output:
                     if '_' in lsource:
                         orig_word = lsource['_']
 
-        # sql_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
+
+
+
+        sql_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
+        # print('NEXT')
+        if keb is not None:
+            counter = 0
+            assert(len(keb) == 1), 'looks like this is off'
+
+
+            # if len(keb) > 1:
+            #     print('MORE THAN ONE')
+
+            # for item in keb:
+            #     print(counter, keb)
+            #     counter += 1
         # sql_statement += str(k_ele + '\',' + r_ele + '\',')
         # sql_statement += str(pos + '\',' + lsource + '\'' + ');\n')
         # sql_statement = str(ent_seq + keb + reb + pos + gloss)
         # print(sql_statement)
         # print(type(keb))
 
-        if lsource is not None:
-            # print(lsource)
-            pass
 
         # if type(keb) is not None:
         #     print('type(keb)', type(keb))
@@ -81,3 +93,7 @@ with open(output, 'w') as output:
         # second_statement += gloss + ');'
         # INSERT INTO jmdict VALUES('1000220', '明白', 'めいはく', NULL, NULL);
         # INSERT INTO word_gloss('1000220', 'obvious')
+
+
+
+        # print(sql_statement)
