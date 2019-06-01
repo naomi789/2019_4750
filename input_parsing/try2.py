@@ -4,46 +4,51 @@
 import json
 
 # json_file = './JMdict_e.xml.json'
-json_file = './examp_3.json'
+json_file = './examp_1.json'
 
 # with open(json_file, 'r') as file:
 #     data = file.read().replace('\n', '')
 
-
 with open(json_file, 'r') as file:
     all_data = file.read()
 
-print(all_data)
+# print('all_data:', all_data)
 all_data = json.loads(all_data)
 
 
 counter = 0
 for entry in all_data:
-    # ent_seq = all_data['ent_seq'] # this ALWAYS exists
-    # print(ent_seq)
-    # print(counter, entry, entry[entry])
-    # 0 is ent_seq
-    # 1 is k_ele
-    # 2 is r_ele
-    # 3 is sense
-    # if entry == 'ent_seq':
-        # print(entry['ent_seq'])
-    # keb = entry[0]
-    # reb = entry[0]
-
     ent_seq = None
-    keb = None
     reb = None
+    keb = None
     sense = None
     lsource = None
     pos = None
     gloss = None
 
-    # print(reb)
-    # print(counter, entry, all_data[entry])
 
+    # print(counter, entry)
+    ent_seq = entry['ent_seq'] # this ALWAYS exists
 
+    r_ele = entry['r_ele'] # an object
+    r_ele = r_ele[0]
+    reb = r_ele['reb']
 
+    k_ele = entry['k_ele'] # an object
+    k_ele = k_ele[0]
+    keb = k_ele['keb']
+
+    sense = entry['sense'] # an object
+    sense = sense[0]
+    # pos = sense['pos']
+    # gloss = sense['gloss']
+    # lsource = sense['lsource']
+
+    # keb = entry['']
+    sense = None
+    lsource = None
+    pos = None
+    gloss = None
 
 
     counter += 1
