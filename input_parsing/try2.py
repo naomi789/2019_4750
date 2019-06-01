@@ -3,8 +3,10 @@
 
 import json
 
-# json_file = './JMdict_e.xml.json'
-json_file = './examp_1.json'
+json_file = './JMdict_e.xml.json'
+# json_file = './examp_6.json'
+
+output = 'create.sql'
 
 # with open(json_file, 'r') as file:
 #     data = file.read().replace('\n', '')
@@ -16,41 +18,79 @@ with open(json_file, 'r') as file:
 all_data = json.loads(all_data)
 
 
-counter = 0
-for entry in all_data:
-    ent_seq = None
-    reb = None
-    keb = None
-    sense = None
-    lsource = None
-    pos = None
-    gloss = None
+with open(output, 'w') as output:
+    for entry in all_data:
+        ent_seq = None
+        reb = None
+        keb = None
+        sense = None
+        lsource = None
+        pos = None
+        gloss = None
+        orig_lang = None
+        orig_word = None
 
 
-    # print(counter, entry)
-    ent_seq = entry['ent_seq'] # this ALWAYS exists
+        # print(counter, entry)
+        ent_seq = entry['ent_seq'] # this ALWAYS exists
+        ent_seq = ent_seq[0] # there can only be one, therefore always zeroth
 
-    r_ele = entry['r_ele'] # an object
-    r_ele = r_ele[0]
-    reb = r_ele['reb']
+        r_ele = entry['r_ele'] # an object
+        r_ele = r_ele[0]
+        reb = r_ele['reb']
 
-    k_ele = entry['k_ele'] # an object
-    k_ele = k_ele[0]
-    keb = k_ele['keb']
+        if 'k_ele' in entry:
+            # print(True)
+            k_ele = entry['k_ele'] # an object, MAY NOT EXIST
+            k_ele = k_ele[0]
+            keb = k_ele['keb']
 
-    sense = entry['sense'] # an object
-    sense = sense[0]
-    # pos = sense['pos']
-    # gloss = sense['gloss']
-    # lsource = sense['lsource']
+        if 'sense' in entry:
+            sense = entry['sense'] # an object
+            sense = sense[0]
+            pos = sense['pos']
+            gloss = sense['gloss']
+            if 'lsource' in sense:
+                # print('lsource is in sense')
+                lsource = sense['lsource'][0]
+                # print('lsource is:', lsource)
 
-    # sql_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
-    # sql_statement += str(k_ele + '\',' + r_ele + '\',')
-    # sql_statement += str(pos + '\',' + lsource + '\'' + ');\n')
-    print(ent_seq, keb, reb, pos)
+                if '$' in lsource:
+                    # print('$ is in lsource')
 
+                    dollar_lang = lsource['$']
+                    # print('dollar_lang', dollar_lang)
 
-    # second_statement = 'INSERT INTO word_gloss(' + ent_seq + '\','
-    # second_statement += gloss + ');'
-    # INSERT INTO jmdict VALUES('1000220', '明白', 'めいはく', NULL, NULL);
-    # INSERT INTO word_gloss('1000220', 'obvious')
+                    if 'xml:lang' in dollar_lang:
+                        # print('xml is in dollar_lang')
+                        orig_lang = dollar_lang['xml:lang']
+                        # print('orig_lang', orig_lang)
+                    if '_' in lsource:
+                        # print('_ is in dollar_lang')
+                        orig_word = lsource['_']
+                        # print('orig_word', orig_word)
+                    if orig_lang is not None and orig_word is not None:
+                        print(orig_lang, orig_word)
+
+        # sql_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
+        # sql_statement += str(k_ele + '\',' + r_ele + '\',')
+        # sql_statement += str(pos + '\',' + lsource + '\'' + ');\n')
+        # sql_statement = str(ent_seq + keb + reb + pos + gloss)
+        # print(sql_statement)
+        # print(type(keb))
+
+        if lsource is not None:
+            # print(lsource)
+            pass
+
+        # if type(keb) is not None:
+        #     print('type(keb)', type(keb))
+        #     if keb is not []:
+        #         print('keb', keb)
+        #         if keb is not None:
+        #             output.write(str(keb[0]))
+
+        # second_statement = 'INSERT INTO word_gloss(' + ent_seq + '\','
+        # second_statement += gloss + ');'
+        # INSERT INTO jmdict VALUES('1000220', '明白', 'めいはく', NULL, NULL);
+        # INSERT INTO word_gloss('1000220', 'obvious')
