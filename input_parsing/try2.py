@@ -65,17 +65,14 @@ with open(output, 'w') as output:
                         orig_lang = dollar_lang['xml:lang']
 
 
-        jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + ent_seq + '\',')
         jmdict_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
         if keb is not None:
             assert(len(keb) == 1), 'looks like this is off'
             jmdict_statement = str(jmdict_statement + keb[0] + '\',')
-            jmdict_foreign_statement = str(jmdict_statement + keb[0] + '\',')
 
         if reb is not None:
             assert(len(reb) == 1), 'idk about this'
             jmdict_statement = str(jmdict_statement + reb[0] + '\');\n') # that's the last one
-            jmdict_foreign_statement = str(jmdict_statement + reb[0] + '\',')
 
 
         pos_statement = str('INSERT INTO pos VALUES(\'')
@@ -93,23 +90,23 @@ with open(output, 'w') as output:
         # print('all glosses are:', gloss)
         # print('all sense is', sense)
         for single_gloss in gloss:
-            if str(single_gloss):
-                print(type(gloss_statement), type(single_gloss))
-                print(single_gloss)
-
-                finished_gloss_statement = str(gloss_statement + single_gloss + ');\n')
-                gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\');\n')
-                # TODO: write 'finished_gloss_statement to a file
-                output.write(finished_pos_statement)
-                # TODO: write 'gloss_word_statement' to a file
-                output.write(gloss_word_statement)
-                # pass
-                # print(single_gloss)
-            else:
-                # print(single_gloss)
-                pass
-            # if single_gloss is not in ['_', '$']:
-            #     print('single_gloss is', single_gloss)
+            # if str(single_gloss):
+            #     print(type(gloss_statement), type(single_gloss))
+            #     print(single_gloss)
+            #
+            #     finished_gloss_statement = str(gloss_statement + single_gloss + ');\n')
+            #     gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\');\n')
+            #     # TODO: write 'finished_gloss_statement to a file
+            #     output.write(finished_pos_statement)
+            #     # TODO: write 'gloss_word_statement' to a file
+            #     output.write(gloss_word_statement)
+            #     # pass
+            #     # print(single_gloss)
+            # else:
+            #     # print(single_gloss)
+            #     pass
+            # # if single_gloss is not in ['_', '$']:
+            # #     print('single_gloss is', single_gloss)
 
 
             pass
@@ -127,10 +124,12 @@ with open(output, 'w') as output:
                 # print('waseieigo is NULL')
                 waseieigo = 'NULL'
             # print('after', orig_lang, orig_word, waseieigo)
-            jmdict_foreign_statement = str(jmdict_foreign_statement + orig_lang + '\',')
+            jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + orig_lang + '\',')
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',')
             jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');\n')
             output.write(jmdict_foreign_statement)
+            output.write(jmdict_statement)
+
         else:
             # write to jmdict_statement
             output.write(jmdict_statement)
