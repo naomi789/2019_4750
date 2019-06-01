@@ -50,25 +50,6 @@ for entry in all_data:
     pos = None
     gloss = None
 
-
-    counter += 1
-    # for subentry in entry:
-    #     print(subentry, counter)
-
-    # for key, value in entry.iteritems():
-    #     print('key', key, 'val', value)
-    # ent_seq = entry['ent_seq']
-    # print(ent_seq)
-
-
-
-    # if 'ent_seq' in entry: ent_seq = entry['ent_seq']
-    # if 'r_ele' in entry: r_ele = entry['r_ele']
-    # if 'k_ele' in entry: k_ele = entry['k_ele']
-    # if 'sense' in entry: sense = entry['sense']
-    # if 'pos' in entry: pos = entry['pos']
-    # gloss =  None# temp solution
-    #
     # sql_statement = 'INSERT INTO jmdict VALUES(\'' + ent_seq + '\','
     # sql_statement += k_ele + '\',' + r_ele + '\','
     # sql_statement += pos + '\',' + lsource + '\'' + ');\n'
