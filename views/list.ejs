@@ -112,6 +112,7 @@
   <div class="select">
   <select class="form-control" id="locale">
     <option value="en-US" selected>en-US</option>
+
     <option value="ja-JP">ja-JP</option>
   </select>
 </div>
@@ -214,46 +215,46 @@
       height: 550,
       locale: $('#locale').val(),
       columns: [
-        [{
-          field: 'state',
-          checkbox: true,
-          rowspan: 2,
-          align: 'center',
-          valign: 'middle'
-        }, {
-          title: 'Item ID',
-          field: 'id',
-          rowspan: 2,
-          align: 'center',
-          valign: 'middle',
-          sortable: true,
-          footerFormatter: totalTextFormatter
-        }, {
-          title: 'Item Detail',
-          colspan: 3,
-          align: 'center'
-        }],
-        [{
-          field: 'name',
-          title: 'Item Name',
-          sortable: true,
-          footerFormatter: totalNameFormatter,
-          align: 'center'
-        }, {
-          field: 'price',
-          title: 'Item Price',
-          sortable: true,
-          align: 'center',
-          footerFormatter: totalPriceFormatter
-        }, {
-          field: 'operate',
-          title: 'Item Operate',
-          align: 'center',
-          events: window.operateEvents,
-          formatter: operateFormatter
-        }]
-      ]
-    })
+              [{
+                field: 'state',
+                checkbox: true,
+                rowspan: 2,
+                align: 'center',
+                valign: 'middle'
+              }, {
+                title: 'List ID',
+                field: 'id',
+                rowspan: 2,
+                align: 'center',
+                valign: 'middle',
+                sortable: true,
+                footerFormatter: totalTextFormatter
+              }, {
+                title: 'List Detail',
+                colspan: 3,
+                align: 'center'
+              }],
+              [{
+                field: 'name',
+                title: 'List Name',
+                sortable: true,
+                footerFormatter: totalNameFormatter,
+                align: 'center'
+              }, {
+                field: 'price',
+                title: 'List Description',
+                sortable: true,
+                align: 'center',
+                footerFormatter: totalPriceFormatter
+              }, {
+                field: 'operate',
+                title: 'List Operate',
+                align: 'center',
+                events: window.operateEvents,
+                formatter: operateFormatter
+              }]
+            ]
+          })
     $table.on('check.bs.table uncheck.bs.table ' +
       'check-all.bs.table uncheck-all.bs.table',
     function () {
