@@ -44,16 +44,10 @@ for entry in all_data:
     # gloss = sense['gloss']
     # lsource = sense['lsource']
 
-    # keb = entry['']
-    sense = None
-    lsource = None
-    pos = None
-    gloss = None
-
-    # sql_statement = 'INSERT INTO jmdict VALUES(\'' + ent_seq + '\','
-    # sql_statement += k_ele + '\',' + r_ele + '\','
-    # sql_statement += pos + '\',' + lsource + '\'' + ');\n'
-    # output.write(sql_statement)
+    # sql_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
+    # sql_statement += str(k_ele + '\',' + r_ele + '\',')
+    # sql_statement += str(pos + '\',' + lsource + '\'' + ');\n')
+    print(ent_seq, keb, reb, pos)
 
 
     # second_statement = 'INSERT INTO word_gloss(' + ent_seq + '\','
