@@ -4,49 +4,23 @@
 import json
 
 # json_file = './JMdict_e.xml.json'
-json_file = './example.json'
+json_file = './examp_3.json'
 
 # with open(json_file, 'r') as file:
 #     data = file.read().replace('\n', '')
 
 
 with open(json_file, 'r') as file:
-    all_data = json.loads(file.read())
-    # print(all_data)
+    all_data = file.read()
 
-
-# j = json.load("{
-#    "one":"1",
-#    "two":"2",
-#    "three":"3",
-#    "four":[
-#       0,
-#       1,
-#       2,
-#       3,
-#       4
-#    ],
-#    "five":[
-#       {
-#          "reb":[
-#             "おはようございます"
-#          ],
-#          "re_pri":[
-#             "spec1"
-#          ]
-#       }
-#    ]
-# }")
-# j_string = json.loads('{"one" : "1", "two" : "2", "three" : "3"}')
-# j = json.load('{"one" : "1", "two" : "2", "three" : "3"}')
-# print(all_data['ent_seq'])
-# print(j_string['four'])
+print(all_data)
+all_data = json.loads(all_data)
 
 
 counter = 0
 for entry in all_data:
-    ent_seq = all_data['ent_seq'] # this ALWAYS exists
-    print(ent_seq)
+    # ent_seq = all_data['ent_seq'] # this ALWAYS exists
+    # print(ent_seq)
     # print(counter, entry, entry[entry])
     # 0 is ent_seq
     # 1 is k_ele
@@ -54,8 +28,8 @@ for entry in all_data:
     # 3 is sense
     # if entry == 'ent_seq':
         # print(entry['ent_seq'])
-    keb = entry[0]
-    reb = entry[0]
+    # keb = entry[0]
+    # reb = entry[0]
 
     ent_seq = None
     keb = None
