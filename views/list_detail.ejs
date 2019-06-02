@@ -94,7 +94,7 @@
   </div>
 
   <div class="table-wrapper">
-      <% if (lists_words.length > 0) {%>
+      <% if (list_words.length > 0) {%>
           <table class="table table-hovered">
               <thead class="thead-dark">
                   <tr>
@@ -109,7 +109,7 @@
                   </tr>
               </thead>
               <tbody>
-                  <% lists_words.forEach((list, index) => { %>
+                  <% list_words.forEach((list, index) => { %>
                       <tr>
                           <th scope="row"><%= list.vocab_list_name %></th>
                           <td><%= list.vocab_list_id %></td>

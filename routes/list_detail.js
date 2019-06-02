@@ -1,6 +1,7 @@
 module.exports = {
     getListDetailPage: (req, res) => {
-        let query = "SELECT * FROM vocab_list WHERE vocab_list_id = " + "'" + req.params.vocab_list_id + "'"; // query database to get all the players
+        console.log("SELECT * FROM vocab_list WHERE vocab_list_id = " + "'" + req.params.vocab_list_id + "'")
+        let query = "SELECT * FROM vocab_list"; // query database to get all the players
 
         // execute query
         db.query(query, (err, result) => {
