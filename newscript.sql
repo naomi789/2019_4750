@@ -19,12 +19,12 @@ CREATE TABLE IF NOT EXISTS gloss_word
 CONSTRAINT PK_gloss_word PRIMARY KEY (ent_seq, gloss_ID) );
 
 CREATE TABLE IF NOT EXISTS list
-(list_ID VARCHAR(36) NOT NULL, list_name NVARCHAR(200), list_description NVARCHAR(2000),
-CONSTRAINT PK_list PRIMARY KEY (list_ID) );
+(list_name NVARCHAR(200) NOT NULL, list_description NVARCHAR(2000),
+CONSTRAINT PK_list PRIMARY KEY (list_name) );
 
 CREATE TABLE IF NOT EXISTS list_word
-(ent_seq INT NOT NULL, list_ID VARCHAR(36) NOT NULL,
-CONSTRAINT PK_list_word PRIMARY KEY (list_ID) );
+(ent_seq INT NOT NULL, list_name VARCHAR(36) NOT NULL,
+CONSTRAINT PK_list_word PRIMARY KEY (list_name) );
 
 CREATE TABLE IF NOT EXISTS pos(
 pos_ID VARCHAR(36) NOT NULL, 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS JMdict_foreign(
 ent_seq INT NOT NULL,
 orig_lang NVARCHAR(200),
 orig_word NVARCHAR(200),
-waseigo NVARCHAR(7),
+waseieigo NVARCHAR(9),
 CONSTRAINT PK_JMdict_foreign PRIMARY KEY (ent_seq)
 );
 
