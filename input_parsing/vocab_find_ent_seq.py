@@ -39,6 +39,8 @@ def do_everything(list_id, list_name, list_description, input_file_name, output_
 
     with open(output_file_name, 'w') as output:
         output.write('USE main_db;\n')
+        output.write(str('INSERT INTO list VALUES(\'' + list_id + '\',\'' + list_name + '\',\'' + list_description + '\');\n'))
+
         for entry in all_data:
             entry_list = [x.strip() for x in entry.split(',')]
             # 0 = peter's id
@@ -68,10 +70,13 @@ def do_everything(list_id, list_name, list_description, input_file_name, output_
                         # then it's a match
                         print('match!')
                         output.write(str('INSERT INTO list_word VALUES(\'' + ent_seq + '\',\'' + list_id + '\');\n'))
-                        output.write(str('INSERT INTO list VALUES(\'' + list_id + '\',' + list_name + '\',\'' + list_description + '\');\n'))
+                        # output.write(str('INSERT INTO list VALUES(\'' + list_id + '\',' + list_name + '\',\'' + list_description + '\');\n'))
                 else:
                     if entry_list[1] == jim_reading:
                         # then it's a match
                         print('match!')
                         output.write(str('INSERT INTO list_word VALUES(\'' + ent_seq + '\',\'' + list_id + '\');\n'))
-                        output.write(str('INSERT INTO list VALUES(\'' + list_id + '\',' + list_name + '\',\'' + list_description + '\');\n'))
+                        # output.write(str('INSERT INTO list VALUES(\'' + list_id + '\',' + list_name + '\',\'' + list_description + '\');\n'))
+
+
+main()
