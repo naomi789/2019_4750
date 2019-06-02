@@ -6,7 +6,8 @@ import collections
 import uuid
 
 json_file = '../data/JMdict_e/JMdict_e.json'
-output = 'jmdict_create.sql'
+# output = 'jmdict_no_bridges_create.sql'
+output = 'jmdict_bridges_only_create.sql'
 
 
 with open(json_file, 'r') as file:
@@ -77,7 +78,7 @@ with open(output, 'w') as output:
             finished_pos_statement = str(pos_statement + pos_id + '\',\'' + single_pos + '\');\n')
             pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + '\',\'' + pos_id + '\');\n')
             output.write(finished_pos_statement)
-            output.write(pos_word_statement)
+            # output.write(pos_word_statement) # TODO!!!
 
         gloss_statement = 'INSERT INTO gloss VALUES(\''
         for single_gloss in gloss:
@@ -89,7 +90,7 @@ with open(output, 'w') as output:
                 finished_gloss_statement = str(gloss_statement + gloss_id + '\',\'' + key_from_dict_gloss + ');\n')
 
             gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\',\'' + gloss_id + '\');\n')
-            output.write(gloss_word_statement)
+            # output.write(gloss_word_statement) # TODO!!!
             output.write(finished_gloss_statement)
 
         if lsource is not None:
