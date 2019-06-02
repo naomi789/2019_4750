@@ -31,7 +31,6 @@ with open(output, 'w') as output:
         orig_word = None
         waseieigo = None
 
-        # print(counter, entry)
         ent_seq = entry['ent_seq'] # this ALWAYS exists
         ent_seq = ent_seq[0] # there can only be one, therefore always zeroth
 
@@ -40,7 +39,6 @@ with open(output, 'w') as output:
         reb = r_ele['reb']
 
         if 'k_ele' in entry:
-            # print(True)
             k_ele = entry['k_ele'] # an object, MAY NOT EXIST
             k_ele = k_ele[0]
             keb = k_ele['keb']
@@ -85,27 +83,20 @@ with open(output, 'w') as output:
             output.write(pos_word_statement)
 
         gloss_statement = str('INSERT INTO gloss VALUES(\'')
-        # print('all glosses are:', gloss)
-        # print('all sense is', sense)
+
         for single_gloss in gloss:
             if not isinstance(single_gloss, collections.Mapping):
-                # print(type(gloss_statement), type(single_gloss))
-                # print(single_gloss)
-
                 finished_gloss_statement = str(gloss_statement + single_gloss + ');\n')
-                gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\');\n')
-                # TODO: write 'finished_gloss_statement to a file
-                output.write(finished_pos_statement)
-                # TODO: write 'gloss_word_statement' to a file
-                output.write(gloss_word_statement)
+            else: # these are probably exclusively for 'lsource' words?? Not 100% sure why this is different...
+                key_from_dict_gloss = single_gloss['_']
+                # print(key_from_dict_gloss)
+                finished_gloss_statement = str(gloss_statement + key_from_dict_gloss + ');\n')
 
-            # note that we're ignoring the else
-            # else:
-            #     print(single_gloss)
-            # TODO: add the '_' val as a gloss (tabun)
-
-            pass
-            # TODO FIX THIS
+            gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\');\n')
+            # TODO: write 'finished_gloss_statement to a file
+            output.write(finished_gloss_statement)
+            # TODO: write 'gloss_word_statement' to a file
+            output.write(gloss_word_statement)
 
         if lsource is not None:
             # print('before', orig_lang, orig_word, waseieigo)
