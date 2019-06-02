@@ -44,6 +44,9 @@ with open(output, 'w') as output:
             k_ele = entry['k_ele'] # an object, MAY NOT EXIST
             k_ele = k_ele[0]
             keb = k_ele['keb']
+        # TODO: should I care about this??
+        # else:
+        #     assert(False, 'something... is... something...')
 
         if 'sense' in entry:
             sense = entry['sense'] # an object
@@ -119,4 +122,4 @@ with open(output, 'w') as output:
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');\n')
             output.write(jmdict_foreign_statement) # NOT a bridge
-            output.write(jmdict_statement) # NOT a bridge
+        output.write(jmdict_statement) # NOT a bridge
