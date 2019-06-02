@@ -20,6 +20,7 @@ all_data = json.loads(all_data)
 
 
 with open(output, 'w') as output:
+    output.write('USE main_db;\n')
     for entry in all_data:
         ent_seq = None
         reb = None
