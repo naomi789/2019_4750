@@ -1,3 +1,4 @@
+DROP DATABASE main_db;
 CREATE DATABASE main_db;
 USE main_db;
 
@@ -30,6 +31,7 @@ pos_ID VARCHAR(36) NOT NULL,
 pos_type NVARCHAR(100),
 CONSTRAINT PK_pos PRIMARY KEY (pos_ID)
 );
+
 
 CREATE TABLE IF NOT EXISTS pos_word(
 ent_seq INT NOT NULL, 
