@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS JMdict_foreign(
 ent_seq INT NOT NULL,
 orig_lang NVARCHAR(200),
 orig_word NVARCHAR(200),
-waseigo BOOLEAN,
+waseigo NVARCHAR(7),
 CONSTRAINT PK_JMdict_foreign PRIMARY KEY (ent_seq)
 );
 
