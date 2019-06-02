@@ -96,12 +96,18 @@ with open(output, 'w') as output:
             output.write(finished_gloss_statement) # NOT a bridge
 
         if lsource is not None:
+            # print(waseieigo)
             if orig_lang is None:
                 orig_lang = 'NULL'
             if orig_word is None:
                 orig_word = 'NULL'
             if waseieigo is None:
-                waseieigo = 'NULL'
+                waseieigo = ''
+            elif waseieigo == 'y':
+                waseieigo = 'waseieigo'
+            else:
+                assert(False, 'something bad might\'ve happened')
+
             jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + ent_seq + '\', \'' + orig_lang + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');\n')
