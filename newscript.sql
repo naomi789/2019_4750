@@ -11,7 +11,7 @@ CONSTRAINT PK_JMdict PRIMARY KEY (ent_seq)
 );
 
 CREATE TABLE IF NOT EXISTS gloss
-(gloss_ID VARCHAR(36) NOT NULL, gloss_def NVARCHAR(300), 
+(gloss_ID VARCHAR(36) NOT NULL, gloss_def NVARCHAR(2000), 
 CONSTRAINT PK_gloss PRIMARY KEY (gloss_ID) );
 
 CREATE TABLE IF NOT EXISTS gloss_word
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS JMdict_foreign(
 ent_seq INT NOT NULL,
 orig_lang NVARCHAR(200),
 orig_word NVARCHAR(200),
-waseieigo NVARCHAR(13),
+waseieigo NVARCHAR(20),
 CONSTRAINT PK_JMdict_foreign PRIMARY KEY (ent_seq)
 );
 
