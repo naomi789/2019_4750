@@ -5,8 +5,8 @@ import json
 import collections
 import uuid
 
-json_file = '../data/JMdict_e.json'
-output = 'create.sql'
+json_file = '../data/JMdict_e/JMdict_e.json'
+output = 'jmdict_create.sql'
 
 
 with open(json_file, 'r') as file:
