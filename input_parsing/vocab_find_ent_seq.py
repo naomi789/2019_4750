@@ -29,7 +29,6 @@ with open(output_file_name, 'w') as output:
         # 3 = peter's pos
         # 4 = peter's eng
         print(entry_list[0])
-        # print(entry_list[0], 'looking for word: \'', entry_list[1], entry_list[2], '\' in the dictionary')
         for jim_entry in jim_data:
             ent_seq = jim_entry['ent_seq'][0]
             r_ele = jim_entry['r_ele']
@@ -46,8 +45,6 @@ with open(output_file_name, 'w') as output:
             jim_reading = reb
             jim_kanji = keb
 
-            # print(ent_seq, jim_reading, jim_kanji)
-
             if jim_kanji is not None:
                 if entry_list[1] == jim_reading and entry_list[2] == jim_kanji:
                     # then it's a match
@@ -60,8 +57,3 @@ with open(output_file_name, 'w') as output:
                     print('match!')
                     output.write(str('INSERT INTO list_word VALUES(\'' + ent_seq + '\',\'' + list_id + '\');\n'))
                     output.write(str('INSERT INTO list VALUES(\'' + list_id + '\',' + list_name + '\',\'' + list_description + '\');\n'))
-
-            #     output.write(jim_reading)
-                # print(jim_kanji)
-                # print(str(jim_reading + jim_kanji))
-        # output.write(str('\'' + entry_list[1] + '\', \'' + entry_list[2] + '\''))
