@@ -16,7 +16,7 @@
       color: #818181;
     }
     .jumbotron {
-      background-image: url('https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009__340.jpg');
+      background-image: url('https://cdn.pixabay.com/photo/2015/02/15/03/04/japanese-umbrellas-636870_1280.jpg');
       color: #fff;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
@@ -32,7 +32,7 @@
     }
     .navbar {
       margin-bottom: 0;
-      background-image: url('https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009__340.jpg');
+      background-image: url('https://cdn.pixabay.com/photo/2015/02/15/03/04/japanese-umbrellas-636870_1280.jpg');
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
@@ -77,10 +77,33 @@
 
   <div class="jumbotron text-center">
     <h1>Add a List</h1>
-
-
   </div>
 
+  <div class="container">
+
+    <form>
+  <div class="form-group">
+    <label for="New List Name">New List Name</label>
+    <input class="form-control"
+           size="50"
+           type="search"
+           placeholder="Enter a name"
+           required
+           name='listName'>
+  </div>
+  <div class="form-group">
+    <label for="New List Discription">New List Description</label>
+    <input class="form-control"
+           size="100"
+           type="search"
+           placeholder="Enter Descritption"
+           required
+           name='listDescri'>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>
+  </div>
 
 
 
