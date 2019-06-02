@@ -50,7 +50,7 @@ CONSTRAINT PK_JMdict_foreign PRIMARY KEY (ent_seq)
 ALTER TABLE pos_word
 ADD FOREIGN KEY (ent_seq) REFERENCES JMdict(ent_seq);
 ALTER TABLE pos_word
-ADD FOREIGN KEY (pos_ID) REFERENCES JMdict(pos_ID);
+ADD FOREIGN KEY (pos_ID) REFERENCES pos(pos_ID);
 
 ALTER TABLE gloss_word
 ADD FOREIGN KEY (ent_seq) REFERENCES JMdict(ent_seq);
