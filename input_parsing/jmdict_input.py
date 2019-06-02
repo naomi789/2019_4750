@@ -65,14 +65,19 @@ with open(output, 'w') as output:
         jmdict_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',\'')
         if keb is not None:
             assert(len(keb) == 1), 'looks like this is off'
-            jmdict_statement = str(jmdict_statement + keb[0] + '\',')
+            this_keb = keb[0]
+        else:
+            this_keb = 'NULL'
 
+        jmdict_statement = str(jmdict_statement + this_keb + '\',')
 
 
         if reb is not None:
             assert(len(reb) == 1), 'idk about this'
-            jmdict_statement = str(jmdict_statement + '\'' + reb[0] + '\');\n') # that's the last one
-
+            this_reb = reb[0]
+        else:
+            this_reb = 'NULL'
+        jmdict_statement = str(jmdict_statement + '\'' + this_reb + '\');\n') # that's the last one
 
         pos_statement = 'INSERT INTO pos VALUES(\''
         for single_pos in pos:
