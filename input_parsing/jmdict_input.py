@@ -70,7 +70,7 @@ with open(output, 'w') as output:
                 if orig_word is None:
                     orig_word = 'NULL'
                 if waseieigo is None:
-                    waseieigo = 'NULL'
+                    waseieigo = 'not waseieigo'
                 elif waseieigo == 'y':
                     waseieigo = 'waseieigo'
                 # to do i should come back and fix this
