@@ -12,6 +12,9 @@ const {getDetailPage} = require('./routes/detail');
 const {getListDetailPage} = require('./routes/list_detail');
 const {getHelpPage} = require('./routes/help');
 const {getDeletePage} = require('./routes/delete');
+const {addListPage} = require('./routes/add_list');
+const {listCreateButtonPage} = require('./routes/create_list_button');
+
 
 
 const port = 5000;
@@ -51,6 +54,8 @@ app.get('/detail/:romaji', getDetailPage);
 app.get('/list_detail/:vocab_list_id', getListDetailPage);
 app.get('/help', getHelpPage);
 app.get('/delete/:vocab_list_id', getDeletePage);
+app.get('/add_list',addListPage);
+app.get('/new_list',listCreateButtonPage);
 
 
 //app.get('/sumbit', searchWordPage);
