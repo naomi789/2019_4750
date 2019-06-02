@@ -1,0 +1,1954 @@
+{
+  "kanjidic2": {
+    "header": {
+      "file_version": 4,
+      "database_version": "2019-142",
+      "date_of_creation": "2019-05-22"
+    },
+    "character": [{
+        "literal": "亜",
+        "codepoint": {
+          "cp_value": [{
+              "#text": "4e9c",
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-01",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": [{
+              "#text": 7,
+              "@_rad_type": "classical"
+            },
+            {
+              "#text": 1,
+              "@_rad_type": "nelson_c"
+            }
+          ]
+        },
+        "misc": {
+          "grade": 8,
+          "stroke_count": 7,
+          "variant": {
+            "#text": "48-19",
+            "@_var_type": "jis208"
+          },
+          "freq": 1509,
+          "jlpt": 1
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 43,
+              "@_dr_type": "nelson_c"
+            },
+            {
+              "#text": 81,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 3540,
+              "@_dr_type": "halpern_njecd"
+            },
+            {
+              "#text": 4354,
+              "@_dr_type": "halpern_kkd"
+            },
+            {
+              "#text": 2204,
+              "@_dr_type": "halpern_kkld"
+            },
+            {
+              "#text": 2966,
+              "@_dr_type": "halpern_kkld_2ed"
+            },
+            {
+              "#text": 1809,
+              "@_dr_type": "heisig"
+            },
+            {
+              "#text": 1950,
+              "@_dr_type": "heisig6"
+            },
+            {
+              "#text": 1331,
+              "@_dr_type": "gakken"
+            },
+            {
+              "#text": 525,
+              "@_dr_type": "oneill_names"
+            },
+            {
+              "#text": 1788,
+              "@_dr_type": "oneill_kk"
+            },
+            {
+              "#text": 272,
+              "@_dr_type": "moro",
+              "@_m_vol": 1,
+              "@_m_page": 525
+            },
+            {
+              "#text": 997,
+              "@_dr_type": "henshall"
+            },
+            {
+              "#text": 1616,
+              "@_dr_type": "sh_kk"
+            },
+            {
+              "#text": 1724,
+              "@_dr_type": "sh_kk2"
+            },
+            {
+              "#text": 1032,
+              "@_dr_type": "jf_cards"
+            },
+            {
+              "#text": 1092,
+              "@_dr_type": "tutt_cards"
+            },
+            {
+              "#text": 1818,
+              "@_dr_type": "kanji_in_context"
+            },
+            {
+              "#text": 35,
+              "@_dr_type": "kodansha_compact"
+            },
+            {
+              "#text": 1827,
+              "@_dr_type": "maniette"
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "4-7-1",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "0a7.14",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 1010.6,
+              "@_qc_type": "four_corner"
+            },
+            {
+              "#text": 3273,
+              "@_qc_type": "deroo"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "ya4",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "a",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "아",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "A",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "Á",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "ア",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "つ.ぐ",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": [
+              "Asia",
+              "rank next",
+              "come after",
+              "-ous",
+              {
+                "#text": "Asie",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "suivant",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "sub-",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "sous-",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "pref. para indicar",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "venir después de",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "Asia",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "Ásia",
+                "@_m_lang": "pt"
+              },
+              {
+                "#text": "próxima",
+                "@_m_lang": "pt"
+              },
+              {
+                "#text": "o que vem depois",
+                "@_m_lang": "pt"
+              },
+              {
+                "#text": "-ous",
+                "@_m_lang": "pt"
+              }
+            ]
+          },
+          "nanori": [
+            "や",
+            "つぎ",
+            "つぐ"
+          ]
+        }
+      },
+      {
+        "literal": "唖",
+        "codepoint": {
+          "cp_value": [{
+              "#text": 5516,
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-2",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": {
+            "#text": 30,
+            "@_rad_type": "classical"
+          }
+        },
+        "misc": {
+          "stroke_count": 10,
+          "variant": [{
+              "#text": "21-64",
+              "@_var_type": "jis212"
+            },
+            {
+              "#text": "45-68",
+              "@_var_type": "jis212"
+            }
+          ]
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 939,
+              "@_dr_type": "nelson_c"
+            },
+            {
+              "#text": 795,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 2958,
+              "@_dr_type": "heisig"
+            },
+            {
+              "#text": 2964,
+              "@_dr_type": "heisig6"
+            },
+            {
+              "#text": 3743,
+              "@_dr_type": "moro",
+              "@_m_vol": 2,
+              "@_m_page": 1066
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "1-3-7",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "3d8.3",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 6101.7,
+              "@_qc_type": "four_corner"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "ya1",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "a",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "아",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "Á",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "Ớ",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "Ứ",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "ア",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "アク",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "おし",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": [
+              "mute",
+              "dumb"
+            ]
+          }
+        }
+      },
+      {
+        "literal": "娃",
+        "codepoint": {
+          "cp_value": [{
+              "#text": "5a03",
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-3",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": {
+            "#text": 38,
+            "@_rad_type": "classical"
+          }
+        },
+        "misc": {
+          "grade": 9,
+          "stroke_count": 9
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 1213,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 419,
+              "@_dr_type": "halpern_kkd"
+            },
+            {
+              "#text": 313,
+              "@_dr_type": "halpern_kkld_2ed"
+            },
+            {
+              "#text": 2200,
+              "@_dr_type": "heisig"
+            },
+            {
+              "#text": 2313,
+              "@_dr_type": "heisig6"
+            },
+            {
+              "#text": 6262,
+              "@_dr_type": "moro",
+              "@_m_vol": 3,
+              "@_m_page": 707
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "1-3-6",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "3e6.5",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 4441.4,
+              "@_qc_type": "four_corner"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "wa2",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "wae",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "wa",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "왜",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "와",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "Oa",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "ア",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "アイ",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "ワ",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "うつく.しい",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": "beautiful"
+          },
+          "nanori": "い"
+        }
+      },
+      {
+        "literal": "阿",
+        "codepoint": {
+          "cp_value": [{
+              "#text": "963f",
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-4",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": {
+            "#text": 170,
+            "@_rad_type": "classical"
+          }
+        },
+        "misc": {
+          "grade": 9,
+          "stroke_count": 8,
+          "variant": {
+            "#text": 5008,
+            "@_var_type": "nelson_c"
+          },
+          "freq": 1126,
+          "jlpt": 1
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 4985,
+              "@_dr_type": "nelson_c"
+            },
+            {
+              "#text": 6435,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 346,
+              "@_dr_type": "halpern_njecd"
+            },
+            {
+              "#text": 408,
+              "@_dr_type": "halpern_kkd"
+            },
+            {
+              "#text": 256,
+              "@_dr_type": "halpern_kkld"
+            },
+            {
+              "#text": 305,
+              "@_dr_type": "halpern_kkld_2ed"
+            },
+            {
+              "#text": 1295,
+              "@_dr_type": "heisig"
+            },
+            {
+              "#text": 1391,
+              "@_dr_type": "heisig6"
+            },
+            {
+              "#text": 1515,
+              "@_dr_type": "gakken"
+            },
+            {
+              "#text": 569,
+              "@_dr_type": "oneill_names"
+            },
+            {
+              "#text": 41599,
+              "@_dr_type": "moro",
+              "@_m_vol": 11,
+              "@_m_page": 798
+            },
+            {
+              "#text": 2258,
+              "@_dr_type": "sh_kk"
+            },
+            {
+              "#text": 1304,
+              "@_dr_type": "maniette"
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "1-3-5",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "2d5.6",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 7122,
+              "@_qc_type": "four_corner"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "a1",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "e1",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "a5",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "a2",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "a4",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "a",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "og",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "아",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "옥",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "A",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "Á",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "ア",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "オ",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "おもね.る",
+                "@_r_type": "ja_kun"
+              },
+              {
+                "#text": "くま",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": [
+              "Africa",
+              "flatter",
+              "fawn upon",
+              "corner",
+              "nook",
+              "recess",
+              {
+                "#text": "flatter",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "flagorner",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "Afrique",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "coin",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "recoin",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "A fonética",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "África",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "meandro",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "adular",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "halagar",
+                "@_m_lang": "es"
+              }
+            ]
+          },
+          "nanori": [
+            "ほとり",
+            "あず",
+            "あわ",
+            "おか",
+            "きた",
+            "な"
+          ]
+        }
+      },
+      {
+        "literal": "哀",
+        "codepoint": {
+          "cp_value": [{
+              "#text": "54c0",
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-5",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": [{
+              "#text": 30,
+              "@_rad_type": "classical"
+            },
+            {
+              "#text": 8,
+              "@_rad_type": "nelson_c"
+            }
+          ]
+        },
+        "misc": {
+          "grade": 8,
+          "stroke_count": 9,
+          "freq": 1715,
+          "jlpt": 1
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 304,
+              "@_dr_type": "nelson_c"
+            },
+            {
+              "#text": 791,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 2068,
+              "@_dr_type": "halpern_njecd"
+            },
+            {
+              "#text": 2568,
+              "@_dr_type": "halpern_kkd"
+            },
+            {
+              "#text": 1310,
+              "@_dr_type": "halpern_kkld"
+            },
+            {
+              "#text": 1781,
+              "@_dr_type": "halpern_kkld_2ed"
+            },
+            {
+              "#text": 401,
+              "@_dr_type": "heisig"
+            },
+            {
+              "#text": 428,
+              "@_dr_type": "heisig6"
+            },
+            {
+              "#text": 1670,
+              "@_dr_type": "gakken"
+            },
+            {
+              "#text": 1249,
+              "@_dr_type": "oneill_kk"
+            },
+            {
+              "#text": 3580,
+              "@_dr_type": "moro",
+              "@_m_vol": 2,
+              "@_m_page": 997
+            },
+            {
+              "#text": 998,
+              "@_dr_type": "henshall"
+            },
+            {
+              "#text": 1675,
+              "@_dr_type": "sh_kk"
+            },
+            {
+              "#text": 1790,
+              "@_dr_type": "sh_kk2"
+            },
+            {
+              "#text": 1131,
+              "@_dr_type": "jf_cards"
+            },
+            {
+              "#text": 1239,
+              "@_dr_type": "tutt_cards"
+            },
+            {
+              "#text": 1804,
+              "@_dr_type": "kanji_in_context"
+            },
+            {
+              "#text": 327,
+              "@_dr_type": "kodansha_compact"
+            },
+            {
+              "#text": 408,
+              "@_dr_type": "maniette"
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "2-2-7",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "2j7.4",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 73.2,
+              "@_qc_type": "four_corner"
+            },
+            {
+              "#text": 465,
+              "@_qc_type": "deroo"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "ai1",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "ae",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "애",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "Ai",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "アイ",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "あわ.れ",
+                "@_r_type": "ja_kun"
+              },
+              {
+                "#text": "あわ.れむ",
+                "@_r_type": "ja_kun"
+              },
+              {
+                "#text": "かな.しい",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": [
+              "pathetic",
+              "grief",
+              "sorrow",
+              "pathos",
+              "pity",
+              "sympathize",
+              {
+                "#text": "pitoyable",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "peine",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "chagrin",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "pitié",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "pathétique",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "compatir",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "compasión",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "lástima",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "miseria",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "piedad",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "pena",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "compadecerse de",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "patético",
+                "@_m_lang": "pt"
+              },
+              {
+                "#text": "pesar",
+                "@_m_lang": "pt"
+              },
+              {
+                "#text": "pena",
+                "@_m_lang": "pt"
+              },
+              {
+                "#text": "emoção",
+                "@_m_lang": "pt"
+              },
+              {
+                "#text": "compaixão",
+                "@_m_lang": "pt"
+              },
+              {
+                "#text": "solidariesar",
+                "@_m_lang": "pt"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "literal": "愛",
+        "codepoint": {
+          "cp_value": [{
+              "#text": "611b",
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-6",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": [{
+              "#text": 61,
+              "@_rad_type": "classical"
+            },
+            {
+              "#text": 87,
+              "@_rad_type": "nelson_c"
+            }
+          ]
+        },
+        "misc": {
+          "grade": 4,
+          "stroke_count": 13,
+          "freq": 640,
+          "jlpt": 2
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 2829,
+              "@_dr_type": "nelson_c"
+            },
+            {
+              "#text": 1927,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 2492,
+              "@_dr_type": "halpern_njecd"
+            },
+            {
+              "#text": 3133,
+              "@_dr_type": "halpern_kkd"
+            },
+            {
+              "#text": 1606,
+              "@_dr_type": "halpern_kkld"
+            },
+            {
+              "#text": 2191,
+              "@_dr_type": "halpern_kkld_2ed"
+            },
+            {
+              "#text": 737,
+              "@_dr_type": "heisig"
+            },
+            {
+              "#text": 796,
+              "@_dr_type": "heisig6"
+            },
+            {
+              "#text": 436,
+              "@_dr_type": "gakken"
+            },
+            {
+              "#text": 2018,
+              "@_dr_type": "oneill_names"
+            },
+            {
+              "#text": 456,
+              "@_dr_type": "oneill_kk"
+            },
+            {
+              "#text": 10947,
+              "@_dr_type": "moro",
+              "@_m_vol": 4,
+              "@_m_page": 1123
+            },
+            {
+              "#text": 417,
+              "@_dr_type": "henshall"
+            },
+            {
+              "#text": 259,
+              "@_dr_type": "sh_kk"
+            },
+            {
+              "#text": 259,
+              "@_dr_type": "sh_kk2"
+            },
+            {
+              "#text": 339,
+              "@_dr_type": "sakade"
+            },
+            {
+              "#text": 545,
+              "@_dr_type": "jf_cards"
+            },
+            {
+              "#text": 441,
+              "@_dr_type": "henshall3"
+            },
+            {
+              "#text": 602,
+              "@_dr_type": "tutt_cards"
+            },
+            {
+              "#text": 268,
+              "@_dr_type": "crowley"
+            },
+            {
+              "#text": 1079,
+              "@_dr_type": "kanji_in_context"
+            },
+            {
+              "#text": 790,
+              "@_dr_type": "kodansha_compact"
+            },
+            {
+              "#text": 745,
+              "@_dr_type": "maniette"
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "2-4-9",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "4i10.1",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 2024.7,
+              "@_qc_type": "four_corner"
+            },
+            {
+              "#text": 2067,
+              "@_qc_type": "deroo"
+            },
+            {
+              "#text": "2-1-12",
+              "@_qc_type": "skip",
+              "@_skip_misclass": "posn"
+            },
+            {
+              "#text": "2-6-7",
+              "@_qc_type": "skip",
+              "@_skip_misclass": "posn"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "ai4",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "ae",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "애",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "Ái",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "アイ",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "いと.しい",
+                "@_r_type": "ja_kun"
+              },
+              {
+                "#text": "かな.しい",
+                "@_r_type": "ja_kun"
+              },
+              {
+                "#text": "め.でる",
+                "@_r_type": "ja_kun"
+              },
+              {
+                "#text": "お.しむ",
+                "@_r_type": "ja_kun"
+              },
+              {
+                "#text": "まな",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": [
+              "love",
+              "affection",
+              "favourite",
+              {
+                "#text": "amour",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "affection",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "favori",
+                "@_m_lang": "fr"
+              },
+              {
+                "#text": "amor",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "afecto",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "favorito",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "amor",
+                "@_m_lang": "pt"
+              },
+              {
+                "#text": "afeição",
+                "@_m_lang": "pt"
+              },
+              {
+                "#text": "favorito",
+                "@_m_lang": "pt"
+              }
+            ]
+          },
+          "nanori": [
+            "あ",
+            "あし",
+            "え",
+            "かな",
+            "なる",
+            "めぐ",
+            "めぐみ",
+            "よし",
+            "ちか"
+          ]
+        }
+      },
+      {
+        "literal": "挨",
+        "codepoint": {
+          "cp_value": [{
+              "#text": 6328,
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-7",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": {
+            "#text": 64,
+            "@_rad_type": "classical"
+          }
+        },
+        "misc": {
+          "grade": 8,
+          "stroke_count": 10,
+          "freq": 2258
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 1910,
+              "@_dr_type": "nelson_c"
+            },
+            {
+              "#text": 2160,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 510,
+              "@_dr_type": "halpern_kkd"
+            },
+            {
+              "#text": 383,
+              "@_dr_type": "halpern_kkld_2ed"
+            },
+            {
+              "#text": 2248,
+              "@_dr_type": "heisig"
+            },
+            {
+              "#text": 1310,
+              "@_dr_type": "heisig6"
+            },
+            {
+              "#text": 12082,
+              "@_dr_type": "moro",
+              "@_m_vol": 5,
+              "@_m_page": 229
+            },
+            {
+              "#text": 1101,
+              "@_dr_type": "sh_kk2"
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "1-3-7",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "3c7.12",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 5303.4,
+              "@_qc_type": "four_corner"
+            },
+            {
+              "#text": 1363,
+              "@_qc_type": "deroo"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "ai1",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "ai2",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "ae",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "애",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "Ai",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "Ải",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "アイ",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "ひら.く",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": [
+              "approach",
+              "draw near",
+              "push open",
+              {
+                "#text": "empujar",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "acercarse",
+                "@_m_lang": "es"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "literal": "姶",
+        "codepoint": {
+          "cp_value": [{
+              "#text": "59f6",
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-8",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": {
+            "#text": 38,
+            "@_rad_type": "classical"
+          }
+        },
+        "misc": {
+          "stroke_count": 9
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 1208,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 1091,
+              "@_dr_type": "oneill_names"
+            },
+            {
+              "#text": 6242,
+              "@_dr_type": "moro",
+              "@_m_vol": 3,
+              "@_m_page": 696
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "1-3-6",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "3e6.7",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 4846.1,
+              "@_qc_type": "four_corner"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "yan3",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "ab",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "압",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "Áp",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "オウ",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "アイ",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "あい",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": [
+              "good-looking",
+              "quiet"
+            ]
+          }
+        }
+      },
+      {
+        "literal": "逢",
+        "codepoint": {
+          "cp_value": [{
+              "#text": 9022,
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-9",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": {
+            "#text": 162,
+            "@_rad_type": "classical"
+          }
+        },
+        "misc": {
+          "grade": 9,
+          "stroke_count": [
+            10,
+            9,
+            11
+          ],
+          "freq": 2116
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 4694,
+              "@_dr_type": "nelson_c"
+            },
+            {
+              "#text": 6054,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 4002,
+              "@_dr_type": "halpern_kkd"
+            },
+            {
+              "#text": 2774,
+              "@_dr_type": "halpern_kkld_2ed"
+            },
+            {
+              "#text": 2417,
+              "@_dr_type": "heisig"
+            },
+            {
+              "#text": 2497,
+              "@_dr_type": "heisig6"
+            },
+            {
+              "#text": 1516,
+              "@_dr_type": "oneill_names"
+            },
+            {
+              "#text": "38901X",
+              "@_dr_type": "moro",
+              "@_m_vol": 11,
+              "@_m_page": 75
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "3-3-7",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "2q7.15",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 3730.4,
+              "@_qc_type": "four_corner"
+            },
+            {
+              "#text": 2555,
+              "@_qc_type": "deroo"
+            },
+            {
+              "#text": "3-4-7",
+              "@_qc_type": "skip",
+              "@_skip_misclass": "stroke_diff"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "feng2",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "bong",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "봉",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "Phùng",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "ホウ",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "あ.う",
+                "@_r_type": "ja_kun"
+              },
+              {
+                "#text": "むか.える",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": [
+              "meeting",
+              "tryst",
+              "date",
+              "rendezvous",
+              {
+                "#text": "encuentro",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "cita",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "encuentro casual",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "encontrarse",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "reunirse",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "citarse",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "verse por casualidad",
+                "@_m_lang": "es"
+              }
+            ]
+          },
+          "nanori": [
+            "あい",
+            "おう"
+          ]
+        }
+      },
+      {
+        "literal": "葵",
+        "codepoint": {
+          "cp_value": [{
+              "#text": 8475,
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-10",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": {
+            "#text": 140,
+            "@_rad_type": "classical"
+          }
+        },
+        "misc": {
+          "grade": 9,
+          "stroke_count": 12,
+          "freq": 2122,
+          "jlpt": 1
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 3990,
+              "@_dr_type": "nelson_c"
+            },
+            {
+              "#text": 5120,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 2317,
+              "@_dr_type": "halpern_njecd"
+            },
+            {
+              "#text": 2906,
+              "@_dr_type": "halpern_kkd"
+            },
+            {
+              "#text": 1493,
+              "@_dr_type": "halpern_kkld"
+            },
+            {
+              "#text": 2018,
+              "@_dr_type": "halpern_kkld_2ed"
+            },
+            {
+              "#text": 2391,
+              "@_dr_type": "heisig"
+            },
+            {
+              "#text": 2472,
+              "@_dr_type": "heisig6"
+            },
+            {
+              "#text": 1723,
+              "@_dr_type": "oneill_names"
+            },
+            {
+              "#text": "31458X",
+              "@_dr_type": "moro",
+              "@_m_vol": 9,
+              "@_m_page": 806
+            },
+            {
+              "#text": 2222,
+              "@_dr_type": "sh_kk"
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "2-3-9",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "3k9.17",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 4443,
+              "@_qc_type": "four_corner"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "kui2",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "gyu",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "규",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "Quỳ",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "キ",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "あおい",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": [
+              "hollyhock",
+              {
+                "#text": "malva real",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "malva loca",
+                "@_m_lang": "es"
+              }
+            ]
+          },
+          "nanori": [
+            "まもる",
+            "け"
+          ]
+        }
+      },
+      {
+        "literal": "茜",
+        "codepoint": {
+          "cp_value": [{
+              "#text": "831c",
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-11",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": {
+            "#text": 140,
+            "@_rad_type": "classical"
+          }
+        },
+        "misc": {
+          "grade": 9,
+          "stroke_count": 9,
+          "freq": 2422,
+          "jlpt": 1
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 3932,
+              "@_dr_type": "nelson_c"
+            },
+            {
+              "#text": 5019,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 2261,
+              "@_dr_type": "halpern_njecd"
+            },
+            {
+              "#text": 2811,
+              "@_dr_type": "halpern_kkd"
+            },
+            {
+              "#text": 1448,
+              "@_dr_type": "halpern_kkld"
+            },
+            {
+              "#text": 1951,
+              "@_dr_type": "halpern_kkld_2ed"
+            },
+            {
+              "#text": 2407,
+              "@_dr_type": "heisig"
+            },
+            {
+              "#text": 2487,
+              "@_dr_type": "heisig6"
+            },
+            {
+              "#text": 928,
+              "@_dr_type": "oneill_names"
+            },
+            {
+              "#text": "30871X",
+              "@_dr_type": "moro",
+              "@_m_vol": 9,
+              "@_m_page": 619
+            },
+            {
+              "#text": 2216,
+              "@_dr_type": "sh_kk"
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "2-3-6",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "3k6.3",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 4460.1,
+              "@_qc_type": "four_corner"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "qian4",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "xi1",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "cheon",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "천",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "Thiến",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "セン",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "あかね",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": [
+              "madder",
+              "red dye",
+              "Turkey red",
+              {
+                "#text": "tinte rojo",
+                "@_m_lang": "es"
+              },
+              {
+                "#text": "rojo brillante",
+                "@_m_lang": "es"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "literal": "穐",
+        "codepoint": {
+          "cp_value": [{
+              "#text": "7a50",
+              "@_cp_type": "ucs"
+            },
+            {
+              "#text": "16-12",
+              "@_cp_type": "jis208"
+            }
+          ]
+        },
+        "radical": {
+          "rad_value": {
+            "#text": 115,
+            "@_rad_type": "classical"
+          }
+        },
+        "misc": {
+          "stroke_count": 16,
+          "variant": [{
+              "#text": "29-09",
+              "@_var_type": "jis208"
+            },
+            {
+              "#text": "67-52",
+              "@_var_type": "jis208"
+            },
+            {
+              "#text": 3273,
+              "@_var_type": "nelson_c"
+            }
+          ]
+        },
+        "dic_number": {
+          "dic_ref": [{
+              "#text": 4170,
+              "@_dr_type": "nelson_n"
+            },
+            {
+              "#text": 1581,
+              "@_dr_type": "halpern_kkd"
+            },
+            {
+              "#text": 25281,
+              "@_dr_type": "moro",
+              "@_m_vol": 8,
+              "@_m_page": 630
+            }
+          ]
+        },
+        "query_code": {
+          "q_code": [{
+              "#text": "1-5-11",
+              "@_qc_type": "skip"
+            },
+            {
+              "#text": "5d4.1",
+              "@_qc_type": "sh_desc"
+            },
+            {
+              "#text": 2791.6,
+              "@_qc_type": "four_corner"
+            }
+          ]
+        },
+        "reading_meaning": {
+          "rmgroup": {
+            "reading": [{
+                "#text": "qiu1",
+                "@_r_type": "pinyin"
+              },
+              {
+                "#text": "chu",
+                "@_r_type": "korean_r"
+              },
+              {
+                "#text": "추",
+                "@_r_type": "korean_h"
+              },
+              {
+                "#text": "Sắc",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "Thu",
+                "@_r_type": "vietnam"
+              },
+              {
+                "#text": "シュウ",
+                "@_r_type": "ja_on"
+              },
+              {
+                "#text": "あき",
+                "@_r_type": "ja_kun"
+              },
+              {
+                "#text": "とき",
+                "@_r_type": "ja_kun"
+              }
+            ],
+            "meaning": "autumn"
+          }
+        }
+      }
+    ]
+  }
+}

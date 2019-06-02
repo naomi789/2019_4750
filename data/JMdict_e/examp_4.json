@@ -1,0 +1,33 @@
+[{
+    "ent_seq": ["1000000"],
+    "r_ele": [{
+      "reb": ["ヽ"]
+    }, {
+      "reb": ["くりかえし"]
+    }],
+    "sense": [{
+      "pos": ["&n;"],
+      "gloss": ["repetition mark in katakana"]
+    }]
+  }, {
+    "ent_seq": ["1000010"],
+    "r_ele": [{
+      "reb": ["ヾ"]
+    }, {
+      "reb": ["くりかえし"]
+    }],
+    "sense": [{
+      "pos": ["&n;"],
+      "gloss": ["voiced repetition mark in katakana"]
+    }]
+  }, {
+    "ent_seq": ["1000020"],
+    "r_ele": [{
+      "reb": ["ゝ"]
+    }],
+    "sense": [{
+      "pos": ["&unc;"],
+      "gloss": ["repetition mark in hiragana"]
+    }]
+  }
+]
