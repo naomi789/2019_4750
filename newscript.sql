@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS list
 CONSTRAINT PK_list PRIMARY KEY (list_name) );
 
 CREATE TABLE IF NOT EXISTS list_word
-(ent_seq INT NOT NULL, list_name VARCHAR(36) NOT NULL,
+(ent_seq INT NOT NULL, list_name NVARCHAR(200) NOT NULL,
 CONSTRAINT PK_list_word PRIMARY KEY (list_name) );
 
 CREATE TABLE IF NOT EXISTS pos(
@@ -62,7 +62,7 @@ ADD FOREIGN KEY (gloss_ID) REFERENCES gloss(gloss_ID);
 ALTER TABLE list_word
 ADD FOREIGN KEY (ent_seq) REFERENCES JMdict(ent_seq);
 ALTER TABLE list_word
-ADD FOREIGN KEY (list_ID) REFERENCES list(list_ID);
+ADD FOREIGN KEY (list_name) REFERENCES list(list_name);
 
 
 
