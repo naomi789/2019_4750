@@ -7,29 +7,26 @@ import collections
 jim_file_name = './../data/JMdict_e/JMdict_e.json'
 
 def main():
-    list_id = '0001'
     list_name = 'JLPT N5'
     list_description = 'Vocabulary from www.jlptstudy.net by Peter van der Woude'
     input_file_name = './../data/vocab/jlpt_vocab_n5.csv'
     output_file_name = 'n5_peter_create.sql'
-    do_everything(list_id, list_name, list_description, input_file_name, output_file_name)
+    do_everything(list_name, list_description, input_file_name, output_file_name)
 
-    list_id = '0002'
     list_name = 'JLPT N4'
     list_description = 'Vocabulary from www.jlptstudy.net by Peter van der Woude'
     input_file_name = './../data/vocab/jlpt_vocab_n4.csv'
     output_file_name = 'n4_peter_create.sql'
-    do_everything(list_id, list_name, list_description, input_file_name, output_file_name)
+    do_everything(list_name, list_description, input_file_name, output_file_name)
 
-    list_id = '0003'
     list_name = 'JLPT N2'
     list_description = 'Vocabulary from www.jlptstudy.net by Peter van der Woude'
     input_file_name = './../data/vocab/jlpt_vocab_n2.csv'
     output_file_name = 'n2_peter_create.sql'
-    do_everything(list_id, list_name, list_description, input_file_name, output_file_name)
+    do_everything(list_name, list_description, input_file_name, output_file_name)
 
 
-def do_everything(list_id, list_name, list_description, input_file_name, output_file_name):
+def do_everything(list_name, list_description, input_file_name, output_file_name):
     with open(input_file_name, 'r') as file:
         all_data = str.splitlines(file.read())
 
@@ -39,7 +36,7 @@ def do_everything(list_id, list_name, list_description, input_file_name, output_
 
     with open(output_file_name, 'w') as output:
         output.write('USE main_db;\n')
-        output.write(str('INSERT INTO list VALUES(\'' + list_id + '\',\'' + list_name + '\',\'' + list_description + '\');\n'))
+        output.write(str('INSERT INTO list VALUES(\'' + list_name + '\',\'' + list_description + '\');\n'))
 
         for entry in all_data:
             entry_list = [x.strip() for x in entry.split(',')]
@@ -69,14 +66,12 @@ def do_everything(list_id, list_name, list_description, input_file_name, output_
                     if entry_list[1] == jim_reading and entry_list[2] == jim_kanji:
                         # then it's a match
                         print('match!')
-                        output.write(str('INSERT INTO list_word VALUES(\'' + ent_seq + '\',\'' + list_id + '\');\n'))
-                        # output.write(str('INSERT INTO list VALUES(\'' + list_id + '\',' + list_name + '\',\'' + list_description + '\');\n'))
+                        output.write(str('INSERT INTO list_word VALUES(\'' + ent_seq + '\',\'' + list_name + '\');\n'))
                 else:
                     if entry_list[1] == jim_reading:
                         # then it's a match
                         print('match!')
-                        output.write(str('INSERT INTO list_word VALUES(\'' + ent_seq + '\',\'' + list_id + '\');\n'))
-                        # output.write(str('INSERT INTO list VALUES(\'' + list_id + '\',' + list_name + '\',\'' + list_description + '\');\n'))
+                        output.write(str('INSERT INTO list_word VALUES(\'' + ent_seq + '\',\'' + list_name + '\');\n'))
 
 
 main()
