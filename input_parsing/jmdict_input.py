@@ -62,9 +62,9 @@ with open(output, 'w') as output:
                         waseieigo = dollar_lang['ls_wasei']
                     if 'xml:lang' in dollar_lang:
                         orig_lang = dollar_lang['xml:lang']
+                        is_foreign = '1'
 
             if lsource is not None:
-                is_foreign = '1'
                 # print(waseieigo)
                 if orig_lang is None:
                     orig_lang = 'NULL'
@@ -119,7 +119,7 @@ with open(output, 'w') as output:
             gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\',\'' + gloss_id + '\');\n')
             # output.write(gloss_word_statement) # is a bridge
             output.write(finished_gloss_statement) # NOT a bridge
-        if lsource is not None:
+        if is_foreign == '1':
             jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + ent_seq + '\', \'' + orig_lang + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');\n')
