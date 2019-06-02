@@ -71,22 +71,23 @@ with open(output, 'w') as output:
             jmdict_statement = str(jmdict_statement + reb[0] + '\');\n') # that's the last one
 
 
-        pos_statement = str('INSERT INTO pos VALUES(\'')
+        pos_statement = 'INSERT INTO pos VALUES(\''
         for single_pos in pos:
             finished_pos_statement = str(pos_statement + single_pos + '\');\n')
             pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + '\');\n')
             output.write(finished_pos_statement)
             output.write(pos_word_statement)
 
-        gloss_statement = str('INSERT INTO gloss VALUES(\'')
+        gloss_statement = 'INSERT INTO gloss VALUES(\''
         for single_gloss in gloss:
+            gloss_id = uuid.uuid4()
             if not isinstance(single_gloss, collections.Mapping):
-                finished_gloss_statement = str(gloss_statement + single_gloss + ');\n')
+                finished_gloss_statement = str(gloss_statement + gloss_id + ',' + single_gloss + ');\n')
             else: # these are probably exclusively for 'lsource' words?? Not 100% sure why this is different...
                 key_from_dict_gloss = single_gloss['_']
-                finished_gloss_statement = str(gloss_statement + key_from_dict_gloss + ');\n')
+                finished_gloss_statement = str(gloss_statement + gloss_id + ',' + key_from_dict_gloss + ');\n')
 
-            gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\');\n')
+            gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + ',' + gloss_id + '\');\n')
             output.write(gloss_word_statement)
             output.write(finished_gloss_statement)
 
