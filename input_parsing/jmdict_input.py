@@ -73,54 +73,32 @@ with open(output, 'w') as output:
 
         pos_statement = str('INSERT INTO pos VALUES(\'')
         for single_pos in pos:
-
             finished_pos_statement = str(pos_statement + single_pos + '\');\n')
             pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + '\');\n')
-
-            # TODO: write 'finished_pos_statement to a file
             output.write(finished_pos_statement)
-            # TODO: write 'pos_word_statement to a file
             output.write(pos_word_statement)
 
         gloss_statement = str('INSERT INTO gloss VALUES(\'')
-
         for single_gloss in gloss:
             if not isinstance(single_gloss, collections.Mapping):
                 finished_gloss_statement = str(gloss_statement + single_gloss + ');\n')
             else: # these are probably exclusively for 'lsource' words?? Not 100% sure why this is different...
                 key_from_dict_gloss = single_gloss['_']
-                # print(key_from_dict_gloss)
                 finished_gloss_statement = str(gloss_statement + key_from_dict_gloss + ');\n')
 
             gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\');\n')
-            # TODO: write 'finished_gloss_statement to a file
-            output.write(finished_gloss_statement)
-            # TODO: write 'gloss_word_statement' to a file
             output.write(gloss_word_statement)
+            output.write(finished_gloss_statement)
 
         if lsource is not None:
-            # print('before', orig_lang, orig_word, waseieigo)
             if orig_lang is None:
-                # print('orig_lang is NULL')
                 orig_lang = 'NULL'
             if orig_word is None:
-                # print('orig_word is NULL')
                 orig_word = 'NULL'
             if waseieigo is None:
-                # print('waseieigo is NULL')
                 waseieigo = 'NULL'
-            # print('after', orig_lang, orig_word, waseieigo)
             jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + orig_lang + '\',')
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',')
             jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');\n')
             output.write(jmdict_foreign_statement)
             output.write(jmdict_statement)
-
-
-
-        # INSERT INTO jmdict VALUES('1000220', '明白', 'めいはく', NULL, NULL);
-        # INSERT INTO word_gloss('1000220', 'obvious')
-
-
-
-        # print(jmdict_statement)
