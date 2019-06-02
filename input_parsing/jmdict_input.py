@@ -73,8 +73,9 @@ with open(output, 'w') as output:
 
         pos_statement = 'INSERT INTO pos VALUES(\''
         for single_pos in pos:
-            finished_pos_statement = str(pos_statement + single_pos + '\');\n')
-            pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + '\');\n')
+            pos_id = uuid.uuid4()
+            finished_pos_statement = str(pos_statement + pos_id + ',' + single_pos + '\');\n')
+            pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + ',' + pos_od + '\');\n')
             output.write(finished_pos_statement)
             output.write(pos_word_statement)
 
