@@ -87,7 +87,7 @@ with open(output, 'w') as output:
                 finished_gloss_statement = str(gloss_statement + gloss_id + '\',\'' + single_gloss + '\');\n')
             else: # these are probably exclusively for 'lsource' words?? Not 100% sure why this is different...
                 key_from_dict_gloss = single_gloss['_']
-                finished_gloss_statement = str(gloss_statement + gloss_id + '\',\'' + key_from_dict_gloss + ');\n')
+                finished_gloss_statement = str(gloss_statement + gloss_id + '\',\'' + key_from_dict_gloss + '\');\n')
 
             gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\',\'' + gloss_id + '\');\n')
             # output.write(gloss_word_statement) # is a bridge
