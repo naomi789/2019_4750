@@ -98,27 +98,27 @@
           <table class="table table-hovered">
               <thead class="thead-dark">
                   <tr>
-                      <th scope="col">List Name</th>
-                      <th scope="col">List ID</th>
-                      <th scope="col">Kanji</th>
-                      <th scope="col">Romaji</th>
-                      <th scope="col">Katakana</th>
-                      <th scope="col">Hiragana</th>
-                      <th scope="col">English Definition</th>
-
+                    <th scope="col">List Name</th>
+                    <th scope="col">List ID</th>
+                    <th scope="col">Kanji</th>
+                    <th scope="col">Romaji</th>
+                    <th scope="col">Katakana</th>
+                    <th scope="col">Hiragana</th>
+                    <th scope="col">English Definition</th>
                   </tr>
               </thead>
               <tbody>
                   <% list_words.forEach((list, index) => { %>
                       <tr>
-                          <th scope="row"><%= list.vocab_list_name %></th>
-                          <td><%= list.vocab_list_id %></td>
-                        
-                          <td><%= list.kanji_symbol_name %></td>
-                          <td><%= list.romaji %></td>
-                          <td><%= list.katakana %></td>
-                          <td><%= list.hiragana %></td>
-                          <td><%= list.english_word_name%></td>
+                        <th scope="row"><%= list.vocab_list_name %></th>
+                        <td><%= list.vocab_list_id %></td>
+
+                        <td><%= list.kanji_symbol_name %></td>
+                        <td><%= list.romaji %></td>
+                        <td><%= list.katakana %></td>
+                        <td><%= list.hiragana %></td>
+                        <td><%= list.english_word_name%></td>
+
 
                       </tr>
                   <% }) %>
@@ -128,6 +128,7 @@
           <p class="text-center">No search found.</p>
       <% } %>
   </div>
+
 
 
 
