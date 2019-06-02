@@ -1,0 +1,817 @@
+[{
+  "ent_seq": ["1007070"],
+  "k_ele": [{
+    "keb": ["それ等"],
+    "ke_pri": ["spec1"]
+  }, {
+    "keb": ["其れ等"]
+  }, {
+    "keb": ["其等"]
+  }],
+  "r_ele": [{
+    "reb": ["それら"],
+    "re_pri": ["spec1"]
+  }],
+  "sense": [{
+    "pos": ["&pn;"],
+    "misc": ["&uk;"],
+    "gloss": ["those (near the second person)"]
+  }]
+}, {
+  "ent_seq": ["1007080"],
+  "k_ele": [{
+    "keb": ["それ以上"]
+  }],
+  "r_ele": [{
+    "reb": ["それいじょう"]
+  }],
+  "sense": [{
+    "pos": ["&exp;"],
+    "gloss": ["further", "above", "anymore"]
+  }]
+}, {
+  "ent_seq": ["1007090"],
+  "k_ele": [{
+    "keb": ["それ以来"]
+  }],
+  "r_ele": [{
+    "reb": ["それいらい"]
+  }],
+  "sense": [{
+    "pos": ["&exp;", "&n-adv;"],
+    "gloss": ["since then", "from that time", "ever since"]
+  }]
+}, {
+  "ent_seq": ["1007100"],
+  "k_ele": [{
+    "keb": ["それ故に"]
+  }, {
+    "keb": ["其れ故に"]
+  }],
+  "r_ele": [{
+    "reb": ["それゆえに"]
+  }],
+  "sense": [{
+    "pos": ["&adv;"],
+    "misc": ["&uk;"],
+    "gloss": ["and so", "therefore", "for that reason"]
+  }]
+}, {
+  "ent_seq": ["1007120"],
+  "r_ele": [{
+    "reb": ["そわそわ"],
+    "re_pri": ["ichi1"]
+  }, {
+    "reb": ["ソワソワ"]
+  }],
+  "sense": [{
+    "pos": ["&adv;", "&adv-to;", "&vs;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["restlessly", "nervously", "uneasily", "in a fidget"]
+  }]
+}, {
+  "ent_seq": ["1007130"],
+  "r_ele": [{
+    "reb": ["そんな"],
+    "re_pri": ["ichi1"]
+  }],
+  "sense": [{
+    "pos": ["&adj-pn;"],
+    "xref": ["あんな", "こんな", "どんな・1"],
+    "gloss": ["such (about the actions of the listener, or about ideas expressed or understood by the listener)", "like that", "that sort of"]
+  }]
+}, {
+  "ent_seq": ["1007140"],
+  "r_ele": [{
+    "reb": ["ぞくぞく"],
+    "re_pri": ["spec1"]
+  }, {
+    "reb": ["ゾクゾク"]
+  }],
+  "sense": [{
+    "pos": ["&adv;", "&adv-to;", "&vs;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["shivering", "feeling chilly"]
+  }, {
+    "misc": ["&on-mim;"],
+    "gloss": ["shuddering (with fear)", "feeling creepy"]
+  }, {
+    "misc": ["&on-mim;"],
+    "gloss": ["thrilled", "excited"]
+  }]
+}, {
+  "ent_seq": ["1007150"],
+  "r_ele": [{
+    "reb": ["ぞっと"]
+  }, {
+    "reb": ["ゾッと"]
+  }],
+  "sense": [{
+    "pos": ["&adv;", "&vs;"],
+    "xref": ["ぞっとしない"],
+    "misc": ["&on-mim;"],
+    "gloss": ["shuddering", "shivering", "trembling", "being horrified", "being disgusted"]
+  }]
+}, {
+  "ent_seq": ["1007160"],
+  "r_ele": [{
+    "reb": ["ぞろぞろ"],
+    "re_pri": ["ichi1"]
+  }, {
+    "reb": ["ゾロゾロ"]
+  }],
+  "sense": [{
+    "pos": ["&adv;", "&adv-to;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["in a crowd", "in droves", "in a stream", "in succession"]
+  }, {
+    "misc": ["&on-mim;"],
+    "gloss": ["crawling (of insects)", "swarming"]
+  }, {
+    "misc": ["&on-mim;"],
+    "gloss": ["dragging (e.g. along the ground)", "trailing", "stretching out"]
+  }]
+}, {
+  "ent_seq": ["1007170"],
+  "r_ele": [{
+    "reb": ["ぞんざい"],
+    "re_pri": ["ichi1"]
+  }],
+  "sense": [{
+    "pos": ["&adj-na;", "&n;"],
+    "gloss": ["rude", "careless", "slovenly"]
+  }]
+}, {
+  "ent_seq": ["1007180"],
+  "k_ele": [{
+    "keb": ["高が"]
+  }],
+  "r_ele": [{
+    "reb": ["たかが"]
+  }],
+  "sense": [{
+    "pos": ["&adv;"],
+    "misc": ["&uk;"],
+    "gloss": ["it's only ... (something)", "at most"]
+  }]
+}, {
+  "ent_seq": ["1007190"],
+  "r_ele": [{
+    "reb": ["たかり"]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "gloss": ["extortion", "sponging"]
+  }]
+}, {
+  "ent_seq": ["1007200"],
+  "k_ele": [{
+    "keb": ["たくし上げる"]
+  }],
+  "r_ele": [{
+    "reb": ["たくしあげる"]
+  }],
+  "sense": [{
+    "pos": ["&v1;"],
+    "gloss": ["to roll up or pull up (sleeves, skirt, etc.)"]
+  }]
+}, {
+  "ent_seq": ["1007210"],
+  "r_ele": [{
+    "reb": ["たじたじ"]
+  }],
+  "sense": [{
+    "pos": ["&adv;", "&adv-to;", "&vs;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["overwhelmed", "recoiling", "cringing"]
+  }]
+}, {
+  "ent_seq": ["1007220"],
+  "r_ele": [{
+    "reb": ["たじろぐ"]
+  }],
+  "sense": [{
+    "pos": ["&v5g;", "&vi;"],
+    "gloss": ["to falter", "to wince"]
+  }]
+}, {
+  "ent_seq": ["1007230"],
+  "r_ele": [{
+    "reb": ["たった"],
+    "re_pri": ["ichi1"]
+  }],
+  "sense": [{
+    "pos": ["&adj-f;", "&adv;"],
+    "gloss": ["only", "merely", "but", "no more than"]
+  }]
+}, {
+  "ent_seq": ["1007240"],
+  "r_ele": [{
+    "reb": ["たっぷり"],
+    "re_pri": ["ichi1"]
+  }],
+  "sense": [{
+    "pos": ["&adv;", "&adv-to;", "&n;", "&adj-no;", "&adj-na;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["full", "in plenty", "ample"]
+  }]
+}, {
+  "ent_seq": ["1007250"],
+  "k_ele": [{
+    "keb": ["辿々しい"]
+  }, {
+    "keb": ["辿辿しい"]
+  }, {
+    "keb": ["辿たどしい"]
+  }],
+  "r_ele": [{
+    "reb": ["たどたどしい"]
+  }],
+  "sense": [{
+    "pos": ["&adj-i;"],
+    "misc": ["&uk;"],
+    "gloss": ["with difficulty", "faltering", "tottering", "awkward"]
+  }]
+}, {
+  "ent_seq": ["1007260"],
+  "k_ele": [{
+    "keb": ["鱮"]
+  }, {
+    "keb": ["鰱"]
+  }],
+  "r_ele": [{
+    "reb": ["たなご"]
+  }, {
+    "reb": ["タナゴ"],
+    "re_nokanji": [""]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "misc": ["&uk;"],
+    "gloss": ["bitterling (any fish of subfamily Acheilognathinae, esp. species Acheilognathus melanogaster)"]
+  }]
+}, {
+  "ent_seq": ["1007270"],
+  "k_ele": [{
+    "keb": ["度に"],
+    "ke_pri": ["spec1"]
+  }],
+  "r_ele": [{
+    "reb": ["たびに"],
+    "re_pri": ["spec1"]
+  }, {
+    "reb": ["たんびに"]
+  }],
+  "sense": [{
+    "pos": ["&adv;"],
+    "misc": ["&uk;"],
+    "gloss": ["each time", "every time", "whenever (something happens)", "on the occasion of"]
+  }]
+}, {
+  "ent_seq": ["1007280"],
+  "r_ele": [{
+    "reb": ["たらたら"],
+    "re_pri": ["ichi1"]
+  }],
+  "sense": [{
+    "pos": ["&adv;", "&adv-to;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["drop-by-drop", "dripping", "dribbling", "in a trickle"]
+  }, {
+    "misc": ["&on-mim;"],
+    "gloss": ["incessantly (esp. speaking, e.g. complaints, compliments)", "in great profusion"]
+  }]
+}, {
+  "ent_seq": ["1007290"],
+  "r_ele": [{
+    "reb": ["たらんと"]
+  }],
+  "sense": [{
+    "pos": ["&n;", "&vs;"],
+    "gloss": ["tending to be", "wanting to be"]
+  }]
+}, {
+  "ent_seq": ["1007300"],
+  "k_ele": [{
+    "keb": ["たん瘤"]
+  }],
+  "r_ele": [{
+    "reb": ["たんこぶ"]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "misc": ["&uk;"],
+    "gloss": ["bump", "lump", "protuberance", "swelling"]
+  }]
+}, {
+  "ent_seq": ["1007310"],
+  "r_ele": [{
+    "reb": ["だから"],
+    "re_pri": ["ichi1"]
+  }],
+  "sense": [{
+    "pos": ["&conj;"],
+    "xref": ["ですから"],
+    "gloss": ["so", "therefore"]
+  }]
+}, {
+  "ent_seq": ["1007320"],
+  "r_ele": [{
+    "reb": ["だからって"]
+  }],
+  "sense": [{
+    "pos": ["&exp;"],
+    "gloss": ["even so", "all the same", "nevertheless", "yes, but ..."]
+  }]
+}, {
+  "ent_seq": ["1007330"],
+  "k_ele": [{
+    "keb": ["だからと言って"]
+  }],
+  "r_ele": [{
+    "reb": ["だからといって"]
+  }],
+  "sense": [{
+    "pos": ["&conj;"],
+    "misc": ["&uk;"],
+    "gloss": ["while it may be true that", "just because", "nevertheless", "not necessarily"]
+  }]
+}, {
+  "ent_seq": ["1007340"],
+  "k_ele": [{
+    "keb": ["丈"],
+    "ke_pri": ["spec1"]
+  }],
+  "r_ele": [{
+    "reb": ["だけ"],
+    "re_pri": ["spec1"]
+  }],
+  "sense": [{
+    "pos": ["&prt;"],
+    "xref": ["しか"],
+    "misc": ["&uk;"],
+    "gloss": ["only", "just", "merely", "simply", "no more than", "nothing but", "alone"]
+  }, {
+    "misc": ["&uk;"],
+    "gloss": ["as (e.g. as soon as, as much as)"]
+  }, {
+    "misc": ["&uk;"],
+    "s_inf": ["e.g. ...だけの"],
+    "gloss": ["worth"]
+  }]
+}, {
+  "ent_seq": ["1007350"],
+  "r_ele": [{
+    "reb": ["だけあって"]
+  }],
+  "sense": [{
+    "pos": ["&suf;"],
+    "gloss": [".. being the case", "(precisely) because ...", "as might be expected (from ..)"]
+  }]
+}, {
+  "ent_seq": ["1007360"],
+  "r_ele": [{
+    "reb": ["だけでなく"],
+    "re_pri": ["spec1"]
+  }],
+  "sense": [{
+    "pos": ["&exp;"],
+    "xref": ["のみならず"],
+    "gloss": ["not just ... (but also ..)"]
+  }]
+}, {
+  "ent_seq": ["1007370"],
+  "r_ele": [{
+    "reb": ["だけど"],
+    "re_pri": ["spec1"]
+  }],
+  "sense": [{
+    "pos": ["&conj;"],
+    "gloss": ["however"]
+  }]
+}, {
+  "ent_seq": ["1007380"],
+  "k_ele": [{
+    "keb": ["丈に"]
+  }],
+  "r_ele": [{
+    "reb": ["だけに"]
+  }],
+  "sense": [{
+    "pos": ["&exp;"],
+    "misc": ["&uk;"],
+    "gloss": [".. being the case", "(precisely) because ...", "as might be expected (from ..)"]
+  }]
+}, {
+  "ent_seq": ["1007390"],
+  "r_ele": [{
+    "reb": ["ダサい"]
+  }, {
+    "reb": ["ださい"]
+  }],
+  "sense": [{
+    "pos": ["&adj-i;"],
+    "misc": ["&sl;"],
+    "gloss": ["uncool", "unsophisticated", "unfashionable", "out of fashion"]
+  }]
+}, {
+  "ent_seq": ["1007400"],
+  "r_ele": [{
+    "reb": ["だったら"],
+    "re_pri": ["spec1"]
+  }],
+  "sense": [{
+    "pos": ["&conj;"],
+    "xref": ["だ・1"],
+    "gloss": ["if it's the case"]
+  }]
+}, {
+  "ent_seq": ["1007420"],
+  "r_ele": [{
+    "reb": ["だと"],
+    "re_pri": ["spec1"]
+  }],
+  "sense": [{
+    "pos": ["&exp;"],
+    "gloss": ["if it's the case"]
+  }]
+}, {
+  "ent_seq": ["1007430"],
+  "r_ele": [{
+    "reb": ["だぶだぶ"],
+    "re_pri": ["ichi1"]
+  }, {
+    "reb": ["ダブダブ"]
+  }],
+  "sense": [{
+    "pos": ["&adj-na;", "&adj-no;", "&adv;", "&adv-to;", "&vs;"],
+    "xref": ["ぶかぶか・1", "ゆったり・2", "たぶたぶ・2"],
+    "misc": ["&on-mim;"],
+    "gloss": ["loose (of clothing)", "baggy"]
+  }, {
+    "pos": ["&adv;", "&adv-to;", "&vs;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["flabby", "saggy"]
+  }, {
+    "pos": ["&adv;", "&adv-to;", "&adj-na;", "&vs;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["sloshing", "slopping", "overflowing"]
+  }, {
+    "pos": ["&adv;", "&adv-to;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["plenty (of pouring a liquid)", "drowning (e.g. in a sauce)"]
+  }]
+}, {
+  "ent_seq": ["1007440"],
+  "k_ele": [{
+    "keb": ["だぼ鯊"]
+  }],
+  "r_ele": [{
+    "reb": ["だぼはぜ"]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "gloss": ["goby (fish)"]
+  }]
+}, {
+  "ent_seq": ["1007450"],
+  "k_ele": [{
+    "keb": ["だまし取る"]
+  }, {
+    "keb": ["騙し取る"]
+  }, {
+    "keb": ["騙しとる"]
+  }],
+  "r_ele": [{
+    "reb": ["だましとる"]
+  }],
+  "sense": [{
+    "pos": ["&v5r;"],
+    "gloss": ["to take something away by deception"]
+  }]
+}, {
+  "ent_seq": ["1007460"],
+  "k_ele": [{
+    "keb": ["駄目になる"]
+  }],
+  "r_ele": [{
+    "reb": ["だめになる"]
+  }],
+  "sense": [{
+    "pos": ["&exp;", "&v5r;"],
+    "xref": ["駄目・1"],
+    "gloss": ["to spoil", "to break", "to go bad", "to go wrong", "to fail"]
+  }]
+}, {
+  "ent_seq": ["1007470"],
+  "r_ele": [{
+    "reb": ["だもの"]
+  }],
+  "sense": [{
+    "pos": ["&n;", "&vs;"],
+    "gloss": ["indicate reason", "infers some protest"]
+  }]
+}, {
+  "ent_seq": ["1007480"],
+  "r_ele": [{
+    "reb": ["だらけ"],
+    "re_pri": ["ichi1"]
+  }],
+  "sense": [{
+    "pos": ["&n-suf;"],
+    "gloss": ["full of (e.g. mistakes)", "riddled with"]
+  }, {
+    "gloss": ["covered all over with (blood, mud, etc.)"]
+  }]
+}, {
+  "ent_seq": ["1007490"],
+  "r_ele": [{
+    "reb": ["だらける"]
+  }],
+  "sense": [{
+    "pos": ["&v1;", "&vi;"],
+    "gloss": ["to be lazy", "to be slack", "to feel dull", "to feel languid", "to feel listless"]
+  }]
+}, {
+  "ent_seq": ["1007500"],
+  "k_ele": [{
+    "keb": ["だらし無い"],
+    "ke_pri": ["ichi1"]
+  }],
+  "r_ele": [{
+    "reb": ["だらしない"],
+    "re_pri": ["ichi1"]
+  }],
+  "sense": [{
+    "pos": ["&adj-i;"],
+    "misc": ["&uk;"],
+    "gloss": ["slovenly", "loose", "sluttish", "slatternly", "untidy", "undisciplined", "careless"]
+  }]
+}, {
+  "ent_seq": ["1007510"],
+  "r_ele": [{
+    "reb": ["だらだら"],
+    "re_pri": ["ichi1"]
+  }, {
+    "reb": ["ダラダラ"],
+    "re_pri": ["spec1"]
+  }],
+  "sense": [{
+    "pos": ["&adv;", "&adv-to;", "&vs;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["in drops", "dripping", "trickling", "streaming", "flowing"]
+  }, {
+    "misc": ["&on-mim;"],
+    "gloss": ["gently (sloping)"]
+  }, {
+    "misc": ["&on-mim;"],
+    "gloss": ["sluggishly", "endlessly", "lengthily"]
+  }, {
+    "misc": ["&on-mim;"],
+    "gloss": ["leisurely", "idly", "slowly", "slovenly"]
+  }]
+}, {
+  "ent_seq": ["1007520"],
+  "k_ele": [{
+    "keb": ["怠い"],
+    "ke_pri": ["ichi1"]
+  }, {
+    "keb": ["懈い"]
+  }],
+  "r_ele": [{
+    "reb": ["だるい"],
+    "re_pri": ["ichi1"]
+  }, {
+    "reb": ["たるい"],
+    "re_inf": ["&ok;"]
+  }],
+  "sense": [{
+    "pos": ["&adj-i;"],
+    "misc": ["&uk;"],
+    "gloss": ["sluggish", "languid", "listless", "heavy (heart, legs, etc.)", "dull"]
+  }, {
+    "misc": ["&uk;", "&sl;"],
+    "gloss": ["bothersome", "tiresome"]
+  }]
+}, {
+  "ent_seq": ["1007530"],
+  "r_ele": [{
+    "reb": ["ちぎりぎ"]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "field": ["&MA;"],
+    "gloss": ["weight-chain-pole weapon"]
+  }]
+}, {
+  "ent_seq": ["1007540"],
+  "r_ele": [{
+    "reb": ["ちぐはぐ"],
+    "re_pri": ["ichi1"]
+  }],
+  "sense": [{
+    "pos": ["&adj-na;", "&n;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["mismatched", "odd", "irregular"]
+  }]
+}, {
+  "ent_seq": ["1007550"],
+  "k_ele": [{
+    "keb": ["些と"]
+  }, {
+    "keb": ["少と"]
+  }],
+  "r_ele": [{
+    "reb": ["ちっと"]
+  }, {
+    "reb": ["ちと"]
+  }],
+  "sense": [{
+    "pos": ["&adv;"],
+    "misc": ["&uk;"],
+    "gloss": ["a little bit"]
+  }, {
+    "gloss": ["a little while"]
+  }]
+}, {
+  "ent_seq": ["1007560"],
+  "k_ele": [{
+    "keb": ["些とも"],
+    "ke_pri": ["ichi1"]
+  }],
+  "r_ele": [{
+    "reb": ["ちっとも"],
+    "re_pri": ["ichi1"]
+  }],
+  "sense": [{
+    "pos": ["&adv;"],
+    "misc": ["&uk;"],
+    "gloss": ["not at all (neg. verb)"]
+  }]
+}, {
+  "ent_seq": ["1007570"],
+  "k_ele": [{
+    "keb": ["小っぽけ"]
+  }],
+  "r_ele": [{
+    "reb": ["ちっぽけ"]
+  }],
+  "sense": [{
+    "pos": ["&adj-na;"],
+    "misc": ["&uk;"],
+    "gloss": ["very small", "tiny"]
+  }]
+}, {
+  "ent_seq": ["1007590"],
+  "r_ele": [{
+    "reb": ["ちびちび"]
+  }, {
+    "reb": ["ちびりちびり"]
+  }],
+  "sense": [{
+    "pos": ["&adv;", "&adv-to;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["little by little", "piecemeal", "bit by bit"]
+  }]
+}, {
+  "ent_seq": ["1007600"],
+  "r_ele": [{
+    "reb": ["ちゃきちゃき"]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "gloss": ["efficient"]
+  }]
+}, {
+  "ent_seq": ["1007610"],
+  "r_ele": [{
+    "reb": ["ちゃっかり"]
+  }],
+  "sense": [{
+    "pos": ["&adv;", "&adv-to;", "&vs;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["shrewd", "smart", "calculating", "astute", "sharp", "cunning"]
+  }]
+}, {
+  "ent_seq": ["1007620"],
+  "r_ele": [{
+    "reb": ["ちやほや"]
+  }, {
+    "reb": ["ちゃほや"],
+    "re_inf": ["&ik;"]
+  }],
+  "sense": [{
+    "pos": ["&vs;", "&adv;", "&adv-to;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["to pamper", "to make a fuss of", "to spoil", "to fawn over"]
+  }]
+}, {
+  "ent_seq": ["1007630"],
+  "r_ele": [{
+    "reb": ["チャラ"]
+  }, {
+    "reb": ["ちゃら"]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "misc": ["&col;"],
+    "gloss": ["forgiving a debt", "getting even"]
+  }]
+}, {
+  "ent_seq": ["1007640"],
+  "r_ele": [{
+    "reb": ["ちゃり"]
+  }, {
+    "reb": ["チャリ"]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "xref": ["ちゃりんこ・1"],
+    "misc": ["&abbr;", "&col;"],
+    "gloss": ["bicycle"]
+  }]
+}, {
+  "ent_seq": ["1007650"],
+  "r_ele": [{
+    "reb": ["ちゃりんこ"]
+  }, {
+    "reb": ["チャリンコ"]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "misc": ["&col;"],
+    "gloss": ["bicycle"]
+  }, {
+    "misc": ["&sl;"],
+    "gloss": ["child pickpocket"]
+  }]
+}, {
+  "ent_seq": ["1007660"],
+  "r_ele": [{
+    "reb": ["ちゃん"],
+    "re_pri": ["ichi1"]
+  }],
+  "sense": [{
+    "pos": ["&suf;"],
+    "misc": ["&fam;"],
+    "gloss": ["suffix for familiar person"]
+  }]
+}, {
+  "ent_seq": ["1007670"],
+  "k_ele": [{
+    "keb": ["ちゃんこ鍋"]
+  }],
+  "r_ele": [{
+    "reb": ["ちゃんこなべ"]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "field": ["&sumo;", "&food;"],
+    "gloss": ["chankonabe", "fish, meat, and vegetable stew traditionally served to wrestlers"]
+  }]
+}, {
+  "ent_seq": ["1007680"],
+  "k_ele": [{
+    "keb": ["ちゃんこ料理"]
+  }],
+  "r_ele": [{
+    "reb": ["ちゃんこりょうり"]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "xref": ["ちゃんこ鍋・ちゃんこなべ"],
+    "field": ["&sumo;", "&food;"],
+    "gloss": ["fish, meat, and vegetable stew traditionally served to wrestlers"]
+  }]
+}, {
+  "ent_seq": ["1007690"],
+  "r_ele": [{
+    "reb": ["ちゃんたま"]
+  }],
+  "sense": [{
+    "pos": ["&n;"],
+    "misc": ["&col;"],
+    "gloss": ["testicles"]
+  }]
+}, {
+  "ent_seq": ["1007700"],
+  "r_ele": [{
+    "reb": ["ちゃんちゃん"]
+  }],
+  "sense": [{
+    "pos": ["&adv;", "&n;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["regularly", "promptly"]
+  }, {
+    "pos": ["&adv-to;"],
+    "misc": ["&on-mim;"],
+    "gloss": ["sound of clashing swords"]
+  }, {
+    "pos": ["&n;"],
+    "xref": ["辮髪"],
+    "gloss": ["Manchu queue"]
+  }, {
+    "xref": ["ちゃんちゃんこ"],
+    "gloss": ["padded sleeveless kimono jacket", "Japanese vest (often for children)"]
+  }]
+}]
