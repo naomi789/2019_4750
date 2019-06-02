@@ -74,11 +74,6 @@ with open(output, 'w') as output:
                     waseieigo = 'not waseieigo'
                 elif waseieigo == 'y':
                     waseieigo = 'waseieigo'
-                # to do i should come back and fix this
-                # else:
-                #     print(waseieigo)
-                    #     assert(False, 'something bad might\'ve happened')
-
 
         jmdict_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',\'')
         if keb is not None:
