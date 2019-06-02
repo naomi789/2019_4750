@@ -3,14 +3,11 @@
 
 import json
 import collections
+import uuid
 
-json_file = './JMdict_e.xml.json'
-# json_file = './examp_6.json'
-
+json_file = '../data/JMdict_e.json'
 output = 'create.sql'
 
-# with open(json_file, 'r') as file:
-#     data = file.read().replace('\n', '')
 
 with open(json_file, 'r') as file:
     all_data = file.read()
