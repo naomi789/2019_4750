@@ -76,7 +76,7 @@
   </nav>
 
   <div class="jumbotron text-center">
-    <h1>Search for words</h1>
+    <h1>List Detail Page</h1>
     <form class="form-inline" method="get" action="new_search">
        <div class="input-group">
          <input class="form-control"
@@ -93,31 +93,39 @@
 
   </div>
 
+
+  <div class="container">
+
+  <input class="form-control" id="myInput" type="text" style="width: 400px" placeholder="search lists with name">
+  <br>
+
   <div class="table-wrapper">
-      <% if (search_results.length > 0) {%>
+      <% if (list_words.length > 0) {%>
           <table class="table table-hovered">
               <thead class="thead-dark">
                   <tr>
-                      <th scope="col">Kanji</th>
-                      <th scope="col">Romaji</th>
-                      <th scope="col">Katakana</th>
-                      <th scope="col">Hiragana</th>
-                      <th scope="col">English Definition</th>
-                      <th scope="col">Action</th>
+                    <th scope="col">List Name</th>
+                    <th scope="col">List ID</th>
+                    <th scope="col">Kanji</th>
+                    <th scope="col">Romaji</th>
+                    <th scope="col">Katakana</th>
+                    <th scope="col">Hiragana</th>
+                    <th scope="col">English Definition</th>
                   </tr>
               </thead>
-              <tbody>
-                  <% search_results.forEach((search, index) => { %>
+              <tbody id="myTable">
+                  <% list_words.forEach((list, index) => { %>
                       <tr>
-                          <th scope="row"><%= search.kanji_symbol_name %></th>
-                          <td><%= search.romaji %></td>
-                          <td><%= search.katakana %></td>
-                          <td><%= search.hiragana %></td>
-                          <td><%= search.English_Definition %></td>
-                          <td>
-                                <a href="/detail/<%= search.romaji%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">Detail</a>
-                                <a href="/" target="_blank" rel="noopener" class="btn btn-sm btn-success">Add to a List</a>
-                            </td>
+                        <th scope="row"><%= list.vocab_list_name %></th>
+                        <td><%= list.vocab_list_id %></td>
+
+                        <td><%= list.kanji_symbol_name %></td>
+                        <td><%= list.romaji %></td>
+                        <td><%= list.katakana %></td>
+                        <td><%= list.hiragana %></td>
+                        <td><%= list.english_word_name%></td>
+
+
                       </tr>
                   <% }) %>
               </tbody>
@@ -126,6 +134,23 @@
           <p class="text-center">No search found.</p>
       <% } %>
   </div>
+
+  </div>
+
+  <script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
+
+
+
+
 
 <!-- Citations for codes
 Citation 1:Theme Used
