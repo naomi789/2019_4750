@@ -1,7 +1,7 @@
 module.exports = {
     getSearchPage: (req, res) => {
-        
-        let query = "SELECT * FROM learn_kanji WHERE romaji = " + "'" + req.query.search + "'"; // query database to get all the players
+
+        let query = "SELECT * FROM join_all_tables WHERE romaji = " + "'" + req.query.search + "'"; // query database to get all the players
 
         // execute query
         db.query(query, (err, result) => {

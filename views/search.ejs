@@ -113,10 +113,32 @@
                           <td><%= search.romaji %></td>
                           <td><%= search.katakana %></td>
                           <td><%= search.hiragana %></td>
-                          <td><%= search.English_Definition %></td>
+                          <td><%= search.english_word_name %></td>
                           <td>
-                                <a href="/detail/<%= search.romaji%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">Detail</a>
-                                
+
+                                <form class="form-inline" method="get" action="add_word">
+                                  <a href="/detail/<%= search.romaji%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">Word Detail</a>
+                                   <div class="input-group">
+                                     <input type="hidden"
+                                            value=<%= search.kanji_id %>
+                                            name='kanji_id'>
+                                    <input type="hidden"
+                                            value=<%= search.english_word_id %>
+                                            name='english_id'>
+                                     <input class="form-control"
+                                            size="10"
+                                            type="search"
+                                            placeholder="list id"
+                                            required
+                                            name='list'>
+                                    <div class="input-group-btn">
+                                     <button class="btn btn-success" type="submit">+ Add to list</button>
+                                    </div>
+                                  </div>
+
+                                 </form>
+
+
                             </td>
                       </tr>
                   <% }) %>
