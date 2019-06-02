@@ -56,6 +56,7 @@ with open(output, 'w') as output:
                     dollar_lang = lsource['$']
                     if '_' in lsource:
                         orig_word = lsource['_']
+                        orig_word = orig_word.replace('\'', '')
 
                     if 'ls_wasei' in dollar_lang:
                         waseieigo = dollar_lang['ls_wasei']
