@@ -84,9 +84,11 @@ with open(output, 'w') as output:
         for single_gloss in gloss:
             gloss_id = str(uuid.uuid4())
             if not isinstance(single_gloss, collections.Mapping):
+                single_gloss = single_gloss.replace('\'', '')
+
                 finished_gloss_statement = str(gloss_statement + gloss_id + '\',\'' + single_gloss + '\');\n')
             else: # these are probably exclusively for 'lsource' words?? Not 100% sure why this is different...
-                key_from_dict_gloss = single_gloss['_']
+                key_from_dict_gloss = single_gloss['_'].replace('\'', '')
                 finished_gloss_statement = str(gloss_statement + gloss_id + '\',\'' + key_from_dict_gloss + '\');\n')
 
             gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\',\'' + gloss_id + '\');\n')
