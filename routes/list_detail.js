@@ -1,6 +1,6 @@
 module.exports = {
     getListDetailPage: (req, res) => {
-        console.log("SELECT * FROM join_all_tables WHERE vocab_list_id = " + "'" + req.params.vocab_list_id + "'")
+        //console.log("SELECT * FROM join_all_tables WHERE vocab_list_id = " + "'" + req.params.vocab_list_id + "'")
         let query = "SELECT * FROM join_all_tables WHERE vocab_list_id = " + "'" + req.params.vocab_list_id + "'"; // query database to get all the players
 
         // execute query
