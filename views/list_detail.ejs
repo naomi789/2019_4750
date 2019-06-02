@@ -93,6 +93,12 @@
 
   </div>
 
+
+  <div class="container">
+
+  <input class="form-control" id="myInput" type="text" style="width: 400px" placeholder="search lists with name">
+  <br>
+
   <div class="table-wrapper">
       <% if (list_words.length > 0) {%>
           <table class="table table-hovered">
@@ -107,7 +113,7 @@
                     <th scope="col">English Definition</th>
                   </tr>
               </thead>
-              <tbody>
+              <tbody id="myTable">
                   <% list_words.forEach((list, index) => { %>
                       <tr>
                         <th scope="row"><%= list.vocab_list_name %></th>
@@ -128,6 +134,20 @@
           <p class="text-center">No search found.</p>
       <% } %>
   </div>
+
+  </div>
+
+  <script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
+
 
 
 
