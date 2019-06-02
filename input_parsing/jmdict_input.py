@@ -62,14 +62,16 @@ with open(output, 'w') as output:
                         orig_lang = dollar_lang['xml:lang']
 
 
-        jmdict_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',')
+        jmdict_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',\'')
         if keb is not None:
             assert(len(keb) == 1), 'looks like this is off'
             jmdict_statement = str(jmdict_statement + keb[0] + '\',')
 
+
+
         if reb is not None:
             assert(len(reb) == 1), 'idk about this'
-            jmdict_statement = str(jmdict_statement + reb[0] + '\');\n') # that's the last one
+            jmdict_statement = str(jmdict_statement + '\'' + reb[0] + '\');\n') # that's the last one
 
 
         pos_statement = 'INSERT INTO pos VALUES(\''
@@ -105,8 +107,10 @@ with open(output, 'w') as output:
                 waseieigo = ''
             elif waseieigo == 'y':
                 waseieigo = 'waseieigo'
-            else:
-                assert(False, 'something bad might\'ve happened')
+            # to do i should come back and fix this
+            # else:
+            #     print(waseieigo)
+            #     assert(False, 'something bad might\'ve happened')
 
             jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + ent_seq + '\', \'' + orig_lang + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',\'')
