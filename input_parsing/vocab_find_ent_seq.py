@@ -8,9 +8,9 @@ jim_file_name = './../data/JMdict_e/JMdict_e.json'
 
 list_id = '0001'
 list_name = 'JLPT N5'
-list_description = 'Vocabulary from Peter van der Woude\'s www.jlptstudy.net'
+list_description = 'Vocabulary from Peter van der Woude\\\'s www.jlptstudy.net'
 input_file_name = './../data/vocab/jlpt_vocab_n5.csv'
-output_file_name = 'breen_jlpt_vocab_n5.csv'
+output_file_name = 'n5_peter_create.sql'
 
 with open(input_file_name, 'r') as file:
     all_data = str.splitlines(file.read())
