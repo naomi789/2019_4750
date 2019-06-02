@@ -31,6 +31,7 @@ with open(output, 'w') as output:
         orig_lang = None
         orig_word = None
         waseieigo = None
+        is_foreign = '0'
 
         ent_seq = entry['ent_seq'] # this ALWAYS exists
         ent_seq = ent_seq[0] # there can only be one, therefore always zeroth
@@ -61,6 +62,22 @@ with open(output, 'w') as output:
                     if 'xml:lang' in dollar_lang:
                         orig_lang = dollar_lang['xml:lang']
 
+            if lsource is not None:
+                is_foreign = '1'
+                # print(waseieigo)
+                if orig_lang is None:
+                    orig_lang = 'NULL'
+                if orig_word is None:
+                    orig_word = 'NULL'
+                if waseieigo is None:
+                    waseieigo = ''
+                elif waseieigo == 'y':
+                    waseieigo = 'waseieigo'
+                # to do i should come back and fix this
+                # else:
+                #     print(waseieigo)
+                    #     assert(False, 'something bad might\'ve happened')
+
 
         jmdict_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',\'')
         if keb is not None:
@@ -69,7 +86,7 @@ with open(output, 'w') as output:
         else:
             this_keb = 'NULL'
 
-        jmdict_statement = str(jmdict_statement + this_keb + '\',')
+        jmdict_statement = str(jmdict_statement + this_keb + '\',\'')
 
 
         if reb is not None:
@@ -77,7 +94,7 @@ with open(output, 'w') as output:
             this_reb = reb[0]
         else:
             this_reb = 'NULL'
-        jmdict_statement = str(jmdict_statement + '\'' + this_reb + '\');\n') # that's the last one
+        jmdict_statement = str(jmdict_statement + this_reb + '\',\'' + is_foreign + '\');\n') # that's the last one
 
         pos_statement = 'INSERT INTO pos VALUES(\''
         for single_pos in pos:
@@ -101,22 +118,7 @@ with open(output, 'w') as output:
             gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\',\'' + gloss_id + '\');\n')
             # output.write(gloss_word_statement) # is a bridge
             output.write(finished_gloss_statement) # NOT a bridge
-
         if lsource is not None:
-            # print(waseieigo)
-            if orig_lang is None:
-                orig_lang = 'NULL'
-            if orig_word is None:
-                orig_word = 'NULL'
-            if waseieigo is None:
-                waseieigo = ''
-            elif waseieigo == 'y':
-                waseieigo = 'waseieigo'
-            # to do i should come back and fix this
-            # else:
-            #     print(waseieigo)
-            #     assert(False, 'something bad might\'ve happened')
-
             jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + ent_seq + '\', \'' + orig_lang + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');\n')
