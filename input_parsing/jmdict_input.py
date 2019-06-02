@@ -102,7 +102,7 @@ with open(output, 'w') as output:
                 orig_word = 'NULL'
             if waseieigo is None:
                 waseieigo = 'NULL'
-            jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + orig_lang + '\',\'')
+            jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + ent_seq + '\', \'' + orig_lang + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');\n')
             output.write(jmdict_foreign_statement) # NOT a bridge
