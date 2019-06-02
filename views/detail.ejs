@@ -118,22 +118,22 @@
                             <td><%= detail.romaji %></td>
                             <td><%= detail.katakana %></td>
                             <td><%= detail.hiragana %></td>
-                            <td><%= detail.English_Definition %></td>
+                            <td><%= detail.english_word_name %></td>
 
                             <form class="form-inline" method="get" action="add_word">
                                <div class="input-group">
                                  <input type="hidden"
-                                        value=<%= detail.kanji_symbol_name %>
-                                        name='kanji_symbol_name'>
+                                        value=<%= detail.kanji_id %>
+                                        name='kanji_id'>
                                 <input type="hidden"
-                                        value=<%= detail.kanji_symbol_name %>
-                                        name='searchhidden'>
+                                        value=<%= detail.english_word_id %>
+                                        name='english_id'>
                                  <input class="form-control"
                                         size="50"
                                         type="search"
                                         placeholder="Type in the name of the list you want to add to"
                                         required
-                                        name='search'>
+                                        name='list'>
                                 <div class="input-group-btn">
                                  <button class="btn btn-success" type="submit">+ Add this word to a list</button>
                                 </div>
