@@ -8,7 +8,7 @@ module.exports = {
         // execute query
         db.query(query, (err, result) => {
             if (err) {
-                res.redirect('/');
+                return res.redirect('/');
             }
             res.render('detail.ejs', {
                 title: "Welcome to Dictionary | View English Words Detail" , detail_results: result,message:''
