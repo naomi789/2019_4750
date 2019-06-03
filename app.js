@@ -15,6 +15,7 @@ const {getDeletePage} = require('./routes/delete');
 const {addListPage} = require('./routes/add_list');
 const {listCreateButtonPage} = require('./routes/create_list_button');
 const {addWordPage} = require('./routes/add_word');
+const {deleteWordPage} = require('./routes/delete_word')
 
 
 
@@ -58,8 +59,7 @@ app.get('/delete/:vocab_list_id', getDeletePage);
 app.get('/add_list',addListPage);
 app.get('/new_list',listCreateButtonPage);
 app.get('/add_word',addWordPage);
-
-
+app.get('/delete_word', deleteWordPage);
 
 //app.get('/sumbit', searchWordPage);
 
