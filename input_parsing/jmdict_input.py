@@ -84,7 +84,7 @@ with open(output, 'w') as output, open(bridge_output, 'w') as bridge_output:
                 elif waseieigo == 'y':
                     waseieigo = 'waseieigo'
 
-        jmdict_statement = str('INSERT INTO jmdict VALUES(\'' + ent_seq + '\',\'')
+        jmdict_statement = str('INSERT INTO JMdict VALUES(\'' + ent_seq + '\',\'')
         if keb is not None:
             assert(len(keb) == 1), 'looks like this is off'
             this_keb = keb[0]
@@ -129,7 +129,7 @@ with open(output, 'w') as output, open(bridge_output, 'w') as bridge_output:
             bridge_output.write(gloss_word_statement) # is a bridge
             output.write(finished_gloss_statement) # NOT a bridge
         if is_foreign == '1' or orig_lang is not None or orig_word is not None or waseieigo == 'waseieigo':
-            jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + ent_seq + '\', \'' + orig_lang + '\',\'')
+            jmdict_foreign_statement = str('INSERT INTO JMdict_foreign VALUES(\'' + ent_seq + '\', \'' + orig_lang + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');\n')
             output.write(jmdict_foreign_statement) # NOT a bridge
