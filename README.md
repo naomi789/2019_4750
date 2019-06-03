@@ -16,10 +16,10 @@ https://jlptstudy.net
 Install node, npm, and clone the repo.
 
 You'll also need:
-'''
+```
 npm install express
 npm install express-fileupload
 npm install body-parser
 npm install mysql
 npm install ejs
-'''
+```
