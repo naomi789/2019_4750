@@ -36,7 +36,7 @@ def do_everything(list_name, list_description, input_file_name, output_file_name
 
     with open(output_file_name, 'w') as output:
         output.write('USE main_db;\n')
-        output.write(str('INSERT INTO list VALUES(\'' + list_name + '\',\'' + list_description + '\');\n'))
+        output.write(str('INSERT IGNORE INTO list VALUES(\'' + list_name + '\',\'' + list_description + '\');\n'))
 
         for entry in all_data:
             entry_list = [x.strip() for x in entry.split(',')]
@@ -66,12 +66,12 @@ def do_everything(list_name, list_description, input_file_name, output_file_name
                     if entry_list[1] == jim_reading and entry_list[2] == jim_kanji:
                         # then it's a match
                         print('match!')
-                        output.write(str('INSERT INTO list_word VALUES(\'' + ent_seq + '\',\'' + list_name + '\');\n'))
+                        output.write(str('INSERT IGNORE INTO list_word VALUES(\'' + ent_seq + '\',\'' + list_name + '\');\n'))
                 else:
                     if entry_list[1] == jim_reading:
                         # then it's a match
                         print('match!')
-                        output.write(str('INSERT INTO list_word VALUES(\'' + ent_seq + '\',\'' + list_name + '\');\n'))
+                        output.write(str('INSERT IGNORE INTO list_word VALUES(\'' + ent_seq + '\',\'' + list_name + '\');\n'))
 
 
 main()
