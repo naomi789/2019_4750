@@ -96,7 +96,7 @@
 
   <div class="container">
 
-  <input class="form-control" id="myInput" type="text" style="width: 400px" placeholder="search lists with name">
+  <input class="form-control" id="myInput" type="text" style="width: 400px" placeholder="search word in list">
   <br>
 
   <div class="table-wrapper">
@@ -111,6 +111,9 @@
                     <th scope="col">Katakana</th>
                     <th scope="col">Hiragana</th>
                     <th scope="col">English Definition</th>
+                    <th scope="col">Operation</th>
+
+
                   </tr>
               </thead>
               <tbody id="myTable">
@@ -124,14 +127,17 @@
                         <td><%= list.katakana %></td>
                         <td><%= list.hiragana %></td>
                         <td><%= list.english_word_name%></td>
-
+                        <td>
+                                <a href="/delete_word?kanji_id=<%= list.kanji_id%>&english_id=<%= list.english_word_id%>&list=<%= list.vocab_list_id%>" class="btn btn-sm btn-danger">X Delete Word From List</a>
+                                
+                          </td>
 
                       </tr>
                   <% }) %>
               </tbody>
           </table>
       <% } else { %>
-          <p class="text-center">No search found.</p>
+          <p class="text-center">This list contains zero words.</p>
       <% } %>
   </div>
 

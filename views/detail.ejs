@@ -93,35 +93,43 @@
 
   </div>
 
-  <div class="table-wrapper">
-      <% if (detail_results.length > 0) {%>
-          <table class="table table-hovered">
-              <thead class="thead-dark">
-                  <tr>
-                      <th scope="col">Kanji</th>
-                      <th scope="col">Romaji</th>
-                      <th scope="col">Katakana</th>
-                      <th scope="col">Hiragana</th>
-                      <th scope="col">English Definition</th>
+  <div class="container">
 
-                  </tr>
-              </thead>
-              <tbody>
-                  <% detail_results.forEach((detail, index) => { %>
-                      <tr>
-                          <th scope="row"><%= detail.kanji_symbol_name %></th>
-                          <td><%= detail.romaji %></td>
-                          <td><%= detail.katakana %></td>
-                          <td><%= detail.hiragana %></td>
-                          <td><%= detail.English_Definition %></td>
 
-                      </tr>
-                  <% }) %>
-              </tbody>
-          </table>
-      <% } else { %>
-          <p class="text-center">No search found.</p>
-      <% } %>
+    <br>
+    <div class="table-wrapper">
+
+        <% if (detail_results.length > 0) {%>
+            <table class="table table-hovered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Kanji</th>
+                        <th scope="col">Romaji</th>
+                        <th scope="col">Katakana</th>
+                        <th scope="col">Hiragana</th>
+                        <th scope="col">English Definition</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <% detail_results.forEach((detail, index) => { %>
+                        <tr>
+                            <th scope="row"><%= detail.kanji_symbol_name %></th>
+                            <td><%= detail.romaji %></td>
+                            <td><%= detail.katakana %></td>
+                            <td><%= detail.hiragana %></td>
+                            <td><%= detail.english_word_name %></td>
+
+                            
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p class="text-center">No search found.</p>
+        <% } %>
+    </div>
+
   </div>
 
 

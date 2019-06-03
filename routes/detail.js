@@ -1,8 +1,9 @@
 module.exports = {
+
     getDetailPage: (req, res) => {
 
         //console.log(req.params);
-        let query = "SELECT * FROM learn_kanji WHERE romaji = " + "'" + req.params.romaji + "'"; 
+        let query = "SELECT * FROM join_all_tables WHERE romaji = " + "'" + req.params.romaji + "'";
 
         // execute query
         db.query(query, (err, result) => {
