@@ -111,9 +111,8 @@
                           <td><%= search.reb %></td>
                           <td><%= search.gloss_def%></td>
                           <td>
-
                                 <form class="form-inline" method="get" action="add_word">
-                                  <a href="/detail/<%= search.romaji%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">Word Detail</a>
+                                  <a href="/detail/<%= search.ent_seq%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">Word Detail</a>
                                    <div class="input-group">
                                      <input type="hidden"
                                             value=<%= search.kanji_id %>
