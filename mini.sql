@@ -904,6 +904,7 @@ INSERT INTO pos VALUES('1a759805-3a95-4bc0-a32e-d78ceb246d2e','&n;');
 INSERT INTO gloss VALUES('f2ee234e-698c-46c8-beef-17610bddcb60','metal pins of climbing shoes');
 INSERT INTO gloss VALUES('1a27166f-25c4-4922-8b46-da8f340c72ae','crampons');
 INSERT INTO gloss VALUES('9416b30e-d08c-4cb9-8289-edd731a9e772','climbing irons');
+INSERT INTO jmdict VALUES('1014080','NULL','アイゼン','1');
 INSERT INTO jmdict_foreign VALUES('1014080', 'ger','Eisen','not waseieigo');
 INSERT INTO jmdict VALUES('1014080','NULL','アイゼン','1');
 INSERT INTO pos_word VALUES('1014080','2ee0381b-12f8-433d-8a9f-3802a8637195');
