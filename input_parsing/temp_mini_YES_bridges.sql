@@ -1,2 +1,0 @@
-INSERT INTO pos_word VALUES('1007070','0991e44d-f2d5-459c-9e51-41b0cadcec8b');
-INSERT INTO pos_word VALUES('1007080','f50c1b41-d6ee-48e0-a6ab-82bc505473fd');
