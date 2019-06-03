@@ -36,7 +36,7 @@ ALTER TABLE list CHANGE list_description list_description VARCHAR(2000) CHARACTE
 
 CREATE TABLE IF NOT EXISTS list_word
 (ent_seq INT NOT NULL, list_name NVARCHAR(200) NOT NULL,
-CONSTRAINT PK_list_word PRIMARY KEY (list_name) );
+CONSTRAINT PK_list_word PRIMARY KEY (ent_seq, list_name) );
 ALTER TABLE list_word CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE list_word CHANGE list_name list_name VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
