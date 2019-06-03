@@ -5,13 +5,13 @@ import json
 import collections
 import uuid
 
-# json_file = '../data/JMdict_e/JMdict_e.json'
+json_file = '../data/JMdict_e/JMdict_e.json'
 # json_file = '../data/JMdict_e/examp_1.json'
-json_file = '../data/JMdict_e/examp_6.json'
-# output = 'jmdict_no_bridges_create.sql'
-output = 'mini.sql'
-bridge_output = 'mini_bridges.sql'
-# bridge_output = 'jmdict_bridges_only_create.sql'
+# json_file = '../data/JMdict_e/examp_6.json'
+output = 'jmdict_no_bridges_create.sql'
+# output = 'mini.sql'
+# bridge_output = 'mini_bridges.sql'
+bridge_output = 'jmdict_bridges_only_create.sql'
 # output = 'temp_mini_no_bridges.sql'
 # bridge_output = 'temp_mini_YES_bridges.sql'
 
@@ -126,7 +126,7 @@ with open(output, 'w') as output, open(bridge_output, 'w') as bridge_output:
                 finished_gloss_statement = str(gloss_statement + gloss_id + '\',\'' + key_from_dict_gloss + '\');\n')
 
             gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\',\'' + gloss_id + '\');\n')
-            # output.write(gloss_word_statement) # is a bridge
+            bridge_output.write(gloss_word_statement) # is a bridge
             output.write(finished_gloss_statement) # NOT a bridge
         if is_foreign == '1' or orig_lang is not None or orig_word is not None or waseieigo == 'waseieigo':
             jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + ent_seq + '\', \'' + orig_lang + '\',\'')
