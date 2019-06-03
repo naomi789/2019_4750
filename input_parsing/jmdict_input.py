@@ -5,10 +5,13 @@ import json
 import collections
 import uuid
 
-json_file = '../data/JMdict_e/JMdict_e.json'
+# json_file = '../data/JMdict_e/JMdict_e.json'
 # json_file = '../data/JMdict_e/examp_1.json'
-output = 'jmdict_no_bridges_create.sql'
-bridge_output = 'jmdict_bridges_only_create.sql'
+json_file = '../data/JMdict_e/examp_6.json'
+# output = 'jmdict_no_bridges_create.sql'
+output = 'mini.sql'
+bridge_output = 'mini_bridges.sql'
+# bridge_output = 'jmdict_bridges_only_create.sql'
 # output = 'temp_mini_no_bridges.sql'
 # bridge_output = 'temp_mini_YES_bridges.sql'
 
