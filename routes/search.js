@@ -1,7 +1,7 @@
 module.exports = {
     getSearchPage: (req, res) => {
 
-        let query = "SELECT * FROM learn_kanji WHERE romaji LIKE " + "%" + req.query.search + "%";
+        let query = "SELECT * FROM learn_kanji WHERE romaji LIKE '%" + req.query.search + "%'";
         // query(err, rows, fields)
         //   if (err) throw err;
         //   var data=[];

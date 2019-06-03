@@ -61,8 +61,3 @@ ALTER TABLE list_word
 ADD FOREIGN KEY (ent_seq) REFERENCES JMdict(ent_seq);
 ALTER TABLE list_word
 ADD FOREIGN KEY (list_ID) REFERENCES list(list_ID);
-
-
-
-
-
