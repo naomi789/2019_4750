@@ -3,7 +3,7 @@ module.exports = {
     getDetailPage: (req, res) => {
 
         //console.log(req.params);
-        let query = "SELECT * FROM join_all_tables WHERE romaji = " + "'" + req.params.romaji + "'";
+        let query = "SELECT * FROM join_all_tables WHERE ent_seq = " + "'" + req.params.romaji + "'";
 
         // execute query
         db.query(query, (err, result) => {
