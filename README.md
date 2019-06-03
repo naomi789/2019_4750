@@ -31,8 +31,9 @@ In MySQL Workbench,
 1) Run script.sql to create database, tables, columns, and to change unicode format
 	(location: root of repo)
 
-2) Run insert_commands_1.sql, insert_commands_2.sql, insert_commands_3.sql, and insert_commands_4.sql to insert jmdict records
-	(location: /input_parsing)
+2) Run all_jmdict_insert_commands.sql to insert jmdict records
+	(location: input_parsing/)
+	NOTE: If file is too large for your computer to handle, use jmdict_inserts_part1.sql and jmdict_inserts_part2.sql (location: input_parsing/). If these are still too large, you may need to divide them up into smaller files, making sure to run them in their natural order.
 
 3) Run n2_peter_create.sql, n4_peter_create.sql, and n5_peter_create.sql 
-	(location: input_parsing)
+	(location: input_parsing/)
