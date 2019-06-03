@@ -37,3 +37,10 @@ In MySQL Workbench,
 
 3) Run n2_peter_create.sql, n4_peter_create.sql, and n5_peter_create.sql 
 	(location: input_parsing/)
+
+## How we set up the server
+We found the following tutorials helpful:
+
+https://hackernoon.com/tutorial-creating-and-managing-a-node-js-server-on-aws-part-1-d67367ac5171
+
+https://www.linode.com/docs/databases/mysql/install-mysql-on-ubuntu-14-04/
