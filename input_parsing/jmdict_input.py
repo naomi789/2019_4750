@@ -6,8 +6,8 @@ import collections
 import uuid
 
 json_file = '../data/JMdict_e/JMdict_e.json'
-output = 'jmdict_no_bridges_create.sql'
-# output = 'jmdict_bridges_only_create.sql'
+# output = 'jmdict_no_bridges_create.sql'
+output = 'jmdict_bridges_only_create.sql'
 
 
 with open(json_file, 'r') as file:
@@ -96,12 +96,17 @@ with open(output, 'w') as output:
         jmdict_statement = str(jmdict_statement + this_reb + '\',\'' + is_foreign + '\');\n') # that's the last one
 
         pos_statement = 'INSERT INTO pos VALUES(\''
+        counter = 0
         for single_pos in pos:
+            # print(counter)
+            counter += 1
+            # print(single_pos)
             pos_id = str(uuid.uuid4())
             finished_pos_statement = str(pos_statement + pos_id + '\',\'' + single_pos + '\');\n')
             pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + '\',\'' + pos_id + '\');\n')
-            output.write(finished_pos_statement)  # NOT a bridge
-            # output.write(pos_word_statement) # is a bridge
+            # output.write(finished_pos_statement)  # NOT a bridge
+            output.write(pos_word_statement) # is a bridge
+        # print(counter, pos)
 
         gloss_statement = 'INSERT INTO gloss VALUES(\''
         for single_gloss in gloss:
@@ -115,11 +120,13 @@ with open(output, 'w') as output:
                 finished_gloss_statement = str(gloss_statement + gloss_id + '\',\'' + key_from_dict_gloss + '\');\n')
 
             gloss_word_statement = str('INSERT INTO gloss_word VALUES(\'' + ent_seq + '\',\'' + gloss_id + '\');\n')
-            # output.write(gloss_word_statement) # is a bridge
-            output.write(finished_gloss_statement) # NOT a bridge
+            output.write(gloss_word_statement) # is a bridge
+            # output.write(finished_gloss_statement) # NOT a bridge
         if is_foreign == '1':
             jmdict_foreign_statement = str('INSERT INTO jmdict_foreign VALUES(\'' + ent_seq + '\', \'' + orig_lang + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + orig_word + '\',\'')
             jmdict_foreign_statement = str(jmdict_foreign_statement + waseieigo + '\');\n')
-            output.write(jmdict_foreign_statement) # NOT a bridge
-        output.write(jmdict_statement) # NOT a bridge
+        #     output.write(jmdict_foreign_statement) # NOT a bridge
+
+        # yes this should be indented differently
+        # output.write(jmdict_statement) # NOT a bridge
