@@ -44,3 +44,23 @@ We found the following tutorials helpful:
 https://hackernoon.com/tutorial-creating-and-managing-a-node-js-server-on-aws-part-1-d67367ac5171
 
 https://www.linode.com/docs/databases/mysql/install-mysql-on-ubuntu-14-04/
+
+```
+CREATE USER 'data'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON * . * TO 'data'@'localhost';
+ALTER USER 'data'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+FLUSH PRIVILEGES; 
+
+```
+
+Afterwards, we ran our scripts in the following order:
+
+```
+sudo mysql -u root
+//then the code goes into mysql...
+source script.sql;
+source all_jmdict_insert_commands.sql;
+
+
+
+```
