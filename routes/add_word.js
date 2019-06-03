@@ -8,10 +8,10 @@ module.exports = {
         let query2 = "SELECT * FROM join_all_tables WHERE vocab_list_id = " + "'" + req.query.list + "'"; // query database to get all the players
 
         // execute query
-        
+
         db.query(query1, (err, result) => {
             if (err) {
-                res.redirect('/');
+                return res.redirect('/');
             }
             //console.log(result[2]);
 

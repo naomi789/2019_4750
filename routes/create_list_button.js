@@ -10,7 +10,7 @@ module.exports = {
 
         db.query(query1, (err, result) => {
             if (err) {
-                res.redirect('/');
+                return res.redirect('/');
             }
             //console.log(result[2]);
 
