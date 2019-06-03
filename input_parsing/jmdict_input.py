@@ -5,12 +5,12 @@ import json
 import collections
 import uuid
 
-# json_file = '../data/JMdict_e/JMdict_e.json'
-json_file = '../data/JMdict_e/examp_1.json'
-# output = 'jmdict_no_bridges_create.sql'
-# output = 'jmdict_bridges_only_create.sql'
-output = 'temp_mini_no_bridges.sql'
-# output = 'temp_mini_YES_bridges.sql'
+json_file = '../data/JMdict_e/JMdict_e.json'
+# json_file = '../data/JMdict_e/examp_1.json'
+output = 'jmdict_no_bridges_create.sql'
+bridge_output = 'jmdict_bridges_only_create.sql'
+# output = 'temp_mini_no_bridges.sql'
+# bridge_output = 'temp_mini_YES_bridges.sql'
 
 
 with open(json_file, 'r') as file:
@@ -20,7 +20,7 @@ with open(json_file, 'r') as file:
 all_data = json.loads(all_data)
 
 
-with open(output, 'w') as output:
+with open(output, 'w') as output, open(bridge_output, 'w') as bridge_output:
     output.write('USE main_db;\n')
     for entry in all_data:
         ent_seq = None
@@ -108,7 +108,7 @@ with open(output, 'w') as output:
             finished_pos_statement = str(pos_statement + pos_id + '\',\'' + single_pos + '\');\n')
             pos_word_statement = str('INSERT INTO pos_word VALUES(\'' + ent_seq + '\',\'' + pos_id + '\');\n')
             output.write(finished_pos_statement)  # NOT a bridge
-            # output.write(pos_word_statement) # is a bridge
+            bridge_output.write(pos_word_statement) # is a bridge
         # print(counter, pos)
 
         gloss_statement = 'INSERT INTO gloss VALUES(\''
