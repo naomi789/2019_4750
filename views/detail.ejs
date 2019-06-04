@@ -68,15 +68,15 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/">WORD</a></li>
-          <li><a href="list">LIST</a></li>
-            <li><a href="help">HELP</a></li>
+          <li><a href="/list">LIST</a></li>
+            <li><a href="/help">HELP</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <div class="jumbotron text-center">
-    <h1>Search for words: Detail Page</h1>
+    <h1>Search for words</h1>
     <form class="form-inline" method="get" action="new_search">
        <div class="input-group">
          <input class="form-control"
@@ -123,7 +123,7 @@
                             <td><%= detail.waseieigo %></td>
                             <td><%= detail.pos_type %></td>
 
-                            
+
                         </tr>
                     <% }) %>
                 </tbody>
@@ -145,7 +145,7 @@
                             <th scope="row">Native</th>
                             <td><%= detail.pos_type %></td>
 
-                            
+
                         </tr>
                     <% }) %>
                 </tbody>

@@ -68,8 +68,8 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/">WORD</a></li>
-          <li><a href="list">LIST</a></li>
-            <li><a href="help">HELP</a></li>
+          <li><a href="/list">LIST</a></li>
+            <li><a href="/help">HELP</a></li>
         </ul>
       </div>
     </div>
@@ -93,53 +93,71 @@
 
   </div>
 
-  <div class="table-wrapper">
-      <% if (search_results.length > 0) {%>
-          <table class="table table-hovered">
-              <thead class="thead-dark">
-                  <tr>
-                      <th scope="col">Kanji</th>
-                      <th scope="col">Hiragana/Katakana</th>
-                      <th scope="col">English Definition</th>
-                      <th scope="col">Action</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <% search_results.forEach((search, index) => { %>
-                      <tr>
-                          <th scope="row"><%= search.keb %></th>
-                          <td><%= search.reb %></td>
-                          <td><%= search.gloss_def%></td>
-                          <td>
-                                <form class="form-inline" method="get" action="add_word">
-                                  <a href="/detail?ent_seq=<%= search.ent_seq%>&is_foreign=<%= search.is_foreign%>&orig_lang=<%= search.orig_lang%>&orig_word=<%= search.orig_word%>&waseieigo=<%= search.waseieigo%>&pos_type=<%= search.pos_type%>&pos_ID=<%= search.pos_ID%>&gloss_ID=<%= search.gloss_ID%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">Word Details</a>
-                                   <div class="input-group">
-                                     <input type="hidden"
-                                            value=<%= search.ent_seq %>
-                                            name='ent_seq'>
-                                     <input class="form-control"
-                                            size="10"
-                                            type="search"
-                                            placeholder="list name"
-                                            required
-                                            name='list_name'>
-                                    <div class="input-group-btn">
-                                     <button class="btn btn-success" type="submit">+ Add to this list</button>
+  <div class="container">
+
+    <input class="form-control" id="myInput" type="text" style="width: 900px" placeholder="Below is a list of possible match. Type in your word to filter the list.">
+    <br>
+
+    <div class="table-wrapper">
+        <% if (search_results.length > 0) {%>
+            <table class="table table-hovered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Kanji</th>
+                        <th scope="col">Hiragana/Katakana</th>
+                        <th scope="col">English Definition</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    <% search_results.forEach((search, index) => { %>
+                        <tr>
+                            <th scope="row"><%= search.keb %></th>
+                            <td><%= search.reb %></td>
+                            <td><%= search.gloss_def%></td>
+                            <td>
+                                  <form class="form-inline" method="get" action="add_word">
+                                    <a href="/detail?ent_seq=<%= search.ent_seq%>&is_foreign=<%= search.is_foreign%>&orig_lang=<%= search.orig_lang%>&orig_word=<%= search.orig_word%>&waseieigo=<%= search.waseieigo%>&pos_type=<%= search.pos_type%>&pos_ID=<%= search.pos_ID%>&gloss_ID=<%= search.gloss_ID%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">Word Details</a>
+                                     <div class="input-group">
+                                       <input type="hidden"
+                                              value=<%= search.ent_seq %>
+                                              name='ent_seq'>
+                                       <input class="form-control"
+                                              size="10"
+                                              type="search"
+                                              placeholder="list name"
+                                              required
+                                              name='list_name'>
+                                      <div class="input-group-btn">
+                                       <button class="btn btn-success" type="submit">+ Add to this list</button>
+                                      </div>
                                     </div>
-                                  </div>
 
-                                 </form>
+                                   </form>
 
 
-                            </td>
-                      </tr>
-                  <% }) %>
-              </tbody>
-          </table>
-      <% } else { %>
-          <p class="text-center">No search found.</p>
-      <% } %>
+                              </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p class="text-center">No search found.</p>
+        <% } %>
+    </div>
   </div>
+
+  <script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
+
 
 <!-- Citations for codes
 Citation 1:Theme Used
