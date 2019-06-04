@@ -58,7 +58,7 @@ app.get('/detail', getDetailPage);
 app.get('/list_detail/:list_name', getListDetailPage);
 app.get('/help', getHelpPage);
 app.get('/delete/:vocab_list_id', getDeletePage);
-app.get('/add_list',addListPage);
+app.get('/list/add_list',addListPage);
 app.get('/new_list',listCreateButtonPage);
 app.get('/add_word',addWordPage);
 app.get('/delete_word', deleteWordPage);
