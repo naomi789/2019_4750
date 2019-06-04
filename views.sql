@@ -29,6 +29,26 @@ ON gloss_word.ent_seq = pos_word.ent_seq
 LEFT JOIN pos
 ON pos_word.pos_ID = pos.pos_ID
 ORDER BY gloss_word.ent_seq;
+SELECT * FROM word_detail;
 
+/*view for showing all words in lists*/
+DROP VIEW IF EXISTS words_in_lists;
+CREATE VIEW words_in_lists AS
+SELECT gloss_word.gloss_ID, gloss_word.ent_seq, jmdict.keb, jmdict.reb, gloss.gloss_def, pos.pos_type, list.list_name, list.list_description
+FROM list
+LEFT JOIN list_word 
+ON list_word.list_name = list.list_name
+LEFT JOIN jmdict 
+ON list_word.ent_seq = jmdict.ent_seq
+LEFT JOIN gloss_word
+ON gloss_word.ent_seq = list_word.ent_seq
+LEFT JOIN gloss
+ON gloss_word.gloss_ID = gloss.gloss_ID
+LEFT JOIN pos_word
+ON gloss_word.ent_seq = pos_word.ent_seq
+LEFT JOIN pos
+ON pos_word.pos_ID = pos.pos_ID
+ORDER BY gloss_word.ent_seq;
+SELECT * FROM words_in_lists;
 
 
