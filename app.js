@@ -55,7 +55,7 @@ app.get('/new_search',getSearchPage);
 app.get('/list', getListPage);
 app.get('/search', getSearchPage);
 app.get('/detail', getDetailPage);
-app.get('/list_detail/:vocab_list_id', getListDetailPage);
+app.get('/list_detail', getListDetailPage);
 app.get('/help', getHelpPage);
 app.get('/delete/:vocab_list_id', getDeletePage);
 app.get('/add_list',addListPage);
