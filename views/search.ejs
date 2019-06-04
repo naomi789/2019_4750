@@ -115,19 +115,16 @@
                                   <a href="/detail?ent_seq=<%= search.ent_seq%>&is_foreign=<%= search.is_foreign%>&orig_lang=<%= search.orig_lang%>&orig_word=<%= search.orig_word%>&waseieigo=<%= search.waseieigo%>&pos_type=<%= search.pos_type%>&pos_ID=<%= search.pos_ID%>&gloss_ID=<%= search.gloss_ID%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">Word Details</a>
                                    <div class="input-group">
                                      <input type="hidden"
-                                            value=<%= search.kanji_id %>
-                                            name='kanji_id'>
-                                    <input type="hidden"
-                                            value=<%= search.english_word_id %>
-                                            name='english_id'>
+                                            value=<%= search.ent_seq %>
+                                            name='ent_seq'>
                                      <input class="form-control"
                                             size="10"
                                             type="search"
-                                            placeholder="list id"
+                                            placeholder="list name"
                                             required
-                                            name='list'>
+                                            name='list_name'>
                                     <div class="input-group-btn">
-                                     <button class="btn btn-success" type="submit">+ Add to list</button>
+                                     <button class="btn btn-success" type="submit">+ Add to this list</button>
                                     </div>
                                   </div>
 

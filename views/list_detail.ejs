@@ -101,6 +101,7 @@
 
   <div class="table-wrapper">
       <% if (list_words.length > 0) {%>
+          <p class="text-center">Warning: Clicking a delete button will not only remove the selected row, but all rows that contains the same kanji symbol of the selected row. </p>
           <table class="table table-hovered">
               <thead class="thead-dark">
                   <tr>
@@ -109,29 +110,23 @@
                     <th scope="col">Kanji</th>
                     <th scope="col">Hiragana/Katakana</th>
                     <th scope="col">English definition</th>
-                    <th scope="col">Native/Foreign</th>
-                    <th scope="col">Original Language</th>
-                    <th scope="col">Original Word</th>
-                    <th scope="col">Waseieigo</th>
                     <th scope="col">Part of Speech</th>
-
+                    <th scope="col">Operation</th>
 
                   </tr>
               </thead>
               <tbody id="myTable">
                   <% list_words.forEach((list, index) => { %>
                       <tr>
-                        <th scope="row"><%= list.vocab_list_name %></th>
-                        <td><%= list.vocab_list_id %></td>
-
-                        <td><%= list.kanji_symbol_name %></td>
-                        <td><%= list.romaji %></td>
-                        <td><%= list.katakana %></td>
-                        <td><%= list.hiragana %></td>
-                        <td><%= list.english_word_name%></td>
+                        <th scope="row"><%= list.list_name %></th>
+                        <td><%= list.list_description %></td>
+                        <td><%= list.keb %></td>
+                        <td><%= list.reb %></td>
+                        <td><%= list.gloss_def %></td>
+                        <td><%= list.pos_type%></td>
                         <td>
-                                <a href="/delete_word?kanji_id=<%= list.kanji_id%>&english_id=<%= list.english_word_id%>&list=<%= list.vocab_list_id%>" class="btn btn-sm btn-danger">X Delete Word From List</a>
-                                
+                                <a href="/delete_word?ent_seq=<%= list.ent_seq%>&list_name=<%= list.list_name%>" class="btn btn-sm btn-danger">X Delete Word From List</a>
+
                           </td>
 
                       </tr>
