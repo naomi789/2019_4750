@@ -59,11 +59,11 @@ Afterwards, we ran our scripts in the following order:
 sudo mysql -u root
 //then the code goes into mysql and you can create the DB & tables, and insert data:
 source script.sql;
-source jmdict_inserts_part_1.sql;
-source jmdict_inserts_par2.sql;
-n2_peter_create.sql;
-n4_peter_create.sql;
-n5_peter_create.sql;
+source ./input_parsing/jmdict_inserts_part_1.sql;
+source ./input_parsinng/jmdict_inserts_par2.sql;
+source ./input_parsing/n2_peter_create.sql;
+source ./input_parsing/n4_peter_create.sql;
+source ./input_parsing/n5_peter_create.sql;
 
 
 ```
