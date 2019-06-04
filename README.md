@@ -47,6 +47,8 @@ https://www.linode.com/docs/databases/mysql/install-mysql-on-ubuntu-14-04/
 
 https://computingforgeeks.com/linux-tmux-cheat-sheet/
 
+https://gist.github.com/ryanmcgrath/982242
+
 ```
 CREATE USER 'data'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON * . * TO 'data'@'localhost';
