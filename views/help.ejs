@@ -1,85 +1,247 @@
-<div class="container">
-    <div class="row">
-         <h3>
-            FAQ Filter <span class="glyphicon glyphicon-filter"></span><small>With full text search</small>
-        </h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dictionary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+    }
+    .jumbotron {
+      background-image: url('https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009__340.jpg');
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+    .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+    }
+    .logo {
+      color: #f4511e;
+      font-size: 200px;
+    }
+    .navbar {
+      margin-bottom: 0;
+      background-image: url('https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009__340.jpg');
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+    .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+    }
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
 
-        <div class="col-md-12">
-            <div class="input-group">
-                <input type="search" class="form-control faq" placeholder="Search" /> <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button" id="btnFaqSearch">
-                        <span class="glyphicon glyphicon-search"></span>
-
-                </button>
-                </span>
-            </div>
-            <br />
-            <!-- /input-group -->
-            <div class= "panel-group faq-list" id="accordion">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                         <h4 class="panel-title">
-                            <span class="glyphicon glyphicon-hand-right"></span><a> Q: What kind of users is this site designed for?</a>
-                        </h4>
-
-                    </div>
-                    <!-- <div id="collapseOne" class="panel-collapse collapse">
-                        <div class="panel-body">
-                             <h3>
-                                <a href= surfing>Intended Users</a></h3> -->
-A: "This site is designed for two groups of people: English speaking users who want to learn Japanes, or Japanese speaking users who want to learn English."</div>
-                    </div>
-                </div>
-                <!-- <div class="panel panel-danger">
-                    <div class="panel-heading">
-                         <h4 class="panel-title">
-                            <span class="glyphicon glyphicon-hand-right"></span><a data-toggle="collapse" data-parent="#accordion"
-                                href="#collapseOnedanger">Next Question:</a>
-                        </h4> -->
-
-                    </div>
-                    <div id="collapseOnedanger" class="panel-collapse collapse">
-                        <div class="panel-body">
-                             <h4>
-                                <a>Q: Does this site cost money?</a></h4>
-A: "No, this resource is available for free!"</div>
-                    </div>
-                </div>
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                         <h4 class="panel-title">
-                            <span class="glyphicon glyphicon-hand-right"></span><a>Q: How do I search for a word?</a>
-                        </h4>
-
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse">
-                        <div class="panel-body">A: "All that needs to be done is input the word in the search bar and click search/press enter. </div>
-                    </div>
-                </div>
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                         <h4 class="panel-title">
-                            <span class="glyphicon glyphicon-hand-right"></span><a>Q: Inputting Englishs word VS kanji_id</a>
-                        </h4>
-                        <p> A: Whether you are domestic or international, this site will return all the possible matches in either language in order to find a solution for you! </a>
-
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse">
-                        <div class="panel-body">
-                    </div>
-                </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                         <h4 class="panel-title">
-                            <span class="glyphicon glyphicon-hand-right"></span><a>Q: Do I have to create an account?</a>
-                        </h4>
-                        <div class="panel-heading">
-                    </div>
-                    <div id="collapseFour" class="panel-collapse collapse">
-                        <div class="panel-body">A: No, this site is available to the public.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    .glyphicon {
+        margin-right:5px;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+        -webkit-appearance: searchfield-cancel-button;
+    }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#myPage">Dictionary</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">WORD</a></li>
+          <li><a href="list">LIST</a></li>
+          <li><a href="help">HELP</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <h1>FAQ Center</h1>
+
+
+  </div>
+
+  <div class="container">
+    <div class="container">
+      <div class="row">
+           <h3>
+              FAQ Filter <span class="glyphicon glyphicon-filter"></span><small>With full text search</small>
+          </h3>
+
+          <div class="col-md-12">
+              <div class="input-group">
+                  <input type="search" class="form-control faq" placeholder="Search" /> <span class="input-group-btn">
+                      <button class="btn btn-primary" type="button" id="btnFaqSearch">
+                          <span class="glyphicon glyphicon-search"></span>
+
+                  </button>
+                  </span>
+              </div>
+              <br />
+              <!-- /input-group -->
+              <div class="panel-group faq-list" id="accordion">
+                  <div class="panel panel-danger">
+                      <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <span class="glyphicon glyphicon-hand-right"></span><a data-toggle="collapse" data-parent="#accordion"
+                                  href="#collapseOnedanger">Question 1: put question here</a>
+                          </h4>
+
+                      </div>
+                      <div id="collapseOnedanger" class="panel-collapse collapse">
+                          <div class="panel-body">
+
+  "put answer here"</div>
+                      </div>
+                  </div>
+                  <div class="panel panel-success">
+                      <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <span class="glyphicon glyphicon-hand-right"></span><a data-toggle="collapse" data-parent="#accordion"
+                                  href="#collapseTwo">Question 2: ????"
+                  </a>
+                          </h4>
+
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse">
+                          <div class="panel-body">"put answer here</div>
+                      </div>
+                  </div>
+                  <div class="panel panel-warning">
+                      <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <span class="glyphicon glyphicon-hand-right"></span><a data-toggle="collapse" data-parent="#accordion"
+                                  href="#collapseThree">Question 3</a>
+                          </h4>
+
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse">
+                          <div class="panel-body">put answer </div>
+                      </div>
+                  </div>
+                  <div class="panel panel-primary">
+                      <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <span class="glyphicon glyphicon-hand-right"></span><a data-toggle="collapse" data-parent="#accordion"
+                                  href="#collapseFour">Question 4</a>
+                          </h4>
+
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse">
+                          <div class="panel-body">put answer </div>
+                      </div>
+                  </div>
+                  <div class="panel panel-primary">
+                      <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <span class="glyphicon glyphicon-hand-right"></span><a data-toggle="collapse" data-parent="#accordion"
+                                  href="#collapseFour">Question 5</a>
+                          </h4>
+
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse">
+                          <div class="panel-body">put answer</div>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
+
+  <script>
+    $(function () {
+       function FullTextContains(innerText, searchTerm) {
+           for (x = 0; x < searchTerm.length; x++) {
+               if (innerText.toLowerCase().indexOf(searchTerm[x].toLowerCase()) >= 0) {
+                   return true;
+               }
+           }
+           return false;
+       }
+
+
+       $('.faq').on('keyup input', function (e) {
+           var text = $.trim($(this).val());
+           if (e.keyCode == 13) {
+               SearchFAQ(text);
+           } else if (text == '') {
+               SearchFAQ('');
+           }
+       });
+
+       $('#btnFaqSearch').on('click', function (e) {
+           var text = $.trim($('.faq').val());
+           SearchFAQ(text);
+       });
+
+       function SearchFAQ(searchTermText) {
+           var searchTerm = searchTermText.split(' ');
+           if (searchTermText != '') {
+               $(".faq-list .panel").filter(function (index) {
+                   var panelText = $.trim($(this).text());
+                   if (FullTextContains(panelText, searchTerm) == true) {
+                       //console.log("found it");
+                       return true;
+                   } else {
+                       //console.log("not found");
+                       $(this).slideUp();
+                       return false;
+                   }
+               }).slideDown();
+           } else {
+               $(".faq-list .panel").slideDown();
+           }
+       }
+   });
+  </script>
+
+
+<!-- Citations for codes
+Citation 1:Theme Used
+Titile: Bootstrap Theme "Company"
+Author: w3school
+Availability: w3school.com
+
+Citation 2:FAQ Section
+Titile: FAQ Filter
+Author: jQueryDotNet
+Availability: http://jsfiddle.net
+-->
+
+<!-- Citations for images used
+Citation 1:Index Navigation bar and Jumbotron Image
+Titile: Japanese Umbrellas
+Author: DeltaWorks
+License: Pixabay License (Free for commercial use)
+Availability: Pixabay.com
+-->
+</body>
+</html>
