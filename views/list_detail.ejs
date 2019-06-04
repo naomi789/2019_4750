@@ -110,6 +110,7 @@
                     <th scope="col">Hiragana/Katakana</th>
                     <th scope="col">English definition</th>
                     <th scope="col">Part of Speech</th>
+                    <th scope="col">Operation</th>
 
                   </tr>
               </thead>
@@ -117,8 +118,9 @@
                   <% list_words.forEach((list, index) => { %>
                       <tr>
                         <th scope="row"><%= list.list_name %></th>
-                        <td><%= list.vocab_list_description %></td>
+                        <td><%= list.list_description %></td>
                         <td><%= list.keb %></td>
+                        <td><%= list.reb %></td>
                         <td><%= list.gloss_def %></td>
                         <td><%= list.pos_type%></td>
                         <td>
