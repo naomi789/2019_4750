@@ -99,21 +99,6 @@
               <br />
               <!-- /input-group -->
               <div class="panel-group faq-list" id="accordion">
-                  <div class="panel panel-default">
-                      <div class="panel-heading">
-                           <h4 class="panel-title">
-                              <span class="glyphicon glyphicon-hand-right"></span><a data-toggle="collapse" data-parent="#accordion"
-                                  href="#collapseOne">Item #1 - The standard Lorem Ipsum passage, used since the 1500s</a>
-                          </h4>
-
-                      </div>
-                      <div id="collapseOne" class="panel-collapse collapse">
-                          <div class="panel-body">
-                               <h3>
-                                  <a href="http://www.jquery2dotnet.com">jQuery2DotNet</a></h3>
-  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
-                      </div>
-                  </div>
                   <div class="panel panel-danger">
                       <div class="panel-heading">
                            <h4 class="panel-title">
@@ -173,14 +158,50 @@
 </div>
 
   <script>
-  $(document).ready(function(){
-    $("#myInput").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#myTable tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-    });
-  });
+    $(function () {
+       function FullTextContains(innerText, searchTerm) {
+           for (x = 0; x < searchTerm.length; x++) {
+               if (innerText.toLowerCase().indexOf(searchTerm[x].toLowerCase()) >= 0) {
+                   return true;
+               }
+           }
+           return false;
+       }
+
+
+       $('.faq').on('keyup input', function (e) {
+           var text = $.trim($(this).val());
+           if (e.keyCode == 13) {
+               SearchFAQ(text);
+           } else if (text == '') {
+               SearchFAQ('');
+           }
+       });
+
+       $('#btnFaqSearch').on('click', function (e) {
+           var text = $.trim($('.faq').val());
+           SearchFAQ(text);
+       });
+
+       function SearchFAQ(searchTermText) {
+           var searchTerm = searchTermText.split(' ');
+           if (searchTermText != '') {
+               $(".faq-list .panel").filter(function (index) {
+                   var panelText = $.trim($(this).text());
+                   if (FullTextContains(panelText, searchTerm) == true) {
+                       //console.log("found it");
+                       return true;
+                   } else {
+                       //console.log("not found");
+                       $(this).slideUp();
+                       return false;
+                   }
+               }).slideDown();
+           } else {
+               $(".faq-list .panel").slideDown();
+           }
+       }
+   });
   </script>
 
 
@@ -189,14 +210,11 @@ Citation 1:Theme Used
 Titile: Bootstrap Theme "Company"
 Author: w3school
 Availability: w3school.com
-Citation 2:Filter script
-Titile: Filter Lists
-Author: w3school
-Availability: w3school.com
-Citation 3:FAQ Section
-Titile: Boostrap FAQ Accordion
-Author: MTaqi
-Availability: bootsnipp.com
+
+Citation 2:FAQ Section
+Titile: FAQ Filter
+Author: jQueryDotNet
+Availability: http://jsfiddle.net
 -->
 
 <!-- Citations for images used
