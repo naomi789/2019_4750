@@ -57,10 +57,13 @@ Afterwards, we ran our scripts in the following order:
 
 ```
 sudo mysql -u root
-//then the code goes into mysql...
+//then the code goes into mysql and you can create the DB & tables, and insert data:
 source script.sql;
-source all_jmdict_insert_commands.sql;
-
+source jmdict_inserts_part_1.sql;
+source jmdict_inserts_par2.sql;
+n2_peter_create.sql;
+n4_peter_create.sql;
+n5_peter_create.sql;
 
 
 ```
