@@ -111,19 +111,19 @@
             <tbody id="myTable">
                 <% lists.forEach((list, index) => { %>
                     <tr>
-                        <th scope="row"><%= list.vocab_list_id %></th>
-                        <td><%= list.vocab_list_name %></td>
+                        <th scope="row"><%= list.list_name %></th>
+                        <td><%= list.list_name %></td>
                         <td></td>
                         <td>
-                              <a href="/list_detail/<%= list.vocab_list_id%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">≡ Detail</a>
-                              <a href="/delete/<%= list.vocab_list_id%>" class="btn btn-sm btn-danger">X Delete</a>
+                              <a href="/list_detail/<%= list.list_name%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">≡ Detail</a>
+                              <a href="/delete/<%= list.list_name%>" class="btn btn-sm btn-danger">X Delete</a>
                           </td>
                     </tr>
                 <% }) %>
             </tbody>
         </table>
     <% } else { %>
-        <p class="text-center">No list found.</p>
+        <p class="text-center">No lists found.</p>
     <% } %>
 </div>
 </div>

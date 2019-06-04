@@ -14,6 +14,7 @@ ORDER BY gloss_word.ent_seq;
 SELECT * FROM brief_result;
 
 /*view for word detail page*/
+CREATE VIEW word_detail AS
 SELECT gloss_word.gloss_ID, gloss_word.ent_seq, pos_word.pos_ID, jmdict.keb, jmdict.reb, gloss.gloss_def, jmdict.is_foreign, jmdict_foreign.orig_lang, jmdict_foreign.orig_word, jmdict_foreign.waseieigo, pos.pos_type 
 FROM  gloss_word
 LEFT JOIN gloss 
