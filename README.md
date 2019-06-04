@@ -64,6 +64,6 @@ source ./input_parsinng/jmdict_inserts_par2.sql;
 source ./input_parsing/n2_peter_create.sql;
 source ./input_parsing/n4_peter_create.sql;
 source ./input_parsing/n5_peter_create.sql;
-source ./view.sql;
+source ./views.sql;
 
 ```
