@@ -1,7 +1,7 @@
 module.exports = {
     getListDetailPage: (req, res) => {
-        //console.log("SELECT * FROM join_all_tables WHERE vocab_list_id = " + "'" + req.params.vocab_list_id + "'")
-        let query = "SELECT * FROM join_all_tables WHERE vocab_list_id = " + "'" + req.params.vocab_list_id + "'"; // query database to get all the players
+        //console.log("SELECT list_name, list_description, keb, reb, gloss_def, is_foreign, orig_lang, orig_word, waseieigo, pos_type FROM words_in_lists WHERE list_name = " + "'" + req.query.list_name + "'");
+        let query = "SELECT list_name, list_description, keb, reb, gloss_def, is_foreign, orig_lang, orig_word, waseieigo, pos_type FROM words_in_lists WHERE list_name = " + "'" + req.query.list_name + "'"; // query database to get all the players
 
         // execute query
         db.query(query, (err, result) => {
