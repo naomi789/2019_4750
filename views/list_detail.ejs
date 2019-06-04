@@ -109,29 +109,21 @@
                     <th scope="col">Kanji</th>
                     <th scope="col">Hiragana/Katakana</th>
                     <th scope="col">English definition</th>
-                    <th scope="col">Native/Foreign</th>
-                    <th scope="col">Original Language</th>
-                    <th scope="col">Original Word</th>
-                    <th scope="col">Waseieigo</th>
                     <th scope="col">Part of Speech</th>
-
 
                   </tr>
               </thead>
               <tbody id="myTable">
                   <% list_words.forEach((list, index) => { %>
                       <tr>
-                        <th scope="row"><%= list.vocab_list_name %></th>
-                        <td><%= list.vocab_list_id %></td>
-
-                        <td><%= list.kanji_symbol_name %></td>
-                        <td><%= list.romaji %></td>
-                        <td><%= list.katakana %></td>
-                        <td><%= list.hiragana %></td>
-                        <td><%= list.english_word_name%></td>
+                        <th scope="row"><%= list.list_name %></th>
+                        <td><%= list.vocab_list_description %></td>
+                        <td><%= list.keb %></td>
+                        <td><%= list.gloss_def %></td>
+                        <td><%= list.pos_type%></td>
                         <td>
                                 <a href="/delete_word?kanji_id=<%= list.kanji_id%>&english_id=<%= list.english_word_id%>&list=<%= list.vocab_list_id%>" class="btn btn-sm btn-danger">X Delete Word From List</a>
-                                
+
                           </td>
 
                       </tr>
