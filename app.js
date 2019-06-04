@@ -54,7 +54,7 @@ app.get('/', getHomePage);
 app.get('/new_search',getSearchPage);
 app.get('/list', getListPage);
 app.get('/search', getSearchPage);
-app.get('/detail/:ent_seq', getDetailPage);
+app.get('/detail', getDetailPage);
 app.get('/list_detail/:vocab_list_id', getListDetailPage);
 app.get('/help', getHelpPage);
 app.get('/delete/:vocab_list_id', getDeletePage);

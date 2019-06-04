@@ -112,7 +112,7 @@
                           <td><%= search.gloss_def%></td>
                           <td>
                                 <form class="form-inline" method="get" action="add_word">
-                                  <a href="/detail/<%= search.ent_seq%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">Word Detail</a>
+                                  <a href="/detail?ent_seq=<%= search.ent_seq%>&is_foreign=<%= search.is_foreign%>&orig_lang=<%= search.orig_lang%>&orig_word=<%= search.orig_word%>&waseieigo=<%= search.waseieigo%>&pos_type=<%= search.pos_type%>&pos_ID=<%= search.pos_ID%>&gloss_ID=<%= search.gloss_ID%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">Word Details</a>
                                    <div class="input-group">
                                      <input type="hidden"
                                             value=<%= search.kanji_id %>

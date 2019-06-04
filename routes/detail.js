@@ -1,9 +1,10 @@
 module.exports = {
 
     getDetailPage: (req, res) => {
-
+        
         //console.log(req.params);
-        let query = "SELECT * FROM join_all_tables WHERE ent_seq = " + "'" + req.params.romaji + "'";
+        let query = "SELECT is_foreign, orig_lang, orig_word, waseieigo, pos_type FROM word_detail WHERE ent_seq = " + "'" + req.query.ent_seq + "' AND gloss_ID = '"
+        + req.query.gloss_ID + "'";
 
         // execute query
         db.query(query, (err, result) => {
@@ -16,3 +17,4 @@ module.exports = {
         });
     },
 };
+
