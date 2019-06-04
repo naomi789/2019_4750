@@ -1,7 +1,7 @@
 
 module.exports = {
     getListPage: (req, res) => {
-        let query = "SELECT * FROM vocab_list"; // query database to get all the players
+        let query = "SELECT * FROM list"; // query database to get all the players
 
         // execute query
         db.query(query, (err, result) => {

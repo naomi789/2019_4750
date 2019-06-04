@@ -1,11 +1,9 @@
 module.exports = {
     deleteWordPage: (req, res) => {
 
-        //console.log("SELECT * FROM learn_kanji WHERE romaji = " + "'" + req.query.search + "'");
-      //  console.log("DELETE FROM vocab_list_word WHERE kanji_id = " + "'" + req.query.kanji_id + "' AND " + "english_word_id = " + "'" + req.query.english_id + "'" + " AND " + "vocab_list_id = " + "'" + req.query.list + "'");
+        let query1 = "DELETE FROM list_word WHERE ent_seq = " + "'" + req.query.ent_seq + "' AND " + "list_name = " + "'" + req.query.list_name + "'";
 
-        let query1 = "DELETE FROM vocab_list_word WHERE kanji_id = " + "'" + req.query.kanji_id + "' AND " + "english_word_id = " + "'" + req.query.english_id + "'" + " AND " + "vocab_list_id = " + "'" + req.query.list + "'";
-        let query2 = "SELECT * FROM join_all_tables WHERE vocab_list_id = " + "'" + req.query.list + "'"; // query database to get all the players
+          let query2 = "SELECT * FROM words_in_lists WHERE list_name = " + "'" + req.query.list_name + "'";
 
         // execute query
 

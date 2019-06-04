@@ -100,33 +100,60 @@
     <div class="table-wrapper">
 
         <% if (detail_results.length > 0) {%>
+
+          <% if (detail_results[0].is_foreign == '1') {%>
+
             <table class="table table-hovered">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Kanji</th>
-                        <th scope="col">Romaji</th>
-                        <th scope="col">Katakana</th>
-                        <th scope="col">Hiragana</th>
-                        <th scope="col">English Definition</th>
+                        <th scope="col">Foreign/Native</th>
+                        <th scope="col">Original Language</th>
+                        <th scope="col">Original Word</th>
+                        <th scope="col">Waseieigo</th>
+                        <th scope="col">Part of Speech</th>
 
                     </tr>
                 </thead>
                 <tbody>
                     <% detail_results.forEach((detail, index) => { %>
                         <tr>
-                            <th scope="row"><%= detail.kanji_symbol_name %></th>
-                            <td><%= detail.romaji %></td>
-                            <td><%= detail.katakana %></td>
-                            <td><%= detail.hiragana %></td>
-                            <td><%= detail.english_word_name %></td>
+                            <th scope="row">Foreign</th>
+                            <td><%= detail.orig_lang %></td>
+                            <td><%= detail.orig_word %></td>
+                            <td><%= detail.waseieigo %></td>
+                            <td><%= detail.pos_type %></td>
 
                             
                         </tr>
                     <% }) %>
                 </tbody>
             </table>
+
+
+          <% } else { %>
+            <table class="table table-hovered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Foreign/Native</th>
+                        <th scope="col">Part of Speech</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <% detail_results.forEach((detail, index) => { %>
+                        <tr>
+                            <th scope="row">Native</th>
+                            <td><%= detail.pos_type %></td>
+
+                            
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+          <% } %>
+
         <% } else { %>
-            <p class="text-center">No search found.</p>
+            <p class="text-center">No additional details available for this word.</p>
         <% } %>
     </div>
 
