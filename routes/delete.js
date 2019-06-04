@@ -20,14 +20,14 @@ module.exports = {
         });
         db.query(query2, (err, result) => {
             if (err) {
-                res.redirect('/');
+                return res.redirect('/');
             }
             //console.log(result[2]);
 
         });
         db.query(query3, (err, result) => {
             if (err) {
-                res.redirect('/');
+                return res.redirect('/');
             }
             //console.log(result[2]);
             res.render('list.ejs', {
