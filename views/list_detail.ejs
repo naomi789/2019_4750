@@ -77,8 +77,11 @@
   </nav>
 
   <div class="jumbotron text-center">
-    <h1><%= list_words[0].list_name%> List Details</h1>
-
+    <% if (list_words.length > 0) {%>
+        <h1><%= list_words[0].list_name%> List Details</h1>
+        <% } else { %>
+            <h1>Empty List</h1>
+        <% } %>
      </form>
 
   </div>
@@ -112,7 +115,7 @@
                         <td><%= list.list_description %></td>
                         <% if (list.keb == 'NULL') {%>
                           <td>N/A</td>
-                        <% } else { %> 
+                        <% } else { %>
                           <td><%= list.keb %></td>
                         <% } %>
                         <td><%= list.reb %></td>
