@@ -9,7 +9,7 @@ module.exports = {
                 return res.redirect('/');
             }
             res.render('list_detail.ejs', {
-                title: "Welcome to Dictionary | View List Detail" ,list_words: result
+                title: "Welcome to Dictionary | View List Details" ,list_words: result
             });
         });
     },

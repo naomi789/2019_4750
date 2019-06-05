@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Dictionary</title>
+  <link rel="icon" href="https://cdn.sstatic.net/Sites/japanese/img/favicon.ico?v=04a00a20ef29">
+  <title>JWorldDict - My Lists</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -24,7 +25,8 @@
       color: #818181;
     }
     .jumbotron {
-      background-image: url('https://cdn.pixabay.com/photo/2015/02/15/03/04/japanese-umbrellas-636870_1280.jpg');
+      background-image: url('https://cdn2.wanderlust.co.uk/media/1014/cropped-miyajima-hiroshima.jpg?anchor=center&mode=crop&width=1200&height=0&rnd=131546971050000000');
+      background-size: cover;
       color: #fff;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
@@ -40,7 +42,8 @@
     }
     .navbar {
       margin-bottom: 0;
-      background-image: url('https://cdn.pixabay.com/photo/2015/02/15/03/04/japanese-umbrellas-636870_1280.jpg');
+      background-image: url('https://cdn2.wanderlust.co.uk/media/1014/cropped-miyajima-hiroshima.jpg?anchor=center&mode=crop&width=1200&height=0&rnd=131546971050000000');
+      background-size: cover;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
@@ -91,7 +94,7 @@
 
 <div class="container">
 
-<input class="form-control" id="myInput" type="text" style="width: 400px" placeholder="search lists with name">
+<input class="form-control" id="myInput" type="text" style="width: 400px" placeholder="Search for lists by name or keywords">
 <br>
 
 <a href="/add_list" target="_blank" rel="noopener" class="btn btn-success">+ Add a List</a>
@@ -115,7 +118,7 @@
 
                         <td><%= list.list_description%></td>
                         <td>
-                              <a href="/list_detail/<%= list.list_name%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">≡ Detail</a>
+                              <a href="/list_detail/<%= list.list_name%>" target="_blank" rel="noopener" class="btn btn-sm btn-info">≡ Details</a>
                               <a href="/delete/<%= list.list_name%>" class="btn btn-sm btn-danger">X Delete</a>
                           </td>
                     </tr>

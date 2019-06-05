@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Dictionary</title>
+  <link rel="icon" href="https://cdn.sstatic.net/Sites/japanese/img/favicon.ico?v=04a00a20ef29">
+  <title>JWorldDict - A Superior Dictionary</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -17,6 +18,7 @@
     }
     .jumbotron {
       background-image: url('https://cdn.pixabay.com/photo/2015/02/15/03/04/japanese-umbrellas-636870_1280.jpg');
+      background-size: auto;
       color: #fff;
       padding: 50px 25px;
       font-family: Montserrat, sans-serif;
@@ -33,6 +35,7 @@
     .navbar {
       margin-bottom: 0;
       background-image: url('https://cdn.pixabay.com/photo/2015/02/15/03/04/japanese-umbrellas-636870_1280.jpg');
+      background-size: 50 em;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
@@ -40,9 +43,6 @@
       letter-spacing: 4px;
       border-radius: 0;
       font-family: Montserrat, sans-serif;
-    }
-    .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
     }
     .navbar-nav li a:hover, .navbar-nav li.active a {
       color: #f4511e !important;
@@ -67,7 +67,7 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/">HOME</a></li>
+          <li><a class="home" href="/">HOME</a></li>
           <li><a href="/list/">LISTS</a></li>
           <li><a href="/help">FAQ</a></li>
         </ul>
