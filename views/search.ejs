@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Dictionary</title>
+  <link rel="icon" href="https://cdn.sstatic.net/Sites/japanese/img/favicon.ico?v=04a00a20ef29">
+  <title>JWorldDict Search Results</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -52,6 +53,7 @@
       border-color: transparent;
       color: #fff !important;
     }
+    
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -69,7 +71,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/">HOME</a></li>
           <li><a href="/list">LISTS</a></li>
-            <li><a href="/help">FAQ</a></li>
+            <li><a class="faq" href="/help">FAQ</a></li>
         </ul>
       </div>
     </div>
@@ -82,7 +84,7 @@
          <input class="form-control"
                 size="50"
                 type="search"
-                placeholder="Search by Kanji or English Word"
+                placeholder="Search by Kanji, Hiragana, Katakana, or English Word"
                 required
                 name='search'>
         <div class="input-group-btn">
@@ -95,7 +97,7 @@
 
   <div class="container">
 
-    <input class="form-control" id="myInput" type="text" style="width: 900px" placeholder="Below is a list of possible matches. Type here to further refine your search.">
+    <input class="form-control" id="myInput" type="text" style="width: 900px" placeholder="Type here to further refine your search">
     <br>
 
     <div class="table-wrapper">
