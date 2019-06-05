@@ -4,9 +4,11 @@
   <title>Dictionary</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <style>
@@ -52,6 +54,13 @@
       border-color: transparent;
       color: #fff !important;
     }
+    /*ul .nav {
+     text-align: center; 
+    }
+    ul .nav li {
+     display: inline-block;  
+    }  */
+
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -82,7 +91,7 @@
          <input class="form-control"
                 size="50"
                 type="search"
-                placeholder="Search by Kanji, Hiragana, Katakana, or English Word"
+                placeholder="Input a Kanji, Hiragana, Katakana, or English Word"
                 required
                 name='search'>
         <div class="input-group-btn">
@@ -92,22 +101,70 @@
      </form>
 
   </div>
+  <div class="bottom-half">
+    <ul class="nav">
+      <li>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://img.theculturetrip.com/840x440/smart/wp-content/uploads/2019/02/gpr7w8.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">About JWorldDict </h5>
+            <p class="card-text">Welcome. This is your next step toward becoming a member of today's global world. JWorldDict is a free tool for learning Japanese or English. Type in an english word, kanji, hiragana, or katakana to get started.</p>
+            <a href="#" class="btn btn-primary">More info</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div style="width: 18rem">
+          <p>   </p>
+        </div>
+      </li>
+      <li>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://cdn.theculturetrip.com/wp-content/uploads/2018/03/ge415a-750x500.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Features</h5>
+            <p class="card-text">Search for words in English or Japanese to see their respective counterparts and more information about the word (e.g. origin). Create lists of words to study. Use preset lists to prepare for upcoming fluency exams.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div style="width: 18rem">
+          <p>   </p>
+        </div>
+      </li>
+      <li>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://cdn.theculturetrip.com/wp-content/uploads/2018/03/g1gm01-750x500.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Feedback/Contact</h5>
+            <p class="card-text">Your feedback is invaluable to us in our daily pursuit of providing you with a delightful, hand-crafted experience. We welcome your suggestions and requests. Contact: <a href="mailto:team@jworlddict.com">team@JWorldDict.com</a></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 
 <!-- Citations for codes
 Citation 1:Theme Used
-Titile: Bootstrap Theme "Company"
+Title: Bootstrap Theme "Company"
 Author: w3school
 Availability: w3school.com
 
 Citation 2:Filter script
-Titile: Filter Lists
+Title: Filter Lists
 Author: w3school
 Availability: w3school.com
 
 Citation 3:FAQ Section
-Titile: Boostrap FAQ Accordion
+Title: Boostrap FAQ Accordion
 Author: MTaqi
 Availability: bootsnipp.com
+
+Citation 4: Front Page CSS
+Title: Cards
+Author: Bootstrap
+Availability: https://getbootstrap.com/ 
 
 -->
 
