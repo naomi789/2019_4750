@@ -53,6 +53,7 @@
       border-color: transparent;
       color: #fff !important;
     }
+    
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -70,7 +71,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/">HOME</a></li>
           <li><a href="/list">LISTS</a></li>
-            <li><a href="/help">FAQ</a></li>
+            <li><a class="faq" href="/help">FAQ</a></li>
         </ul>
       </div>
     </div>
@@ -83,7 +84,7 @@
          <input class="form-control"
                 size="50"
                 type="search"
-                placeholder="Search by Kanji or English Word"
+                placeholder="Search by Kanji, Hiragana, Katakana, or English Word"
                 required
                 name='search'>
         <div class="input-group-btn">
