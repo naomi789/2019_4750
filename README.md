@@ -69,4 +69,5 @@ source ./input_parsing/n2_peter_create.sql;
 source ./input_parsing/n4_peter_create.sql;
 source ./input_parsing/n5_peter_create.sql;
 source ./views.sql;
+source ./clean_pos.sql;
 ```
