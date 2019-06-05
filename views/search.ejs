@@ -95,7 +95,7 @@
 
   <div class="container">
 
-    <input class="form-control" id="myInput" type="text" style="width: 900px" placeholder="Below is a list of possible match. Type in your word to filter the list.">
+    <input class="form-control" id="myInput" type="text" style="width: 900px" placeholder="Below is a list of possible matches. Type here to further refine your search.">
     <br>
 
     <div class="table-wrapper">
@@ -103,7 +103,7 @@
             <table class="table table-hovered">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Kanji</th>
+                        <th scope="col">Kanji</th> 
                         <th scope="col">Hiragana/Katakana</th>
                         <th scope="col">English Definition</th>
                         <th scope="col">Action</th>
@@ -112,7 +112,11 @@
                 <tbody id="myTable">
                     <% search_results.forEach((search, index) => { %>
                         <tr>
-                            <th scope="row"><%= search.keb %></th>
+                            <%if (search.keb == 'NULL') {%>
+                              <th scope="row">N/A</th>
+                            <% } else { %>
+                              <th scope="row"><%= search.keb %></th>
+                            <% } %>
                             <td><%= search.reb %></td>
                             <td><%= search.gloss_def%></td>
                             <td>
