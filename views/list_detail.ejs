@@ -91,7 +91,7 @@
 
   <div class="table-wrapper">
       <% if (list_words.length > 0) {%>
-          <p class="text-center">Warning: Clicking a delete button will not only remove the selected row, but all rows that contains the same kanji symbol of the selected row. </p>
+          <p class="text-center">Warning: Clicking delete will not only remove the selected row, but all rows containing the same kanji symbol. </p>
           <table class="table table-hovered">
               <thead class="thead-dark">
                   <tr>
@@ -110,7 +110,11 @@
                       <tr>
                         <th scope="row"><%= list.list_name %></th>
                         <td><%= list.list_description %></td>
-                        <td><%= list.keb %></td>
+                        <% if (list.keb == 'NULL') {%>
+                          <td>N/A</td>
+                        <% } else { %> 
+                          <td><%= list.keb %></td>
+                        <% } %>
                         <td><%= list.reb %></td>
                         <td><%= list.gloss_def %></td>
                         <td><%= list.pos_type%></td>
