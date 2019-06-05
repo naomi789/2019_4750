@@ -83,7 +83,7 @@
          <input class="form-control"
                 size="50"
                 type="search"
-                placeholder="Search by Kanji or English Word"
+                placeholder="Search by Kanji, Hiragana, Katakana, or English Word"
                 required
                 name='search'>
         <div class="input-group-btn">
@@ -107,6 +107,9 @@
             <table class="table table-hovered">
                 <thead class="thead-dark">
                     <tr>
+                        <th scope="col">Kanji</th>
+                        <th scope="col">Hiragana/Katakana</th>
+                        <th scope="col">English Definition</th>
                         <th scope="col">Foreign/Native</th>
                         <th scope="col">Original Language</th>
                         <th scope="col">Original Word</th>
@@ -118,7 +121,14 @@
                 <tbody>
                     <% detail_results.forEach((detail, index) => { %>
                         <tr>
-                            <th scope="row">Foreign</th>
+                          <%if (detail.keb == 'NULL') {%>
+                            <th scope="row">N/A</th>
+                          <% } else { %>
+                            <th scope="row"><%= detail.keb %></th>
+                          <% } %>
+                          <td><%= detail.reb %></td>
+                          <td><%= detail.gloss_def%></td>
+                            <th>Foreign</th>
                             <td><%= detail.orig_lang %></td>
                             <td><%= detail.orig_word %></td>
                             <td><%= detail.waseieigo %></td>
@@ -135,6 +145,9 @@
             <table class="table table-hovered">
                 <thead class="thead-dark">
                     <tr>
+                        <th scope="col">Kanji</th>
+                        <th scope="col">Hiragana/Katakana</th>
+                        <th scope="col">English Definition</th>
                         <th scope="col">Foreign/Native</th>
                         <th scope="col">Part of Speech</th>
 
@@ -143,7 +156,14 @@
                 <tbody>
                     <% detail_results.forEach((detail, index) => { %>
                         <tr>
-                            <th scope="row">Native</th>
+                          <%if (detail.keb == 'NULL') {%>
+                            <th scope="row">N/A</th>
+                          <% } else { %>
+                            <th scope="row"><%= detail.keb %></th>
+                          <% } %>
+                          <td><%= detail.reb %></td>
+                          <td><%= detail.gloss_def%></td>
+                            <th>Native</th>
                             <td><%= detail.pos_type %></td>
 
 
